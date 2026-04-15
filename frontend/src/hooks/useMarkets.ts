@@ -67,23 +67,24 @@ export function useMarketData(marketAddress: `0x${string}` | undefined) {
     query: { enabled },
   });
 
-  if (!results || results.some((r) => r.status === "failure")) {
+  if (!results || results.length < 9 || results.some((r) => r.status === "failure")) {
     return { data: undefined, isLoading };
   }
 
-  const numOutcomes = Number(results[1].result as bigint);
-  const pricesRaw = results[8].result as bigint[];
+  const r = results as { status: "success"; result: unknown }[];
+  const numOutcomes = Number(r[1].result as bigint);
+  const pricesRaw = r[8].result as bigint[];
 
   const data: MarketData = {
     address: marketAddress!,
-    raceId: results[0].result as string,
+    raceId: r[0].result as string,
     numOutcomes,
-    closesAt: Number(results[2].result as bigint),
-    settled: results[3].result as boolean,
-    cancelled: results[4].result as boolean,
-    winningOutcome: Number(results[5].result),
-    totalDeposited: results[6].result as bigint,
-    baseFeeRate: Number(results[7].result as bigint),
+    closesAt: Number(r[2].result as bigint),
+    settled: r[3].result as boolean,
+    cancelled: r[4].result as boolean,
+    winningOutcome: Number(r[5].result),
+    totalDeposited: r[6].result as bigint,
+    baseFeeRate: Number(r[7].result as bigint),
     prices: pricesRaw.map((p) => fromFixedPoint(p)),
     scratched: [], // filled below
   };

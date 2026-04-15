@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+frontend/.next/
+contracts/out/
+contracts/cache/
+
+# Environment & secrets
+.env
+.env.local
+*.env
+
+# Foundry
+contracts/broadcast/
+contracts/cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Forge libs (installed via forge install)
+contracts/lib/

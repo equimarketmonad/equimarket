@@ -7,14 +7,50 @@ import RaceCard from "@/components/RaceCard";
 import { useMarketAddresses } from "@/hooks/useMarkets";
 import { CONTRACTS } from "@/lib/contracts";
 
-// ── Mock data for development (shown when contracts aren't deployed) ──
+// ── Design mode: set to true to preview all mock races ──
+const DESIGN_MODE = true;
+
+// ── Mock data for development & design preview ──
 const MOCK_RACES = [
+  // ── LIVE RACES (in-race) ──
+  {
+    id: "champion-hurdle-2026",
+    name: "Champion Hurdle",
+    venue: "Cheltenham",
+    time: "1:30 PM GMT",
+    date: "April 15, 2026",
+    status: "in-race" as const,
+    horses: [
+      { name: "Constitution Hill", jockey: "N. de Boinville", price: 0.48, shares: 580 },
+      { name: "State Man", jockey: "P. Townend", price: 0.27, shares: 320 },
+      { name: "Lossiemouth", jockey: "D. Mullins", price: 0.14, shares: 120 },
+      { name: "Sir Gino", jockey: "H. Cobden", price: 0.07, shares: 50 },
+      { name: "Doyen Quest", jockey: "R. Blackmore", price: 0.04, shares: 30 },
+    ],
+  },
+  {
+    id: "dubai-world-cup-2026",
+    name: "Dubai World Cup",
+    venue: "Meydan",
+    time: "7:40 PM GST",
+    date: "April 15, 2026",
+    status: "in-race" as const,
+    horses: [
+      { name: "Laurel River", jockey: "W. Buick", price: 0.35, shares: 420 },
+      { name: "Ushba Tesoro", jockey: "Y. Take", price: 0.25, shares: 300 },
+      { name: "Senor Buscador", jockey: "J. Rosario", price: 0.18, shares: 200 },
+      { name: "Derma Sotogake", jockey: "C. Lemaire", price: 0.12, shares: 140 },
+      { name: "Kabirkhan", jockey: "L. Dettori", price: 0.06, shares: 60 },
+      { name: "Romantic Warrior", jockey: "J. McDonald", price: 0.04, shares: 40 },
+    ],
+  },
+  // ── UPCOMING RACES (pre-race) ──
   {
     id: "cheltenham-gold-cup-2026",
     name: "Cheltenham Gold Cup",
     venue: "Cheltenham",
     time: "3:30 PM GMT",
-    date: "March 13, 2026",
+    date: "April 18, 2026",
     status: "pre-race" as const,
     horses: [
       { name: "Galopin des Champs", jockey: "P. Townend", price: 0.32, shares: 320 },
@@ -26,26 +62,45 @@ const MOCK_RACES = [
     ],
   },
   {
-    id: "champion-hurdle-2026",
-    name: "Champion Hurdle",
-    venue: "Cheltenham",
-    time: "1:30 PM GMT",
-    date: "March 11, 2026",
-    status: "in-race" as const,
+    id: "kentucky-derby-2026",
+    name: "Kentucky Derby",
+    venue: "Churchill Downs",
+    time: "6:57 PM EDT",
+    date: "May 2, 2026",
+    status: "pre-race" as const,
     horses: [
-      { name: "Constitution Hill", jockey: "N. de Boinville", price: 0.58, shares: 580 },
-      { name: "State Man", jockey: "P. Townend", price: 0.22, shares: 220 },
-      { name: "Lossiemouth", jockey: "D. Mullins", price: 0.12, shares: 120 },
-      { name: "Sir Gino", jockey: "H. Cobden", price: 0.05, shares: 50 },
-      { name: "Doyen Quest", jockey: "R. Blackmore", price: 0.03, shares: 30 },
+      { name: "Fierceness", jockey: "J. Velazquez", price: 0.22, shares: 260 },
+      { name: "Sierra Leone", jockey: "F. Prat", price: 0.18, shares: 210 },
+      { name: "Catching Freedom", jockey: "T. Gaffalione", price: 0.15, shares: 170 },
+      { name: "Resilience", jockey: "I. Ortiz Jr.", price: 0.13, shares: 150 },
+      { name: "Dornoch", jockey: "L. Saez", price: 0.10, shares: 110 },
+      { name: "Mystik Dan", jockey: "B. Hernandez", price: 0.08, shares: 90 },
+      { name: "Honor Marie", jockey: "R. Moore", price: 0.07, shares: 70 },
+      { name: "Epic Ride", jockey: "J. Castellano", price: 0.07, shares: 65 },
     ],
   },
+  {
+    id: "royal-ascot-sprint-2026",
+    name: "King Charles III Stakes",
+    venue: "Royal Ascot",
+    time: "2:30 PM BST",
+    date: "June 16, 2026",
+    status: "pre-race" as const,
+    horses: [
+      { name: "Big Evs", jockey: "T. Marquand", price: 0.28, shares: 190 },
+      { name: "Bradsell", jockey: "H. Doyle", price: 0.24, shares: 160 },
+      { name: "Highfield Princess", jockey: "J. Fanning", price: 0.20, shares: 130 },
+      { name: "Art Power", jockey: "S. Foley", price: 0.16, shares: 100 },
+      { name: "Regional", jockey: "D. Tudhope", price: 0.12, shares: 80 },
+    ],
+  },
+  // ── SETTLED RACES ──
   {
     id: "arkle-challenge-2026",
     name: "Arkle Challenge Trophy",
     venue: "Cheltenham",
     time: "1:30 PM GMT",
-    date: "March 12, 2026",
+    date: "April 12, 2026",
     status: "settled" as const,
     winner: 0,
     horses: [
@@ -53,6 +108,72 @@ const MOCK_RACES = [
       { name: "Fil Dor", jockey: "M.P. Walsh", price: 0.25, shares: 250 },
       { name: "Sir Gino", jockey: "H. Cobden", price: 0.18, shares: 180 },
       { name: "Embassy Gardens", jockey: "J.W. Kennedy", price: 0.12, shares: 120 },
+    ],
+  },
+  {
+    id: "prix-arc-triomphe-2026",
+    name: "Prix de l'Arc de Triomphe",
+    venue: "Longchamp",
+    time: "4:05 PM CET",
+    date: "April 10, 2026",
+    status: "settled" as const,
+    winner: 2,
+    horses: [
+      { name: "Ace Impact", jockey: "C. Soumillon", price: 0.30, shares: 380 },
+      { name: "Westover", jockey: "R. Moore", price: 0.22, shares: 260 },
+      { name: "Auguste Rodin", jockey: "W. Buick", price: 0.20, shares: 240 },
+      { name: "Continuous", jockey: "J. Doyle", price: 0.15, shares: 170 },
+      { name: "Shin Emperor", jockey: "C. Lemaire", price: 0.08, shares: 90 },
+      { name: "Look de Vega", jockey: "M. Barzalona", price: 0.05, shares: 50 },
+    ],
+  },
+  {
+    id: "melbourne-cup-2026",
+    name: "Melbourne Cup",
+    venue: "Flemington",
+    time: "3:00 PM AEDT",
+    date: "April 8, 2026",
+    status: "settled" as const,
+    winner: 1,
+    horses: [
+      { name: "Without A Fight", jockey: "M. Zahra", price: 0.18, shares: 210 },
+      { name: "Vauban", jockey: "W. Buick", price: 0.22, shares: 280 },
+      { name: "Soulstirrer", jockey: "J. McDonald", price: 0.16, shares: 190 },
+      { name: "Buckaroo", jockey: "D. Lane", price: 0.14, shares: 160 },
+      { name: "Jan Brueghel", jockey: "R. Moore", price: 0.12, shares: 140 },
+      { name: "Land Legend", jockey: "K. McEvoy", price: 0.10, shares: 110 },
+      { name: "Absurde", jockey: "O. Murphy", price: 0.08, shares: 80 },
+    ],
+  },
+  // ── CANCELLED RACES ──
+  {
+    id: "breeders-cup-turf-2026",
+    name: "Breeders' Cup Turf",
+    venue: "Del Mar",
+    time: "5:40 PM PDT",
+    date: "April 5, 2026",
+    status: "cancelled" as const,
+    horses: [
+      { name: "Rebel's Romance", jockey: "W. Buick", price: 0.28, shares: 300 },
+      { name: "Mostahdaf", jockey: "J. Crowley", price: 0.24, shares: 250 },
+      { name: "Auguste Rodin", jockey: "R. Moore", price: 0.20, shares: 200 },
+      { name: "Luxembourg", jockey: "S. Heffernan", price: 0.15, shares: 150 },
+      { name: "Emily Upjohn", jockey: "F. Dettori", price: 0.13, shares: 120 },
+    ],
+  },
+  {
+    id: "japan-cup-2026",
+    name: "Japan Cup",
+    venue: "Tokyo Racecourse",
+    time: "3:40 PM JST",
+    date: "April 3, 2026",
+    status: "cancelled" as const,
+    horses: [
+      { name: "Equinox", jockey: "C. Lemaire", price: 0.40, shares: 500 },
+      { name: "Liberty Island", jockey: "D. Lane", price: 0.25, shares: 300 },
+      { name: "Titleholder", jockey: "K. Yokoyama", price: 0.15, shares: 180 },
+      { name: "Shahryar", jockey: "C. Soumillon", price: 0.12, shares: 140 },
+      { name: "Panthalassa", jockey: "Y. Iwata", price: 0.08, shares: 90 },
     ],
   },
 ];
@@ -68,7 +189,8 @@ export default function Home() {
   const { addresses: marketAddresses, isLoading } = useMarketAddresses();
 
   // Determine if we should show live data or mock data
-  const useLiveData = isContractsDeployed && marketAddresses.length > 0;
+  // When DESIGN_MODE is on, always show mocks for layout preview
+  const useLiveData = !DESIGN_MODE && isContractsDeployed && marketAddresses.length > 0;
 
   const filtered =
     filter === "all" ? MOCK_RACES : MOCK_RACES.filter((r) => r.status === filter);
@@ -77,8 +199,17 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
 
+      {/* Design mode banner */}
+      {DESIGN_MODE && (
+        <div className="bg-purple-500/10 border-b border-purple-500/20 px-6 md:px-12 py-2">
+          <p className="text-purple-400 text-xs font-mono tracking-wide text-center">
+            Design Preview Mode — showing mock races. Set DESIGN_MODE = false to show live markets.
+          </p>
+        </div>
+      )}
+
       {/* Testnet banner */}
-      {!isContractsDeployed && (
+      {!DESIGN_MODE && !isContractsDeployed && (
         <div className="bg-gold/5 border-b border-gold/20 px-6 md:px-12 py-3">
           <p className="text-gold/80 text-xs font-mono tracking-wide text-center">
             Demo Mode — contracts not yet deployed. Showing mock data.

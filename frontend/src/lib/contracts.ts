@@ -19,9 +19,9 @@ export const monadTestnet = defineChain({
 
 // ── Contract Addresses (Monad Testnet — deployed April 2026) ──
 export const CONTRACTS = {
-  usdc: "0xee2Ea709518126cB7591290AF7f386cE5576D4cc" as `0x${string}`,
-  factory: "0xea4503F917A521608E5045B6D1F5f78be331C50C" as `0x${string}`,
-  oracle: "0x22FA7376E70f94AedBCf0C79d578B49a61533853" as `0x${string}`,
+  usdc: "0xb8D1589AA8Ab4a87D871b66B1A3B2C3395b981C8" as `0x${string}`,
+  factory: "0x585dbE0a82872C51A9ED9a52ebaB76D05A603F0D" as `0x${string}`,
+  oracle: "0xE11Aed210D434083ff09a90544d44A29Dd623780" as `0x${string}`,
 };
 
 // ── ABIs (viem-compatible, using human-readable format) ──

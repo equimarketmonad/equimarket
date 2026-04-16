@@ -2,6 +2,7 @@
 pragma solidity ^0.8.24;
 
 import {LMSRMarket} from "./LMSRMarket.sol";
+import {LMSRMath} from "./LMSRMath.sol";
 import {IERC20} from "./interfaces/IERC20.sol";
 
 /// @title MarketFactory — Deploys one LMSRMarket per race
@@ -36,7 +37,8 @@ contract MarketFactory {
         address market,
         uint256 numOutcomes,
         uint256 b,
-        uint256 closesAt
+        uint256 closesAt,
+        uint256 subsidy
     );
     event AdminUpdated(address indexed newAdmin);
     event OracleUpdated(address indexed newOracle);
@@ -45,6 +47,7 @@ contract MarketFactory {
     error OnlyAdmin();
     error MarketAlreadyExists();
     error InvalidParams();
+    error TransferFailed();
 
     modifier onlyAdmin() {
         if (msg.sender != admin) revert OnlyAdmin();
@@ -84,19 +87,35 @@ contract MarketFactory {
         if (b == 0) revert InvalidParams();
         if (closesAt <= block.timestamp) revert InvalidParams();
 
+        // Calculate the LMSR subsidy: b * ln(n) in fixed point, then convert to USDC.
+        // This is the maximum possible loss for the market maker and guarantees
+        // the contract can always pay $1 per winning share (solvency guarantee).
+        uint256[] memory zeroShares = new uint256[](numOutcomes);
+        uint256 subsidyFP = LMSRMath.cost(zeroShares, b);
+        uint256 subsidyUSDC = (subsidyFP / 1e12) + 1; // round up for safety
+
+        // Transfer subsidy USDC from market creator into the factory first
+        bool ok = usdc.transferFrom(msg.sender, address(this), subsidyUSDC);
+        if (!ok) revert TransferFailed();
+
         // Deploy a new market contract
         LMSRMarket market = new LMSRMarket();
         market.initialize(
             raceId, numOutcomes, b, closesAt,
             oracle, address(usdc),
-            defaultBaseFeeRate, protocolTreasury
+            defaultBaseFeeRate, protocolTreasury,
+            subsidyUSDC
         );
+
+        // Transfer subsidy USDC from factory into the new market
+        ok = usdc.transfer(address(market), subsidyUSDC);
+        if (!ok) revert TransferFailed();
 
         address marketAddr = address(market);
         markets[raceId] = marketAddr;
         allMarkets.push(marketAddr);
 
-        emit MarketCreated(raceId, marketAddr, numOutcomes, b, closesAt);
+        emit MarketCreated(raceId, marketAddr, numOutcomes, b, closesAt, subsidyUSDC);
 
         return marketAddr;
     }

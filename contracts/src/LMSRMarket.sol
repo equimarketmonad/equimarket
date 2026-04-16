@@ -156,7 +156,8 @@ contract LMSRMarket {
         address _oracle,
         address _usdc,
         uint256 _baseFeeRate,
-        address _treasury
+        address _treasury,
+        uint256 _initialSubsidy
     ) external {
         if (factory != address(0)) revert OnlyFactory(); // can only init once
         factory = msg.sender;
@@ -172,6 +173,11 @@ contract LMSRMarket {
 
         // Initialize shares array — all zeros (uniform probability at start)
         qShares = new uint256[](_numOutcomes);
+
+        // Record the initial LMSR subsidy (b * ln(n) in USDC).
+        // This amount is transferred by the factory and guarantees solvency:
+        // the market can always pay $1 per winning share.
+        totalDeposited = _initialSubsidy;
     }
 
     /// @notice Calculate the dynamic protocol fee for a trade

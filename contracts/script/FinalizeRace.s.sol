@@ -7,8 +7,8 @@ import {RaceOracle} from "../src/RaceOracle.sol";
 /// @title FinalizeRace - Finalize result after dispute window (step 2 of 2)
 contract FinalizeRace is Script {
     function run() external {
-        RaceOracle oracle = RaceOracle(0x22FA7376E70f94AedBCf0C79d578B49a61533853);
-        bytes32 raceId = keccak256("test-derby-001");
+        RaceOracle oracle = RaceOracle(0xE11Aed210D434083ff09a90544d44A29Dd623780);
+        bytes32 raceId = keccak256("test-derby-002");
 
         vm.startBroadcast();
         oracle.finalizeResult(raceId);

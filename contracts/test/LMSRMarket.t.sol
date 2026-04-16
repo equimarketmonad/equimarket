@@ -42,7 +42,8 @@ contract EquiMarketTest is Test {
         vm.prank(admin);
         oracle.addReporter(reporter);
 
-        // Give users USDC
+        // Give users and admin USDC
+        usdc.mint(admin, 10_000e6);   // admin needs USDC for market subsidy
         usdc.mint(alice, 10_000e6);   // $10,000
         usdc.mint(bob, 10_000e6);
         usdc.mint(charlie, 10_000e6);
@@ -52,12 +53,21 @@ contract EquiMarketTest is Test {
 
     function testCreateMarket() public {
         uint256 closesAt = block.timestamp + 3600; // 1 hour from now
+
+        // Admin must approve USDC for the LMSR solvency subsidy (b * ln(n))
+        vm.prank(admin);
+        usdc.approve(address(factory), type(uint256).max);
+
         vm.prank(admin);
         address market = factory.createMarket(raceId, NUM_HORSES, B, closesAt);
 
         assertTrue(market != address(0), "market should be deployed");
         assertEq(factory.marketCount(), 1);
         assertTrue(factory.markets(raceId) == market, "market should be registered");
+
+        // Verify the market received the subsidy USDC
+        uint256 marketBalance = usdc.balanceOf(market);
+        assertGt(marketBalance, 0, "market should have subsidy USDC");
     }
 
     function testLMSRPricingBasics() public {

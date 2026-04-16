@@ -13,8 +13,8 @@ contract TestSetup is Script {
         address deployer = msg.sender;
 
         // Deployed contract addresses (Monad testnet)
-        MockUSDC usdc = MockUSDC(0xee2Ea709518126cB7591290AF7f386cE5576D4cc);
-        MarketFactory factory = MarketFactory(0xea4503F917A521608E5045B6D1F5f78be331C50C);
+        MockUSDC usdc = MockUSDC(0xb8D1589AA8Ab4a87D871b66B1A3B2C3395b981C8);
+        MarketFactory factory = MarketFactory(0x585dbE0a82872C51A9ED9a52ebaB76D05A603F0D);
 
         vm.startBroadcast();
 
@@ -22,8 +22,13 @@ contract TestSetup is Script {
         usdc.mint(deployer, 10_000e6); // 10,000 USDC (6 decimals)
         console.log("Minted 10,000 USDC to:", deployer);
 
-        // 2. Create a test race: "Test Derby" with 5 horses, closes in 1 hour
-        bytes32 raceId = keccak256("test-derby-001");
+        // 2. Approve factory to spend USDC for the LMSR solvency subsidy
+        //    For b=100 and 5 horses: subsidy = b * ln(5) ~ $161 USDC
+        usdc.approve(address(factory), type(uint256).max);
+        console.log("Approved factory for subsidy");
+
+        // 3. Create a test race: "Test Derby" with 5 horses, closes in 1 hour
+        bytes32 raceId = keccak256("test-derby-002");
         uint256 numHorses = 5;
         uint256 b = 100e18;  // liquidity parameter
         uint256 closesAt = block.timestamp + 3600; // 1 hour from now

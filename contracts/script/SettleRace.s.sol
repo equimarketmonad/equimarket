@@ -7,8 +7,8 @@ import {RaceOracle} from "../src/RaceOracle.sol";
 /// @title SettleRace - Submit race result (step 1 of 2)
 contract SettleRace is Script {
     function run() external {
-        RaceOracle oracle = RaceOracle(0x22FA7376E70f94AedBCf0C79d578B49a61533853);
-        bytes32 raceId = keccak256("test-derby-001");
+        RaceOracle oracle = RaceOracle(0xE11Aed210D434083ff09a90544d44A29Dd623780);
+        bytes32 raceId = keccak256("test-derby-002");
 
         vm.startBroadcast();
         oracle.submitResult(raceId, 0); // Horse #1 wins (outcome index 0)

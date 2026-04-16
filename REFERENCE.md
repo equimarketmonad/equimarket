@@ -1,6 +1,14 @@
 # EquiMarket — Project Reference
 
-## Deployed Contract Addresses (Monad Testnet)
+## Deployed Contract Addresses (Monad Testnet) — v2 (solvency fix)
+
+| Contract | Address |
+|---|---|
+| MockUSDC | `0xb8D1589AA8Ab4a87D871b66B1A3B2C3395b981C8` |
+| MarketFactory | `0x585dbE0a82872C51A9ED9a52ebaB76D05A603F0D` |
+| RaceOracle | `0xE11Aed210D434083ff09a90544d44A29Dd623780` |
+
+### Old Addresses (v1 — deprecated, solvency bug)
 
 | Contract | Address |
 |---|---|
@@ -47,19 +55,25 @@
 
 - LMSR pricing with 18-decimal fixed-point math
 - USDC uses 6 decimals (1 USDC = 1,000,000 units)
+- **Solvency subsidy:** Each market is seeded with `b * ln(n)` USDC at creation (e.g. ~$161 for b=100, 5 horses). This guarantees the pool can always pay $1 per winning share.
 - Scratch refunds at curve value (not original cost) for pool solvency
 - Race cancellation refunds all holders at curve value, processed sequentially
+
+## Live URLs
+
+- **Vercel:** https://equimarket-equimarketmonads-projects.vercel.app
+- **GitHub:** https://github.com/equimarketmonad/equimarket
 
 ## Task Progress
 
 - [x] Task 1: Install developer tools (Node.js, Git, Foundry, VS Code)
 - [x] Task 2: Compile and test smart contracts (17/17 tests passing)
 - [x] Task 3: Get Monad testnet tokens (1,000 MON acquired)
-- [x] Task 4: Deploy contracts to Monad testnet
-- [ ] Task 5: Connect frontend to live contracts
-- [ ] Task 6: End-to-end testing
+- [x] Task 4: Deploy contracts to Monad testnet (v2 with solvency fix)
+- [x] Task 5: Connect frontend to live contracts
+- [x] Task 6: End-to-end testing (buy shares, settle race, claim)
 - [ ] Task 7: Oracle backend (race results)
-- [ ] Task 8: Domain and hosting (Vercel)
+- [x] Task 8: Domain and hosting (Vercel — equimarket-equimarketmonads-projects.vercel.app)
 - [ ] Task 9: Mainnet deployment
 - [ ] Task 10: Post-launch monitoring
 
@@ -76,5 +90,5 @@ cd ~/Desktop/equimarket/contracts && forge test -vv
 cd ~/Desktop/equimarket/frontend && npm run dev
 
 # View contract on explorer
-open https://testnet.monadexplorer.com/address/0xea4503F917A521608E5045B6D1F5f78be331C50C
+open https://testnet.monadexplorer.com/address/0x585dbE0a82872C51A9ED9a52ebaB76D05A603F0D
 ```

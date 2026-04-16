@@ -20,6 +20,9 @@ export interface MarketData {
   scratched: boolean[];
 }
 
+// Auto-refresh interval (ms) — polls chain every 5 seconds
+const POLL_INTERVAL = 5000;
+
 // ── Fetch all market addresses from the factory ──
 
 export function useMarketAddresses() {
@@ -27,6 +30,7 @@ export function useMarketAddresses() {
     address: CONTRACTS.factory,
     abi: parseAbi(FACTORY_ABI),
     functionName: "marketCount",
+    query: { refetchInterval: POLL_INTERVAL },
   });
 
   const { data: addresses, isLoading, error } = useReadContract({
@@ -34,7 +38,7 @@ export function useMarketAddresses() {
     abi: parseAbi(FACTORY_ABI),
     functionName: "getMarkets",
     args: count !== undefined ? [BigInt(0), count as bigint] : undefined,
-    query: { enabled: count !== undefined },
+    query: { enabled: count !== undefined, refetchInterval: POLL_INTERVAL },
   });
 
   return {
@@ -50,7 +54,7 @@ export function useMarketData(marketAddress: `0x${string}` | undefined) {
   const abi = parseAbi(MARKET_ABI);
   const enabled = !!marketAddress;
 
-  const { data: results, isLoading } = useReadContracts({
+  const { data: results, isLoading, refetch } = useReadContracts({
     contracts: marketAddress
       ? [
           { address: marketAddress, abi, functionName: "raceId" },
@@ -64,11 +68,11 @@ export function useMarketData(marketAddress: `0x${string}` | undefined) {
           { address: marketAddress, abi, functionName: "getAllPrices" },
         ]
       : [],
-    query: { enabled },
+    query: { enabled, refetchInterval: POLL_INTERVAL },
   });
 
   if (!results || results.length < 9 || results.some((r) => r.status === "failure")) {
-    return { data: undefined, isLoading };
+    return { data: undefined, isLoading, refetch };
   }
 
   const r = results as { status: "success"; result: unknown }[];
@@ -89,7 +93,7 @@ export function useMarketData(marketAddress: `0x${string}` | undefined) {
     scratched: [], // filled below
   };
 
-  return { data, isLoading };
+  return { data, isLoading, refetch };
 }
 
 // ── Fetch scratch status for all outcomes of a market ──
@@ -109,7 +113,7 @@ export function useScratchedStatus(
           args: [BigInt(i)],
         }))
       : [],
-    query: { enabled: !!marketAddress && numOutcomes > 0 },
+    query: { enabled: !!marketAddress && numOutcomes > 0, refetchInterval: POLL_INTERVAL },
   });
 
   return (results?.map((r) => r.result as boolean) ?? Array(numOutcomes).fill(false)) as boolean[];
@@ -134,7 +138,7 @@ export function useUserPositions(
           args: [userAddress!, BigInt(i)],
         }))
       : [],
-    query: { enabled },
+    query: { enabled, refetchInterval: POLL_INTERVAL },
   });
 
   return (results?.map((r) => r.result as bigint ?? BigInt(0)) ?? Array(numOutcomes).fill(BigInt(0))) as bigint[];

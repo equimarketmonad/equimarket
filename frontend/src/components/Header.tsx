@@ -4,6 +4,8 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useReadContract } from "wagmi";
 import { CONTRACTS, USDC_ABI, formatUSDC } from "@/lib/contracts";
 
+const POLL_INTERVAL = 5000;
+
 export default function Header() {
   const { address, isConnected } = useAccount();
 
@@ -12,11 +14,11 @@ export default function Header() {
     abi: USDC_ABI,
     functionName: "balanceOf",
     args: address ? [address] : undefined,
-    query: { enabled: isConnected && !!address },
+    query: { enabled: isConnected && !!address, refetchInterval: POLL_INTERVAL },
   });
 
   return (
-    <header className="relative px-6 md:px-12 py-10 border-b border-border overflow-hidden">
+    <header className="relative px-6 md:px-12 py-8 md:py-10 border-b border-border overflow-hidden">
       {/* Background gradients */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -28,20 +30,20 @@ export default function Header() {
         }}
       />
 
-      <div className="relative flex items-end justify-between">
-        <div>
-          <p className="font-mono text-[10px] tracking-[3px] uppercase text-gold mb-4">
+      <div className="relative flex items-end justify-between gap-6">
+        <div className="min-w-0">
+          <p className="font-mono text-[10px] tracking-[3px] uppercase text-gold mb-3">
             Live Prediction Markets
           </p>
-          <h1 className="font-serif text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight mb-5">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight mb-4">
             Equi<em className="italic text-gold">Market</em>
           </h1>
-          <p className="text-text-dim text-sm max-w-lg leading-relaxed">
+          <p className="text-text-dim text-sm max-w-lg leading-relaxed hidden sm:block">
             Back horses before and during the race. Crowd-derived odds. Cash out
             any time. No bookmaker — the market IS the odds engine.
           </p>
 
-          <div className="flex flex-wrap gap-2 mt-6">
+          <div className="flex flex-wrap gap-2 mt-5">
             {[
               { label: "Live In-Race", color: "gold" },
               { label: "LMSR Pricing", color: "green" },
@@ -50,10 +52,10 @@ export default function Header() {
             ].map((pill) => (
               <span
                 key={pill.label}
-                className={`font-mono text-[10px] tracking-[2px] uppercase px-3 py-1 rounded-sm border
-                  ${pill.color === "gold" ? "border-gold/35 text-gold bg-gold/5" : ""}
-                  ${pill.color === "green" ? "border-accent-green/35 text-accent-green bg-accent-green/5" : ""}
-                  ${pill.color === "blue" ? "border-accent-blue/35 text-accent-blue bg-accent-blue/5" : ""}
+                className={`font-mono text-[10px] tracking-[2px] uppercase px-3 py-1 rounded-full border
+                  ${pill.color === "gold" ? "border-gold/30 text-gold bg-gold/5" : ""}
+                  ${pill.color === "green" ? "border-accent-green/30 text-accent-green bg-accent-green/5" : ""}
+                  ${pill.color === "blue" ? "border-accent-blue/30 text-accent-blue bg-accent-blue/5" : ""}
                   ${pill.color === "dim" ? "border-border-bright text-text-dim" : ""}
                 `}
               >
@@ -64,13 +66,13 @@ export default function Header() {
         </div>
 
         {/* Wallet connection */}
-        <div className="hidden md:flex flex-col items-end gap-3">
+        <div className="hidden md:flex flex-col items-end gap-3 shrink-0">
           {isConnected && usdcBalance !== undefined && (
-            <div className="text-right">
-              <p className="font-mono text-[10px] tracking-[2px] uppercase text-text-dim mb-1">
+            <div className="text-right bg-surface-card/50 border border-border rounded-lg px-4 py-2.5">
+              <p className="font-mono text-[10px] tracking-[2px] uppercase text-text-dim mb-0.5">
                 USDC Balance
               </p>
-              <p className="font-mono text-lg text-gold">
+              <p className="font-mono text-lg text-gold font-semibold">
                 ${formatUSDC(usdcBalance as bigint)}
               </p>
             </div>
@@ -88,21 +90,21 @@ export default function Header() {
                   {!connected ? (
                     <button
                       onClick={openConnectModal}
-                      className="font-mono text-[10px] tracking-[2px] uppercase px-5 py-2.5 rounded-sm border border-gold/40 text-gold hover:bg-gold/10 transition-colors"
+                      className="font-mono text-[10px] tracking-[2px] uppercase px-5 py-2.5 rounded-lg border border-gold/40 text-gold hover:bg-gold/10 transition-colors"
                     >
                       Connect Wallet
                     </button>
                   ) : chain?.unsupported ? (
                     <button
                       onClick={openChainModal}
-                      className="font-mono text-[10px] tracking-[2px] uppercase px-5 py-2.5 rounded-sm border border-accent-red/40 text-accent-red hover:bg-accent-red/10 transition-colors"
+                      className="font-mono text-[10px] tracking-[2px] uppercase px-5 py-2.5 rounded-lg border border-accent-red/40 text-accent-red hover:bg-accent-red/10 transition-colors"
                     >
                       Wrong Network
                     </button>
                   ) : (
                     <button
                       onClick={openAccountModal}
-                      className="font-mono text-[10px] tracking-[2px] uppercase px-5 py-2.5 rounded-sm border border-gold/40 text-gold hover:bg-gold/10 transition-colors"
+                      className="font-mono text-[10px] tracking-[2px] uppercase px-5 py-2.5 rounded-lg border border-gold/40 text-gold hover:bg-gold/10 transition-colors"
                     >
                       {account.displayName}
                     </button>

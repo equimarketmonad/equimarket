@@ -88,15 +88,15 @@ export default function Home() {
       )}
 
       {/* Filter tabs */}
-      <nav className="flex border-b border-border overflow-x-auto px-6 md:px-12 gap-0">
+      <nav className="flex border-b border-border overflow-x-auto px-6 md:px-12 gap-1 py-2">
         {(["all", "pre-race", "in-race", "settled", "cancelled"] as const).map((f) => (
           <button
             key={f}
             onClick={() => setFilter(f)}
-            className={`font-mono text-[10px] tracking-[2.5px] uppercase px-5 py-4 border-b-2 transition-colors whitespace-nowrap ${
+            className={`font-mono text-[10px] tracking-[2px] uppercase px-4 py-2 rounded-full transition-colors whitespace-nowrap ${
               filter === f
-                ? "text-gold border-gold"
-                : "text-text-dim border-transparent hover:text-text-primary"
+                ? "text-gold bg-gold/10 border border-gold/30"
+                : "text-text-dim hover:text-text-primary hover:bg-surface-card/50 border border-transparent"
             }`}
           >
             {f === "all"
@@ -113,7 +113,7 @@ export default function Home() {
       </nav>
 
       {/* Race list */}
-      <div className="px-6 md:px-12 py-8 space-y-4">
+      <div className="px-4 sm:px-6 md:px-12 py-6 space-y-4">
         {useLiveData ? (
           // Live mode: render a RaceCard for each on-chain market
           marketAddresses.map((addr) => (
@@ -129,6 +129,19 @@ export default function Home() {
         {!useLiveData && filtered.length === 0 && (
           <div className="text-center py-20 text-text-dim">
             <p className="font-mono text-xs tracking-widest uppercase">No races found</p>
+          </div>
+        )}
+
+        {useLiveData && marketAddresses.length === 0 && !isLoading && (
+          <div className="text-center py-20">
+            <div className="inline-block bg-surface-card/50 border border-border rounded-lg px-8 py-6">
+              <p className="font-mono text-xs tracking-widest uppercase text-text-dim mb-2">
+                No active markets
+              </p>
+              <p className="text-text-dim text-sm">
+                Create a market using the admin scripts to get started.
+              </p>
+            </div>
           </div>
         )}
 

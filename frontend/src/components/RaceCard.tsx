@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { useAccount } from "wagmi";
 import { useMarketData, useScratchedStatus, useUserPositions } from "@/hooks/useMarkets";
 import { useBuyShares, useSellShares, useClaim, useApproveUSDC, useUSDCAllowance, useClaimCancelRefund } from "@/hooks/useMarketActions";
@@ -65,8 +65,8 @@ export default function RaceCard({ marketAddress, mockData }: RaceCardProps) {
   const userPositions = useUserPositions(marketAddress, userAddress, market?.numOutcomes ?? 0);
 
   // ── Actions ──
-  const { approve, isPending: isApproving } = useApproveUSDC();
-  const { allowance } = useUSDCAllowance(userAddress, marketAddress);
+  const { approve, isPending: isApproving, isSuccess: approveSuccess } = useApproveUSDC();
+  const { allowance, refetch: refetchAllowance } = useUSDCAllowance(userAddress, marketAddress);
   const { buy, isPending: isBuying, isConfirming: isBuyConfirming } = useBuyShares(marketAddress);
   const { sell, isPending: isSelling, isConfirming: isSellConfirming } = useSellShares(marketAddress);
   const { claim, isPending: isClaiming } = useClaim(marketAddress);
@@ -110,12 +110,30 @@ export default function RaceCard({ marketAddress, mockData }: RaceCardProps) {
 
   // ── Handlers ──
 
+  // Track whether we're waiting for approval to auto-buy
+  const pendingBuyRef = useRef<{ outcome: number; shares: bigint } | null>(null);
+
+  // When approval succeeds, refetch allowance then auto-trigger buy
+  useEffect(() => {
+    if (approveSuccess && pendingBuyRef.current) {
+      refetchAllowance().then(() => {
+        const pending = pendingBuyRef.current;
+        if (pending) {
+          buy(pending.outcome, pending.shares);
+          pendingBuyRef.current = null;
+        }
+      });
+    }
+  }, [approveSuccess, refetchAllowance, buy]);
+
   const handleBuy = useCallback(() => {
     if (!marketAddress || selectedHorse === null || !stakeInput) return;
     const shares = toShares(Number(stakeInput));
     // Check allowance first
     const estimatedCost = toUSDC(Number(stakeInput) * 2); // generous allowance
     if (allowance < estimatedCost) {
+      // Store the intended buy so we can auto-execute after approval
+      pendingBuyRef.current = { outcome: selectedHorse, shares };
       approve(marketAddress, estimatedCost * BigInt(10)); // approve 10x to avoid repeated approvals
       return;
     }
@@ -332,10 +350,12 @@ export default function RaceCard({ marketAddress, mockData }: RaceCardProps) {
                       : "bg-accent-blue/90 text-bg hover:bg-accent-blue"
                   }`}
                 >
-                  {isTransacting
+                  {isApproving
+                    ? "Approving USDC..."
+                    : pendingBuyRef.current
+                    ? "Placing Bet..."
+                    : isTransacting
                     ? "Confirming..."
-                    : isApproving
-                    ? "Approving..."
                     : mode === "buy"
                     ? "Buy Shares"
                     : "Sell Shares"}

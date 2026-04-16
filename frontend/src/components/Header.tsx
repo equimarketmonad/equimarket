@@ -90,7 +90,7 @@ export default function Header() {
 
       {/* Top row: Gate logo */}
       <div className="relative flex items-center justify-between mb-3">
-        <GateLogo className="h-12 w-auto" />
+        <GateLogo className="h-20 w-auto" />
       </div>
 
       {/* Bottom row: Nav + Wallet */}

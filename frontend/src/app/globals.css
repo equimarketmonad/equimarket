@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap');
 
 body {
-  background: #080807;
-  color: #e5e2d8;
-  font-family: 'Syne', sans-serif;
+  background: #1B4332;
+  color: #FAF8F5;
+  font-family: 'Inter', sans-serif;
   min-height: 100vh;
 }
 
@@ -16,9 +16,20 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f0f0d;
+  background: #1B4332;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3a3a32;
+  background: #2D6A4F;
   border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3A7A5A;
+}
+
+/* Hide horizontal scrollbar on ticker/scroll containers */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

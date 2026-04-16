@@ -7,19 +7,84 @@ import RaceCard from "@/components/RaceCard";
 import { useMarketAddresses } from "@/hooks/useMarkets";
 import { CONTRACTS } from "@/lib/contracts";
 
-// ── Design mode: set to true to preview all mock races ──
+// ── Design mode: set to true to preview the branded homepage ──
 const DESIGN_MODE = true;
 
-// ── Mock data for development & design preview ──
-const MOCK_RACES = [
-  // ── LIVE RACES (in-race) ──
+// Racing saddle cloth colors
+const GATE_COLORS: Record<number, { bg: string; text: string }> = {
+  1: { bg: "#D32F2F", text: "#fff" },
+  2: { bg: "#FFFFFF", text: "#1a1a18" },
+  3: { bg: "#1565C0", text: "#fff" },
+  4: { bg: "#F9A825", text: "#1a1a18" },
+  5: { bg: "#2E7D32", text: "#fff" },
+  6: { bg: "#212121", text: "#fff" },
+  7: { bg: "#E65100", text: "#fff" },
+  8: { bg: "#E91E90", text: "#fff" },
+  9: { bg: "#00ACC1", text: "#fff" },
+  10: { bg: "#7B1FA2", text: "#fff" },
+  11: { bg: "#9E9E9E", text: "#1a1a18" },
+  12: { bg: "#7CB342", text: "#1a1a18" },
+};
+
+// ── Mock data ──
+const LIVE_RACES = [
+  { id: "champion-hurdle", name: "Champion Hurdle", venue: "Cheltenham", time: "1:30 PM", leader: "Constitution Hill", odds: "48% — $2.08", pool: "$12,400" },
+  { id: "dubai-world-cup", name: "Dubai World Cup", venue: "Meydan", time: "7:40 PM", leader: "Laurel River", odds: "35% — $2.86", pool: "$28,600" },
+  { id: "prix-saint-alary", name: "Prix Saint-Alary", venue: "Longchamp", time: "3:15 PM", leader: "Mqse de Sevigne", odds: "41% — $2.44", pool: "$6,200" },
+  { id: "lockinge-stakes", name: "Lockinge Stakes", venue: "Newbury", time: "3:35 PM", leader: "Charyn", odds: "52% — $1.92", pool: "$9,100" },
+];
+
+const UPCOMING_RACES = [
+  { id: "gold-cup", name: "Cheltenham Gold Cup", venue: "Cheltenham — Apr 18", time: "3:30 PM", runners: 6, fav: "Galopin des Champs", favOdds: "$3.13" },
+  { id: "kentucky-derby", name: "Kentucky Derby", venue: "Churchill Downs — May 2", time: "6:57 PM", runners: 8, fav: "Fierceness", favOdds: "$4.55" },
+  { id: "king-charles", name: "King Charles III Stakes", venue: "Royal Ascot — Jun 16", time: "2:30 PM", runners: 5, fav: "Big Evs", favOdds: "$3.57" },
+  { id: "eclipse", name: "Eclipse Stakes", venue: "Sandown — Jul 5", time: "4:20 PM", runners: 7, fav: "City of Troy", favOdds: "$2.50" },
+  { id: "arc-2026", name: "Prix de l'Arc 2026", venue: "Longchamp — Oct 4", time: "5:40 PM", runners: 10, fav: "Ace Impact", favOdds: "$3.33" },
+];
+
+const POPULAR_MARKETS = [
   {
-    id: "champion-hurdle-2026",
-    name: "Champion Hurdle",
-    venue: "Cheltenham",
-    time: "1:30 PM GMT",
-    date: "April 15, 2026",
-    status: "in-race" as const,
+    id: "pop-derby", name: "Kentucky Derby", venue: "Churchill Downs — May 2", volume: "$142,800", status: "upcoming" as const, runners: 8,
+    horses: [
+      { name: "Fierceness", jockey: "J. Velazquez", gate: 3, odds: "7/2" },
+      { name: "Sierra Leone", jockey: "F. Prat", gate: 7, odds: "9/2" },
+      { name: "Catching Freedom", jockey: "T. Gaffalione", gate: 2, odds: "11/2" },
+      { name: "Resilience", jockey: "I. Ortiz Jr.", gate: 11, odds: "13/2" },
+    ],
+  },
+  {
+    id: "pop-hurdle", name: "Champion Hurdle", venue: "Cheltenham — Today", volume: "$89,400", status: "live" as const, runners: 5,
+    horses: [
+      { name: "Constitution Hill", jockey: "N. de Boinville", gate: 1, odds: "11/8" },
+      { name: "State Man", jockey: "P. Townend", gate: 4, odds: "11/4" },
+      { name: "Lossiemouth", jockey: "D. Mullins", gate: 6, odds: "6/1" },
+      { name: "Doyen Quest", jockey: "R. Blackmore", gate: 3, odds: "8/1" },
+    ],
+  },
+  {
+    id: "pop-dubai", name: "Dubai World Cup", venue: "Meydan — Today", volume: "$71,200", status: "live" as const, runners: 6,
+    horses: [
+      { name: "Laurel River", jockey: "W. Buick", gate: 8, odds: "2/1" },
+      { name: "Ushba Tesoro", jockey: "Y. Take", gate: 5, odds: "3/1" },
+      { name: "Senor Buscador", jockey: "J. Rosario", gate: 2, odds: "9/2" },
+      { name: "Kabirkhan", jockey: "L. Dettori", gate: 4, odds: "7/1" },
+    ],
+  },
+  {
+    id: "pop-goldcup", name: "Cheltenham Gold Cup", venue: "Cheltenham — Apr 18", volume: "$56,300", status: "upcoming" as const, runners: 7,
+    horses: [
+      { name: "Galopin des Champs", jockey: "P. Townend", gate: 1, odds: "2/1" },
+      { name: "L'Homme Presse", jockey: "C. Deutsch", gate: 5, odds: "7/2" },
+      { name: "Fastorslow", jockey: "J.W. Kennedy", gate: 3, odds: "9/2" },
+      { name: "Shishkin", jockey: "N. de Boinville", gate: 8, odds: "6/1" },
+    ],
+  },
+];
+
+// Full mock data for RaceCard fallback
+const MOCK_RACES = [
+  {
+    id: "champion-hurdle-2026", name: "Champion Hurdle", venue: "Cheltenham", time: "1:30 PM GMT", date: "April 15, 2026", status: "in-race" as const,
     horses: [
       { name: "Constitution Hill", jockey: "N. de Boinville", price: 0.48, shares: 580 },
       { name: "State Man", jockey: "P. Townend", price: 0.27, shares: 320 },
@@ -28,261 +93,169 @@ const MOCK_RACES = [
       { name: "Doyen Quest", jockey: "R. Blackmore", price: 0.04, shares: 30 },
     ],
   },
-  {
-    id: "dubai-world-cup-2026",
-    name: "Dubai World Cup",
-    venue: "Meydan",
-    time: "7:40 PM GST",
-    date: "April 15, 2026",
-    status: "in-race" as const,
-    horses: [
-      { name: "Laurel River", jockey: "W. Buick", price: 0.35, shares: 420 },
-      { name: "Ushba Tesoro", jockey: "Y. Take", price: 0.25, shares: 300 },
-      { name: "Senor Buscador", jockey: "J. Rosario", price: 0.18, shares: 200 },
-      { name: "Derma Sotogake", jockey: "C. Lemaire", price: 0.12, shares: 140 },
-      { name: "Kabirkhan", jockey: "L. Dettori", price: 0.06, shares: 60 },
-      { name: "Romantic Warrior", jockey: "J. McDonald", price: 0.04, shares: 40 },
-    ],
-  },
-  // ── UPCOMING RACES (pre-race) ──
-  {
-    id: "cheltenham-gold-cup-2026",
-    name: "Cheltenham Gold Cup",
-    venue: "Cheltenham",
-    time: "3:30 PM GMT",
-    date: "April 18, 2026",
-    status: "pre-race" as const,
-    horses: [
-      { name: "Galopin des Champs", jockey: "P. Townend", price: 0.32, shares: 320 },
-      { name: "L'Homme Presse", jockey: "C. Deutsch", price: 0.22, shares: 220 },
-      { name: "Fastorslow", jockey: "J.W. Kennedy", price: 0.18, shares: 180 },
-      { name: "Shishkin", jockey: "N. de Boinville", price: 0.14, shares: 140 },
-      { name: "Gerri Colombe", jockey: "M.P. Walsh", price: 0.08, shares: 80 },
-      { name: "Bravemansgame", jockey: "H. Cobden", price: 0.06, shares: 60 },
-    ],
-  },
-  {
-    id: "kentucky-derby-2026",
-    name: "Kentucky Derby",
-    venue: "Churchill Downs",
-    time: "6:57 PM EDT",
-    date: "May 2, 2026",
-    status: "pre-race" as const,
-    horses: [
-      { name: "Fierceness", jockey: "J. Velazquez", price: 0.22, shares: 260 },
-      { name: "Sierra Leone", jockey: "F. Prat", price: 0.18, shares: 210 },
-      { name: "Catching Freedom", jockey: "T. Gaffalione", price: 0.15, shares: 170 },
-      { name: "Resilience", jockey: "I. Ortiz Jr.", price: 0.13, shares: 150 },
-      { name: "Dornoch", jockey: "L. Saez", price: 0.10, shares: 110 },
-      { name: "Mystik Dan", jockey: "B. Hernandez", price: 0.08, shares: 90 },
-      { name: "Honor Marie", jockey: "R. Moore", price: 0.07, shares: 70 },
-      { name: "Epic Ride", jockey: "J. Castellano", price: 0.07, shares: 65 },
-    ],
-  },
-  {
-    id: "royal-ascot-sprint-2026",
-    name: "King Charles III Stakes",
-    venue: "Royal Ascot",
-    time: "2:30 PM BST",
-    date: "June 16, 2026",
-    status: "pre-race" as const,
-    horses: [
-      { name: "Big Evs", jockey: "T. Marquand", price: 0.28, shares: 190 },
-      { name: "Bradsell", jockey: "H. Doyle", price: 0.24, shares: 160 },
-      { name: "Highfield Princess", jockey: "J. Fanning", price: 0.20, shares: 130 },
-      { name: "Art Power", jockey: "S. Foley", price: 0.16, shares: 100 },
-      { name: "Regional", jockey: "D. Tudhope", price: 0.12, shares: 80 },
-    ],
-  },
-  // ── SETTLED RACES ──
-  {
-    id: "arkle-challenge-2026",
-    name: "Arkle Challenge Trophy",
-    venue: "Cheltenham",
-    time: "1:30 PM GMT",
-    date: "April 12, 2026",
-    status: "settled" as const,
-    winner: 0,
-    horses: [
-      { name: "Ballyburn", jockey: "P. Townend", price: 0.45, shares: 450 },
-      { name: "Fil Dor", jockey: "M.P. Walsh", price: 0.25, shares: 250 },
-      { name: "Sir Gino", jockey: "H. Cobden", price: 0.18, shares: 180 },
-      { name: "Embassy Gardens", jockey: "J.W. Kennedy", price: 0.12, shares: 120 },
-    ],
-  },
-  {
-    id: "prix-arc-triomphe-2026",
-    name: "Prix de l'Arc de Triomphe",
-    venue: "Longchamp",
-    time: "4:05 PM CET",
-    date: "April 10, 2026",
-    status: "settled" as const,
-    winner: 2,
-    horses: [
-      { name: "Ace Impact", jockey: "C. Soumillon", price: 0.30, shares: 380 },
-      { name: "Westover", jockey: "R. Moore", price: 0.22, shares: 260 },
-      { name: "Auguste Rodin", jockey: "W. Buick", price: 0.20, shares: 240 },
-      { name: "Continuous", jockey: "J. Doyle", price: 0.15, shares: 170 },
-      { name: "Shin Emperor", jockey: "C. Lemaire", price: 0.08, shares: 90 },
-      { name: "Look de Vega", jockey: "M. Barzalona", price: 0.05, shares: 50 },
-    ],
-  },
-  {
-    id: "melbourne-cup-2026",
-    name: "Melbourne Cup",
-    venue: "Flemington",
-    time: "3:00 PM AEDT",
-    date: "April 8, 2026",
-    status: "settled" as const,
-    winner: 1,
-    horses: [
-      { name: "Without A Fight", jockey: "M. Zahra", price: 0.18, shares: 210 },
-      { name: "Vauban", jockey: "W. Buick", price: 0.22, shares: 280 },
-      { name: "Soulstirrer", jockey: "J. McDonald", price: 0.16, shares: 190 },
-      { name: "Buckaroo", jockey: "D. Lane", price: 0.14, shares: 160 },
-      { name: "Jan Brueghel", jockey: "R. Moore", price: 0.12, shares: 140 },
-      { name: "Land Legend", jockey: "K. McEvoy", price: 0.10, shares: 110 },
-      { name: "Absurde", jockey: "O. Murphy", price: 0.08, shares: 80 },
-    ],
-  },
-  // ── CANCELLED RACES ──
-  {
-    id: "breeders-cup-turf-2026",
-    name: "Breeders' Cup Turf",
-    venue: "Del Mar",
-    time: "5:40 PM PDT",
-    date: "April 5, 2026",
-    status: "cancelled" as const,
-    horses: [
-      { name: "Rebel's Romance", jockey: "W. Buick", price: 0.28, shares: 300 },
-      { name: "Mostahdaf", jockey: "J. Crowley", price: 0.24, shares: 250 },
-      { name: "Auguste Rodin", jockey: "R. Moore", price: 0.20, shares: 200 },
-      { name: "Luxembourg", jockey: "S. Heffernan", price: 0.15, shares: 150 },
-      { name: "Emily Upjohn", jockey: "F. Dettori", price: 0.13, shares: 120 },
-    ],
-  },
-  {
-    id: "japan-cup-2026",
-    name: "Japan Cup",
-    venue: "Tokyo Racecourse",
-    time: "3:40 PM JST",
-    date: "April 3, 2026",
-    status: "cancelled" as const,
-    horses: [
-      { name: "Equinox", jockey: "C. Lemaire", price: 0.40, shares: 500 },
-      { name: "Liberty Island", jockey: "D. Lane", price: 0.25, shares: 300 },
-      { name: "Titleholder", jockey: "K. Yokoyama", price: 0.15, shares: 180 },
-      { name: "Shahryar", jockey: "C. Soumillon", price: 0.12, shares: 140 },
-      { name: "Panthalassa", jockey: "Y. Iwata", price: 0.08, shares: 90 },
-    ],
-  },
 ];
-
-type FilterType = "all" | "pre-race" | "in-race" | "settled" | "cancelled";
 
 const isContractsDeployed =
   CONTRACTS.factory !== "0x0000000000000000000000000000000000000000";
 
+function GateNum({ gate }: { gate: number }) {
+  const c = GATE_COLORS[gate] || { bg: "#666", text: "#fff" };
+  const border = gate === 2 ? "1px solid #666" : "none";
+  return (
+    <div
+      className="w-[30px] h-[30px] rounded-md flex items-center justify-center font-mono text-[13px] font-bold shrink-0"
+      style={{ background: c.bg, color: c.text, border }}
+    >
+      {gate}
+    </div>
+  );
+}
+
 export default function Home() {
-  const [filter, setFilter] = useState<FilterType>("all");
   const { isConnected } = useAccount();
   const { addresses: marketAddresses, isLoading } = useMarketAddresses();
-
-  // Determine if we should show live data or mock data
-  // When DESIGN_MODE is on, always show mocks for layout preview
   const useLiveData = !DESIGN_MODE && isContractsDeployed && marketAddresses.length > 0;
 
-  const filtered =
-    filter === "all" ? MOCK_RACES : MOCK_RACES.filter((r) => r.status === filter);
+  if (!DESIGN_MODE && useLiveData) {
+    // Live on-chain mode — show RaceCards
+    return (
+      <main className="min-h-screen">
+        <Header />
+        <div className="px-4 sm:px-6 md:px-12 py-6 space-y-4">
+          {marketAddresses.map((addr) => (
+            <RaceCard key={addr} marketAddress={addr} />
+          ))}
+        </div>
+      </main>
+    );
+  }
 
+  // ── Design / Demo mode: branded homepage ──
   return (
     <main className="min-h-screen">
       <Header />
 
-      {/* Design mode banner */}
-      {DESIGN_MODE && (
-        <div className="bg-purple-500/10 border-b border-purple-500/20 px-6 md:px-12 py-2">
-          <p className="text-purple-400 text-xs font-mono tracking-wide text-center">
-            Design Preview Mode — showing mock races. Set DESIGN_MODE = false to show live markets.
-          </p>
+      {/* ═══ LIVE RACES TICKER ═══ */}
+      <div className="flex items-center justify-between px-6 md:px-12 pt-5 pb-3">
+        <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-text-dim">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent-green shadow-[0_0_8px_rgba(76,175,122,0.5)] animate-pulse mr-2 align-middle" />
+          Live Races
+        </span>
+        <a className="font-mono text-[10px] tracking-[1.5px] uppercase text-gold cursor-pointer hover:text-gold-dim">See all</a>
+      </div>
+
+      <div className="border-y border-border overflow-hidden relative">
+        <div className="absolute top-0 bottom-0 left-0 w-[60px] bg-gradient-to-r from-bg to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 right-0 w-[60px] bg-gradient-to-l from-bg to-transparent z-10 pointer-events-none" />
+        <div className="flex gap-0 px-6 md:px-12 overflow-x-auto hide-scrollbar">
+          {LIVE_RACES.map((race, i) => (
+            <div key={race.id} className={`flex-none flex items-start gap-5 px-6 py-3.5 min-w-[340px] cursor-pointer hover:bg-gold/[0.04] transition-colors ${i > 0 ? "border-l border-border" : "border-x border-border"}`}>
+              <div className="font-mono text-[9px] tracking-[2px] uppercase text-accent-green bg-accent-green/10 border border-accent-green/30 px-2 py-0.5 rounded-full flex items-center gap-1.5 whitespace-nowrap">
+                <span className="w-[5px] h-[5px] rounded-full bg-accent-green animate-pulse" /> Live
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="font-serif text-sm font-semibold text-text-primary truncate">{race.name}</div>
+                <div className="font-mono text-[10px] text-text-dim mt-0.5">{race.venue} — {race.time}</div>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <div className="font-mono text-[11px] text-gold font-medium">{race.leader}</div>
+                <div className="font-mono text-[10px] text-text-dim mt-0.5">{race.odds}</div>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <div className="font-mono text-[9px] text-text-dim tracking-[1px] uppercase">Pool</div>
+                <div className="font-mono text-[13px] text-text-primary font-medium mt-0.5">{race.pool}</div>
+              </div>
+            </div>
+          ))}
         </div>
-      )}
+      </div>
 
-      {/* Testnet banner */}
-      {!DESIGN_MODE && !isContractsDeployed && (
-        <div className="bg-gold/5 border-b border-gold/20 px-6 md:px-12 py-3">
-          <p className="text-gold/80 text-xs font-mono tracking-wide text-center">
-            Demo Mode — contracts not yet deployed. Showing mock data.
-            Deploy to Monad testnet to see live markets.
-          </p>
-        </div>
-      )}
+      {/* ═══ UPCOMING RACES ═══ */}
+      <div className="flex items-center justify-between px-6 md:px-12 pt-5 pb-3">
+        <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-text-dim">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold mr-2 align-middle" />
+          Upcoming Races
+        </span>
+        <a className="font-mono text-[10px] tracking-[1.5px] uppercase text-gold cursor-pointer hover:text-gold-dim">See all</a>
+      </div>
 
-      {/* Filter tabs */}
-      <nav className="flex border-b border-border overflow-x-auto px-6 md:px-12 gap-1 py-2">
-        {(["all", "pre-race", "in-race", "settled", "cancelled"] as const).map((f) => (
-          <button
-            key={f}
-            onClick={() => setFilter(f)}
-            className={`font-mono text-[10px] tracking-[2px] uppercase px-4 py-2 rounded-full transition-colors whitespace-nowrap ${
-              filter === f
-                ? "text-gold bg-gold/10 border border-gold/30"
-                : "text-text-dim hover:text-text-primary hover:bg-surface-card/50 border border-transparent"
-            }`}
-          >
-            {f === "all"
-              ? "All Races"
-              : f === "in-race"
-              ? "Live Now"
-              : f === "pre-race"
-              ? "Upcoming"
-              : f === "cancelled"
-              ? "Cancelled"
-              : "Settled"}
-          </button>
-        ))}
-      </nav>
-
-      {/* Race list */}
-      <div className="px-4 sm:px-6 md:px-12 py-6 space-y-4">
-        {useLiveData ? (
-          // Live mode: render a RaceCard for each on-chain market
-          marketAddresses.map((addr) => (
-            <RaceCard key={addr} marketAddress={addr} />
-          ))
-        ) : (
-          // Demo mode: show mock data
-          filtered.map((race) => (
-            <RaceCard key={race.id} mockData={race} />
-          ))
-        )}
-
-        {!useLiveData && filtered.length === 0 && (
-          <div className="text-center py-20 text-text-dim">
-            <p className="font-mono text-xs tracking-widest uppercase">No races found</p>
-          </div>
-        )}
-
-        {useLiveData && marketAddresses.length === 0 && !isLoading && (
-          <div className="text-center py-20">
-            <div className="inline-block bg-surface-card/50 border border-border rounded-lg px-8 py-6">
-              <p className="font-mono text-xs tracking-widest uppercase text-text-dim mb-2">
-                No active markets
-              </p>
-              <p className="text-text-dim text-sm">
-                Create a market using the admin scripts to get started.
-              </p>
+      <div className="flex gap-3 px-6 md:px-12 pb-6 overflow-x-auto hide-scrollbar">
+        {UPCOMING_RACES.map((race) => (
+          <div key={race.id} className="flex-none w-[260px] bg-surface border border-border rounded-xl p-4 cursor-pointer hover:border-border-bright hover:-translate-y-0.5 transition-all">
+            <div className="flex items-center justify-between mb-2.5">
+              <span className="font-mono text-[10px] tracking-[1.5px] uppercase text-gold bg-gold/10 border border-gold/25 px-2 py-0.5 rounded-full">{race.time}</span>
+              <span className="font-mono text-[10px] text-text-dim">{race.runners} runners</span>
+            </div>
+            <div className="font-serif text-base font-semibold text-text-primary mb-0.5">{race.name}</div>
+            <div className="font-mono text-[10px] text-text-dim mb-3.5">{race.venue}</div>
+            <div className="flex items-center justify-between bg-surface-2 rounded-lg px-3 py-2">
+              <div>
+                <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px]">Favourite</div>
+                <div className="text-xs font-medium text-text-primary mt-0.5">{race.fav}</div>
+              </div>
+              <div className="font-mono text-sm text-gold font-semibold">{race.favOdds}</div>
             </div>
           </div>
-        )}
+        ))}
+      </div>
 
-        {useLiveData && isLoading && (
-          <div className="text-center py-20 text-text-dim">
-            <p className="font-mono text-xs tracking-widest uppercase animate-pulse">
-              Loading markets from chain...
-            </p>
+      <div className="h-px bg-border mx-6 md:mx-12" />
+
+      {/* ═══ POPULAR MARKETS ═══ */}
+      <div className="flex items-center justify-between px-6 md:px-12 pt-5 pb-3">
+        <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-text-dim">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold-dim mr-2 align-middle" />
+          Popular Markets
+        </span>
+        <a className="font-mono text-[10px] tracking-[1.5px] uppercase text-gold cursor-pointer hover:text-gold-dim">See all</a>
+      </div>
+
+      <div className="flex gap-4 px-6 md:px-12 pb-10 overflow-x-auto hide-scrollbar">
+        {POPULAR_MARKETS.map((market) => (
+          <div key={market.id} className="flex-none w-[320px] bg-surface border border-border rounded-xl overflow-hidden cursor-pointer hover:border-border-bright hover:-translate-y-0.5 transition-all">
+            {/* Banner */}
+            <div className="flex items-start justify-between px-5 py-4">
+              <div>
+                <div className="font-serif text-[17px] font-bold text-text-primary mb-0.5">{market.name}</div>
+                <div className="font-mono text-[10px] text-text-dim">{market.venue}</div>
+              </div>
+              <div className="text-right">
+                <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px]">Volume</div>
+                <div className="font-mono text-base text-gold font-semibold">{market.volume}</div>
+              </div>
+            </div>
+
+            {/* Runners */}
+            <div className="px-5 pb-4">
+              {market.horses.map((horse, hi) => (
+                <div key={hi} className={`flex items-center justify-between py-1.5 ${hi < market.horses.length - 1 ? "border-b border-border" : ""}`}>
+                  <div className="flex items-center gap-2.5">
+                    <GateNum gate={horse.gate} />
+                    <div>
+                      <div className="text-xs font-medium text-text-primary">{horse.name}</div>
+                      <div className="font-mono text-[10px] text-text-dim">{horse.jockey}</div>
+                    </div>
+                  </div>
+                  <button className="font-mono text-xs font-semibold text-gold bg-gold/10 border border-gold/25 px-3.5 py-1 rounded-lg hover:bg-gold/20 transition-colors">
+                    {horse.odds}
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            {/* Status bar */}
+            <div className="flex items-center justify-between px-5 py-2.5 bg-surface-2 border-t border-border">
+              <span className={`font-mono text-[9px] tracking-[1.5px] uppercase px-2 py-0.5 rounded-full ${
+                market.status === "live"
+                  ? "text-accent-green bg-accent-green/10 border border-accent-green/30"
+                  : "text-gold bg-gold/10 border border-gold/25"
+              }`}>
+                {market.status === "live" ? "Live" : "Upcoming"}
+              </span>
+              <span className="font-mono text-[10px] text-text-dim">{market.runners} runners</span>
+            </div>
           </div>
-        )}
+        ))}
       </div>
     </main>
   );

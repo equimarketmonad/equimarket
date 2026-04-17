@@ -338,11 +338,11 @@ export default function Home() {
 
       <div className="h-px bg-border mx-6 md:mx-12" />
 
-      {/* ═══ ALL MARKETS ═══ */}
+      {/* ═══ TOP TRACKS ═══ */}
       <div className="flex items-center justify-between px-6 md:px-12 pt-5 pb-3">
         <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-text-dim">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold-dim mr-2 align-middle" />
-          All Markets
+          Top Tracks
         </span>
       </div>
 

@@ -232,13 +232,27 @@ export default function Home() {
                       </div>
                       <div className="font-serif text-lg font-bold text-text-primary mb-0.5 truncate">{m.meta?.course}</div>
                       <div className="font-mono text-[10px] text-text-dim mb-3 truncate">{m.meta?.name} — {m.numOutcomes} runners</div>
-                      <div className="flex items-center justify-between bg-surface-2 rounded-lg px-3 py-2">
-                        <div>
-                          <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px]">Favourite</div>
-                          <div className="text-xs font-medium text-text-primary mt-0.5 truncate max-w-[120px]">{m.favourite.name}</div>
-                        </div>
-                        <div className="font-mono text-sm text-gold font-semibold">{m.favourite.odds ? `${Math.round(parseFloat(m.favourite.odds))}/1` : "---"}</div>
-                      </div>
+                      {(() => {
+                        const favRunner = m.meta?.runners?.[m.favourite.index];
+                        const odds = m.favourite.odds ? Math.round(parseFloat(m.favourite.odds)) + "/1" : "---";
+                        return (
+                          <div className="bg-surface-2 rounded-lg px-3 py-2.5">
+                            <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px] mb-1.5">Favourite</div>
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center gap-2.5">
+                                <GateNum gate={favRunner?.draw || favRunner?.number || m.favourite.index + 1} />
+                                <div>
+                                  <div className="text-xs font-medium text-text-primary">{m.favourite.name}</div>
+                                  <div className="font-mono text-[10px] text-text-dim">{m.favourite.jockey}</div>
+                                </div>
+                              </div>
+                              <span className="font-mono text-xs font-semibold text-gold bg-gold/10 border border-gold/25 px-3.5 py-1 rounded-lg">
+                                {odds}
+                              </span>
+                            </div>
+                          </div>
+                        );
+                      })()}
                     </div>
                   );
                 })

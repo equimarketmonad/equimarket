@@ -39,14 +39,12 @@ export class MarketIndexer {
       // Fetch all addresses
       const addresses = await this.factory.getMarkets(0n, count);
 
-      // Read data for each market — 2 at a time with delay to stay under
-      // Monad's 15 req/sec rate limit (each market makes 7 RPC calls)
-      const CHUNK_SIZE = 2;
-      for (let i = 0; i < addresses.length; i += CHUNK_SIZE) {
-        const chunk = addresses.slice(i, i + CHUNK_SIZE);
-        await Promise.all(chunk.map((addr) => this.refreshMarket(addr)));
-        // Pause between chunks to respect rate limits
-        if (i + CHUNK_SIZE < addresses.length) await sleep(1200);
+      // Read one market at a time with a pause between each.
+      // Each market makes 8 parallel RPC calls — Monad caps at 15/sec,
+      // so we serialize markets and wait 1s between them.
+      for (let i = 0; i < addresses.length; i++) {
+        await this.refreshMarket(addresses[i]);
+        if (i < addresses.length - 1) await sleep(1000);
       }
 
       this.lastRefresh = Date.now();
@@ -63,25 +61,15 @@ export class MarketIndexer {
     try {
       const market = new ethers.Contract(address, MARKET_ABI, this.provider);
 
-      const [
-        raceId,
-        numOutcomes,
-        closesAt,
-        settled,
-        cancelled,
-        winningOutcome,
-        totalDeposited,
-        prices,
-      ] = await Promise.all([
-        market.raceId(),
-        market.numOutcomes(),
-        market.closesAt(),
-        market.settled(),
-        market.cancelled(),
-        market.winningOutcome(),
-        market.totalDeposited(),
-        market.getAllPrices(),
-      ]);
+      // Sequential calls to stay well under Monad's 15 req/sec limit
+      const raceId = await market.raceId();
+      const numOutcomes = await market.numOutcomes();
+      const closesAt = await market.closesAt();
+      const settled = await market.settled();
+      const cancelled = await market.cancelled();
+      const winningOutcome = await market.winningOutcome();
+      const totalDeposited = await market.totalDeposited();
+      const prices = await market.getAllPrices();
 
       const numOut = Number(numOutcomes);
       const priceArray = prices.map((p) => Number(p) / 1e18);

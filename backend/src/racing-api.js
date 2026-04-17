@@ -99,7 +99,9 @@ export class RacingAPIClient {
    */
   normalizeRace(racecard) {
     const offDt = new Date(racecard.off_dt);
-    const closesAt = Math.floor(offDt.getTime() / 1000); // Unix timestamp
+    // Betting stays open until we settle with confirmed results from the API.
+    // Set closesAt far in the future so the contract never blocks bets.
+    const closesAt = Math.floor(offDt.getTime() / 1000) + 7 * 24 * 60 * 60;
 
     return {
       // Identifiers

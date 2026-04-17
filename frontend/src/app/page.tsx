@@ -237,7 +237,7 @@ export default function Home() {
                         const odds = m.favourite.odds ? Math.round(parseFloat(m.favourite.odds)) + "/1" : "---";
                         return (
                           <div className="bg-surface-2 rounded-lg px-3 py-2.5">
-                            <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px] mb-1.5">Favourite</div>
+                            <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px] mb-1.5">Favorite</div>
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-2.5">
                                 <GateNum gate={favRunner?.draw || favRunner?.number || m.favourite.index + 1} />
@@ -324,7 +324,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-center justify-between px-5 py-2.5 bg-surface-2 border-t border-border">
                       <span className="font-mono text-[9px] tracking-[1.5px] uppercase px-2 py-0.5 rounded-full text-accent-green bg-accent-green/10 border border-accent-green/30">
-                        Live
+                        Market Open
                       </span>
                       <span className="font-mono text-[10px] text-text-dim">{m.numOutcomes} runners</span>
                     </div>
@@ -404,7 +404,7 @@ export default function Home() {
                       ? "text-accent-green bg-accent-green/10 border border-accent-green/30"
                       : "text-gold bg-gold/10 border border-gold/25"
                   }`}>
-                    {!m.settled && !m.cancelled ? "Live" : "Settled"}
+                    {!m.settled && !m.cancelled ? "Market Open" : "Settled"}
                   </span>
                   <span className="font-mono text-[10px] text-text-dim">{m.numOutcomes} runners</span>
                 </div>

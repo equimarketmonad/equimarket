@@ -223,18 +223,22 @@ export default function Home() {
                     >
                       <div className="flex items-center justify-between mb-2.5">
                         <span className="font-mono text-[10px] tracking-[1.5px] uppercase px-2 py-0.5 rounded-full text-accent-green bg-accent-green/10 border border-accent-green/30">
-                          {minsUntil <= 1 ? "Off soon" : `Off in ${minsUntil}m`}
+                          {minsUntil <= 1 ? "Race off soon" : `Race off in ${minsUntil}m`}
                         </span>
                         <span className="font-mono text-[10px] text-text-dim">{m.numOutcomes} runners</span>
                       </div>
                       <div className="font-serif text-base font-semibold text-text-primary mb-0.5 truncate">{m.meta?.name}</div>
-                      <div className="font-mono text-[10px] text-text-dim mb-3.5">{m.meta?.course} — {localTime(m.meta?.offDt, m.meta?.offTime)}</div>
+                      <div className="font-mono text-[10px] text-text-dim mb-1.5">{m.meta?.course}</div>
+                      <div className="flex items-center gap-1.5 mb-3.5">
+                        <RegionBadge region={m.meta?.region} />
+                        <span className="font-mono text-[10px] text-text-dim">R{raceNumMap.get(m.address) || "?"}</span>
+                      </div>
                       <div className="flex items-center justify-between bg-surface-2 rounded-lg px-3 py-2">
                         <div>
                           <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px]">Favourite</div>
                           <div className="text-xs font-medium text-text-primary mt-0.5 truncate max-w-[120px]">{m.favourite.name}</div>
                         </div>
-                        <div className="font-mono text-sm text-gold font-semibold">${m.favourite.odds}</div>
+                        <div className="font-mono text-sm text-gold font-semibold">{m.favourite.odds ? `${Math.round(parseFloat(m.favourite.odds))}/1` : "---"}</div>
                       </div>
                     </div>
                   );

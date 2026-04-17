@@ -39,6 +39,27 @@ function formatPool(dollars: number): string {
   return dollars.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
+const REGION_FLAGS: Record<string, { flag: string; label: string }> = {
+  GB: { flag: "\u{1F3F4}\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}", label: "GB" },   // England flag
+  IRE: { flag: "\u{1F1EE}\u{1F1EA}", label: "IRE" },  // Ireland
+  FR: { flag: "\u{1F1EB}\u{1F1F7}", label: "FR" },    // France
+  US: { flag: "\u{1F1FA}\u{1F1F8}", label: "US" },
+  AUS: { flag: "\u{1F1E6}\u{1F1FA}", label: "AUS" },
+  HK: { flag: "\u{1F1ED}\u{1F1F0}", label: "HK" },
+  UAE: { flag: "\u{1F1E6}\u{1F1EA}", label: "UAE" },
+  JPN: { flag: "\u{1F1EF}\u{1F1F5}", label: "JPN" },
+};
+
+function RegionBadge({ region }: { region?: string }) {
+  const r = REGION_FLAGS[region || ""] || { flag: "\u{1F3C7}", label: region || "" };
+  return (
+    <span className="font-mono text-[10px] text-text-dim whitespace-nowrap">
+      <span className="text-[13px] mr-1 align-middle">{r.flag}</span>
+      {r.label}
+    </span>
+  );
+}
+
 export default function Home() {
   const { data, isLoading, error } = useMarketsAPI();
   const [expandedMarket, setExpandedMarket] = useState<`0x${string}` | null>(null);
@@ -48,6 +69,22 @@ export default function Home() {
   const now = Date.now() / 1000;
   const racingNow = markets.filter((m) => !m.settled && !m.cancelled && m.closesAt < now);
   const tickerMarkets = racingNow.length > 0 ? racingNow : markets.filter((m) => !m.settled && !m.cancelled).slice(0, 6);
+
+  // Compute race number per course (R1, R2, R3… based on off-time order)
+  const raceNumMap = new Map<string, number>();
+  if (markets.length > 0) {
+    const byCourse: Record<string, typeof markets> = {};
+    for (const m of markets) {
+      const course = m.meta?.course || "Unknown";
+      if (!byCourse[course]) byCourse[course] = [];
+      byCourse[course].push(m);
+    }
+    for (const course of Object.keys(byCourse)) {
+      byCourse[course]
+        .sort((a, b) => a.closesAt - b.closesAt)
+        .forEach((m, i) => raceNumMap.set(m.address, i + 1));
+    }
+  }
 
   return (
     <main className="min-h-screen">
@@ -104,15 +141,18 @@ export default function Home() {
                 onClick={() => setExpandedMarket(m.address as `0x${string}`)}
                 className={`flex-none flex items-start gap-5 px-6 py-3.5 min-w-[340px] cursor-pointer hover:bg-gold/[0.04] transition-colors ${i > 0 ? "border-l border-border" : "border-x border-border"}`}
               >
-                <div className={`font-mono text-[9px] tracking-[2px] uppercase px-2 py-0.5 rounded-full flex items-center gap-1.5 whitespace-nowrap ${
-                  !m.settled && !m.cancelled
-                    ? "text-accent-green bg-accent-green/10 border border-accent-green/30"
-                    : m.settled
-                    ? "text-gold bg-gold/10 border border-gold/25"
-                    : "text-text-dim bg-text-dim/10 border border-text-dim/30"
-                }`}>
-                  {!m.settled && !m.cancelled && <span className="w-[5px] h-[5px] rounded-full bg-accent-green animate-pulse" />}
-                  {!m.settled && !m.cancelled ? "Live" : m.settled ? "Settled" : "Cancelled"}
+                <div className="flex flex-col items-center gap-1 shrink-0">
+                  <div className={`font-mono text-[9px] tracking-[2px] uppercase px-2 py-0.5 rounded-full flex items-center gap-1.5 whitespace-nowrap ${
+                    !m.settled && !m.cancelled
+                      ? "text-accent-green bg-accent-green/10 border border-accent-green/30"
+                      : m.settled
+                      ? "text-gold bg-gold/10 border border-gold/25"
+                      : "text-text-dim bg-text-dim/10 border border-text-dim/30"
+                  }`}>
+                    {!m.settled && !m.cancelled && <span className="w-[5px] h-[5px] rounded-full bg-accent-green animate-pulse" />}
+                    R{raceNumMap.get(m.address) || "?"}
+                  </div>
+                  <RegionBadge region={m.meta?.region} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="font-serif text-sm font-semibold text-text-primary truncate">{m.meta?.name}</div>

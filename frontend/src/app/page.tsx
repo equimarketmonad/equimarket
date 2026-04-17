@@ -44,8 +44,10 @@ export default function Home() {
   const [expandedMarket, setExpandedMarket] = useState<`0x${string}` | null>(null);
 
   const markets = data?.all || [];
-  const liveMarkets = data?.live || [];
-  const tickerMarkets = liveMarkets.length > 0 ? liveMarkets : markets.slice(0, 6);
+  // "Racing now" = off time has passed (closesAt < now) but not yet settled — horses are on the track
+  const now = Date.now() / 1000;
+  const racingNow = markets.filter((m) => !m.settled && !m.cancelled && m.closesAt < now);
+  const tickerMarkets = racingNow.length > 0 ? racingNow : markets.filter((m) => !m.settled && !m.cancelled).slice(0, 6);
 
   return (
     <main className="min-h-screen">
@@ -70,7 +72,7 @@ export default function Home() {
       <div className="flex items-center justify-between px-6 md:px-12 pt-5 pb-3">
         <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-text-dim">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent-green shadow-[0_0_8px_rgba(76,175,122,0.5)] animate-pulse mr-2 align-middle" />
-          Live Races
+          {racingNow.length > 0 ? "Racing Now" : "Live Races"}
         </span>
         {markets.length > 0 && (
           <span className="font-mono text-[10px] tracking-[1.5px] uppercase text-gold">

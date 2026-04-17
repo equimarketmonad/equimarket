@@ -53,7 +53,6 @@ export interface APIMarket {
   cancelled: boolean;
   winningOutcome: number;
   totalDeposited: number;
-  baseFeeRate: number;
   prices: number[];
   hasMeta: boolean;
   meta: APIMarketMeta | null;

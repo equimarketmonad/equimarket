@@ -6,6 +6,8 @@ import { ethers } from "ethers";
 import { FACTORY_ABI, MARKET_ABI, USDC_ABI } from "./contracts.js";
 import { getRaceMetadata } from "./metadata.js";
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
 export class MarketIndexer {
   constructor({ rpcUrl, factoryAddress, usdcAddress, oracleAddress }) {
     this.provider = new ethers.JsonRpcProvider(rpcUrl);
@@ -37,15 +39,18 @@ export class MarketIndexer {
       // Fetch all addresses
       const addresses = await this.factory.getMarkets(0n, count);
 
-      // Read data for each market (batched with Promise.all in chunks)
-      const CHUNK_SIZE = 5;
+      // Read data for each market — 2 at a time with delay to stay under
+      // Monad's 15 req/sec rate limit (each market makes 7 RPC calls)
+      const CHUNK_SIZE = 2;
       for (let i = 0; i < addresses.length; i += CHUNK_SIZE) {
         const chunk = addresses.slice(i, i + CHUNK_SIZE);
         await Promise.all(chunk.map((addr) => this.refreshMarket(addr)));
+        // Pause between chunks to respect rate limits
+        if (i + CHUNK_SIZE < addresses.length) await sleep(1200);
       }
 
       this.lastRefresh = Date.now();
-      console.log(`[indexer] Refreshed ${numMarkets} markets`);
+      console.log(`[indexer] Refreshed ${this.markets.size} / ${numMarkets} markets`);
     } catch (e) {
       console.error("[indexer] Refresh failed:", e.message);
     }
@@ -66,7 +71,6 @@ export class MarketIndexer {
         cancelled,
         winningOutcome,
         totalDeposited,
-        baseFeeRate,
         prices,
       ] = await Promise.all([
         market.raceId(),
@@ -76,7 +80,6 @@ export class MarketIndexer {
         market.cancelled(),
         market.winningOutcome(),
         market.totalDeposited(),
-        market.baseFeeRate(),
         market.getAllPrices(),
       ]);
 
@@ -102,7 +105,6 @@ export class MarketIndexer {
         cancelled,
         winningOutcome: Number(winningOutcome),
         totalDeposited: Number(totalDeposited) / 1e6, // USDC → dollars
-        baseFeeRate: Number(baseFeeRate),
         prices: priceArray,
         hasMeta: !!meta,
         meta: meta

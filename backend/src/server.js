@@ -102,6 +102,12 @@ async function start() {
   });
 }
 
+// Catch unhandled rejections (e.g. RPC rate-limit errors from event listeners)
+// so they don't crash the server
+process.on("unhandledRejection", (err) => {
+  console.warn("[server] Unhandled rejection (non-fatal):", err?.message || err);
+});
+
 start().catch((e) => {
   console.error("[server] Fatal:", e.message);
   process.exit(1);

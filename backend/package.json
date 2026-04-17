@@ -1,17 +1,19 @@
 {
   "name": "silks-stakes-backend",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/index.js",
-    "start": "node src/index.js",
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
     "fetch-races": "node src/fetch-races.js",
     "create-markets": "node src/create-markets.js",
     "settle": "node src/settle-markets.js"
   },
   "dependencies": {
     "ethers": "^6.13.0",
-    "dotenv": "^16.4.0"
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0",
+    "cors": "^2.8.5"
   }
 }

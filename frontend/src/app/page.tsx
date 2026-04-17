@@ -221,18 +221,17 @@ export default function Home() {
                       onClick={() => setExpandedMarket(m.address as `0x${string}`)}
                       className="flex-none w-[260px] bg-surface border border-border rounded-xl p-4 cursor-pointer hover:border-border-bright hover:-translate-y-0.5 transition-all"
                     >
-                      <div className="flex items-center justify-between mb-2.5">
+                      <div className="flex items-center justify-between mb-2">
                         <span className="font-mono text-[10px] tracking-[1.5px] uppercase px-2 py-0.5 rounded-full text-accent-green bg-accent-green/10 border border-accent-green/30">
                           {minsUntil <= 1 ? "Race off soon" : `Race off in ${minsUntil}m`}
                         </span>
-                        <span className="font-mono text-[10px] text-text-dim">{m.numOutcomes} runners</span>
+                        <div className="flex items-center gap-2">
+                          <RegionBadge region={m.meta?.region} />
+                          <span className="font-mono text-[10px] text-text-dim">R{raceNumMap.get(m.address) || "?"}</span>
+                        </div>
                       </div>
-                      <div className="font-serif text-base font-semibold text-text-primary mb-0.5 truncate">{m.meta?.name}</div>
-                      <div className="font-mono text-[10px] text-text-dim mb-1.5">{m.meta?.course}</div>
-                      <div className="flex items-center gap-1.5 mb-3.5">
-                        <RegionBadge region={m.meta?.region} />
-                        <span className="font-mono text-[10px] text-text-dim">R{raceNumMap.get(m.address) || "?"}</span>
-                      </div>
+                      <div className="font-serif text-lg font-bold text-text-primary mb-0.5 truncate">{m.meta?.course}</div>
+                      <div className="font-mono text-[10px] text-text-dim mb-3 truncate">{m.meta?.name} — {m.numOutcomes} runners</div>
                       <div className="flex items-center justify-between bg-surface-2 rounded-lg px-3 py-2">
                         <div>
                           <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px]">Favourite</div>
@@ -244,6 +243,80 @@ export default function Home() {
                   );
                 })
               )}
+            </div>
+          </>
+        );
+      })()}
+
+      {/* ═══ POPULAR MARKETS ═══ */}
+      {markets.length > 0 && (() => {
+        const popular = markets
+          .filter((m) => !m.settled && !m.cancelled)
+          .sort((a, b) => b.totalDeposited - a.totalDeposited)
+          .slice(0, 8);
+        if (popular.length === 0) return null;
+        return (
+          <>
+            <div className="flex items-center justify-between px-6 md:px-12 pt-5 pb-3">
+              <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-text-dim">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold mr-2 align-middle" />
+                Popular Markets
+              </span>
+            </div>
+            <div className="flex gap-4 px-6 md:px-12 pb-6 overflow-x-auto hide-scrollbar">
+              {popular.map((m) => {
+                const runners = (m.meta?.runners || [])
+                  .slice()
+                  .sort((a, b) => b.price - a.price)
+                  .slice(0, 4);
+                return (
+                  <div
+                    key={m.address}
+                    onClick={() => setExpandedMarket(m.address as `0x${string}`)}
+                    className="flex-none w-[320px] bg-surface border border-border rounded-xl overflow-hidden cursor-pointer hover:border-border-bright hover:-translate-y-0.5 transition-all"
+                  >
+                    <div className="flex items-start justify-between px-5 py-4">
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <RegionBadge region={m.meta?.region} />
+                          <span className="font-mono text-[10px] text-text-dim">R{raceNumMap.get(m.address) || "?"}</span>
+                        </div>
+                        <div className="font-serif text-[17px] font-bold text-text-primary mb-0.5 truncate">{m.meta?.course}</div>
+                        <div className="font-mono text-[10px] text-text-dim truncate">{m.meta?.name}</div>
+                      </div>
+                      <div className="text-right ml-3">
+                        <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px]">Pool</div>
+                        <div className="font-mono text-base text-gold font-semibold">${formatPool(m.totalDeposited)}</div>
+                      </div>
+                    </div>
+                    <div className="px-5 pb-4">
+                      {runners.map((runner, hi) => {
+                        const odds = runner.price > 0 ? Math.round(1 / runner.price) + "/1" : "---";
+                        return (
+                          <div key={hi} className={`flex items-center justify-between py-1.5 ${hi < runners.length - 1 ? "border-b border-border" : ""}`}>
+                            <div className="flex items-center gap-2.5">
+                              <GateNum gate={runner.draw || runner.number} />
+                              <div>
+                                <div className="text-xs font-medium text-text-primary">{runner.name}</div>
+                                <div className="font-mono text-[10px] text-text-dim">{runner.jockey}</div>
+                              </div>
+                            </div>
+                            <span className="font-mono text-xs font-semibold text-gold bg-gold/10 border border-gold/25 px-3.5 py-1 rounded-lg">
+                              {odds}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="flex items-center justify-between px-5 py-2.5 bg-surface-2 border-t border-border">
+                      <span className="font-mono text-[9px] tracking-[1.5px] uppercase px-2 py-0.5 rounded-full text-accent-green bg-accent-green/10 border border-accent-green/30">
+                        Live
+                      </span>
+                      <span className="font-mono text-[10px] text-text-dim">{m.numOutcomes} runners</span>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </>
         );

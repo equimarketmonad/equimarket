@@ -174,52 +174,76 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ═══ RACE CARDS ═══ */}
-      <div className="flex items-center justify-between px-6 md:px-12 pt-5 pb-3">
-        <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-text-dim">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold mr-2 align-middle" />
-          Race Cards
-        </span>
-      </div>
-
-      <div className="flex gap-3 px-6 md:px-12 pb-6 overflow-x-auto hide-scrollbar">
-        {isLoading && markets.length === 0 ? (
-          Array.from({ length: 4 }).map((_, i) => (
-            <div key={i} className="flex-none w-[260px] bg-surface border border-border rounded-xl p-4 animate-pulse">
-              <div className="h-4 bg-surface-2 rounded w-20 mb-3" />
-              <div className="h-5 bg-surface-2 rounded w-40 mb-2" />
-              <div className="h-3 bg-surface-2 rounded w-28 mb-4" />
-              <div className="h-10 bg-surface-2 rounded" />
+      {/* ═══ UPCOMING RACES ═══ */}
+      {(() => {
+        // Races within 60 minutes of start, not yet started, sorted soonest first.
+        // Use offDt if available (future markets have closesAt = off time + 7 days),
+        // otherwise fall back to closesAt (current markets where closesAt = off time).
+        const getOffTimestamp = (m: typeof markets[0]) => {
+          if (m.meta?.offDt) {
+            const d = new Date(m.meta.offDt);
+            if (!isNaN(d.getTime())) return d.getTime() / 1000;
+          }
+          return m.closesAt;
+        };
+        const upcoming = markets
+          .filter((m) => {
+            if (m.settled || m.cancelled) return false;
+            const offTs = getOffTimestamp(m);
+            return offTs > now && (offTs - now) <= 3600;
+          })
+          .sort((a, b) => getOffTimestamp(a) - getOffTimestamp(b));
+        if (upcoming.length === 0 && !isLoading) return null;
+        return (
+          <>
+            <div className="flex items-center justify-between px-6 md:px-12 pt-5 pb-3">
+              <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-text-dim">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold mr-2 align-middle" />
+                Upcoming Races
+              </span>
             </div>
-          ))
-        ) : (
-          markets.slice(0, 10).map((m) => (
-            <div
-              key={m.address}
-              onClick={() => setExpandedMarket(m.address as `0x${string}`)}
-              className="flex-none w-[260px] bg-surface border border-border rounded-xl p-4 cursor-pointer hover:border-border-bright hover:-translate-y-0.5 transition-all"
-            >
-              <div className="flex items-center justify-between mb-2.5">
-                <span className={`font-mono text-[10px] tracking-[1.5px] uppercase px-2 py-0.5 rounded-full ${
-                  !m.settled && !m.cancelled
-                    ? "text-accent-green bg-accent-green/10 border border-accent-green/30"
-                    : "text-gold bg-gold/10 border border-gold/25"
-                }`}>{localTime(m.meta?.offDt, m.meta?.offTime)}</span>
-                <span className="font-mono text-[10px] text-text-dim">{m.numOutcomes} runners</span>
-              </div>
-              <div className="font-serif text-base font-semibold text-text-primary mb-0.5 truncate">{m.meta?.name}</div>
-              <div className="font-mono text-[10px] text-text-dim mb-3.5">{m.meta?.course} — {m.meta?.date}</div>
-              <div className="flex items-center justify-between bg-surface-2 rounded-lg px-3 py-2">
-                <div>
-                  <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px]">Favourite</div>
-                  <div className="text-xs font-medium text-text-primary mt-0.5 truncate max-w-[120px]">{m.favourite.name}</div>
-                </div>
-                <div className="font-mono text-sm text-gold font-semibold">${m.favourite.odds}</div>
-              </div>
+            <div className="flex gap-3 px-6 md:px-12 pb-6 overflow-x-auto hide-scrollbar">
+              {isLoading && markets.length === 0 ? (
+                Array.from({ length: 4 }).map((_, i) => (
+                  <div key={i} className="flex-none w-[260px] bg-surface border border-border rounded-xl p-4 animate-pulse">
+                    <div className="h-4 bg-surface-2 rounded w-20 mb-3" />
+                    <div className="h-5 bg-surface-2 rounded w-40 mb-2" />
+                    <div className="h-3 bg-surface-2 rounded w-28 mb-4" />
+                    <div className="h-10 bg-surface-2 rounded" />
+                  </div>
+                ))
+              ) : (
+                upcoming.map((m) => {
+                  const minsUntil = Math.max(0, Math.round((getOffTimestamp(m) - now) / 60));
+                  return (
+                    <div
+                      key={m.address}
+                      onClick={() => setExpandedMarket(m.address as `0x${string}`)}
+                      className="flex-none w-[260px] bg-surface border border-border rounded-xl p-4 cursor-pointer hover:border-border-bright hover:-translate-y-0.5 transition-all"
+                    >
+                      <div className="flex items-center justify-between mb-2.5">
+                        <span className="font-mono text-[10px] tracking-[1.5px] uppercase px-2 py-0.5 rounded-full text-accent-green bg-accent-green/10 border border-accent-green/30">
+                          {minsUntil <= 1 ? "Off soon" : `Off in ${minsUntil}m`}
+                        </span>
+                        <span className="font-mono text-[10px] text-text-dim">{m.numOutcomes} runners</span>
+                      </div>
+                      <div className="font-serif text-base font-semibold text-text-primary mb-0.5 truncate">{m.meta?.name}</div>
+                      <div className="font-mono text-[10px] text-text-dim mb-3.5">{m.meta?.course} — {localTime(m.meta?.offDt, m.meta?.offTime)}</div>
+                      <div className="flex items-center justify-between bg-surface-2 rounded-lg px-3 py-2">
+                        <div>
+                          <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px]">Favourite</div>
+                          <div className="text-xs font-medium text-text-primary mt-0.5 truncate max-w-[120px]">{m.favourite.name}</div>
+                        </div>
+                        <div className="font-mono text-sm text-gold font-semibold">${m.favourite.odds}</div>
+                      </div>
+                    </div>
+                  );
+                })
+              )}
             </div>
-          ))
-        )}
-      </div>
+          </>
+        );
+      })()}
 
       <div className="h-px bg-border mx-6 md:mx-12" />
 

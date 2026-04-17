@@ -34,6 +34,7 @@ export interface APIMarketMeta {
   course: string;
   date: string;
   offTime: string;
+  offDt: string | null;
   region: string;
   pattern: string;
   type: string;

@@ -39,6 +39,17 @@ function formatPool(dollars: number): string {
   return dollars.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
+/** Convert an ISO datetime or raw time string to the user's local time (e.g. "10:45 AM") */
+function localTime(offDt: string | null | undefined, offTime: string | undefined): string {
+  if (offDt) {
+    const d = new Date(offDt);
+    if (!isNaN(d.getTime())) {
+      return d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    }
+  }
+  return offTime || "";
+}
+
 const REGION_FLAGS: Record<string, { flag: string; label: string }> = {
   GB: { flag: "\u{1F3F4}\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}", label: "GB" },   // England flag
   IRE: { flag: "\u{1F1EE}\u{1F1EA}", label: "IRE" },  // Ireland
@@ -193,7 +204,7 @@ export default function Home() {
                   !m.settled && !m.cancelled
                     ? "text-accent-green bg-accent-green/10 border border-accent-green/30"
                     : "text-gold bg-gold/10 border border-gold/25"
-                }`}>{m.meta?.offTime}</span>
+                }`}>{localTime(m.meta?.offDt, m.meta?.offTime)}</span>
                 <span className="font-mono text-[10px] text-text-dim">{m.numOutcomes} runners</span>
               </div>
               <div className="font-serif text-base font-semibold text-text-primary mb-0.5 truncate">{m.meta?.name}</div>

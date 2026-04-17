@@ -102,6 +102,7 @@ export class MarketIndexer {
               course: meta.course,
               date: meta.date,
               offTime: meta.offTime,
+              offDt: meta.offDt || null,
               region: meta.region,
               pattern: meta.pattern,
               type: meta.type,

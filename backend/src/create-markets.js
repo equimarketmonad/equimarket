@@ -172,6 +172,7 @@ function generateFrontendMetadata(deployments) {
       course: race.course,
       date: race.date,
       offTime: race.offTime,
+      offDt: race.offDt,
       region: race.region,
       pattern: race.pattern,
       type: race.type,

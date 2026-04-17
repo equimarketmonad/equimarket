@@ -6,6 +6,8 @@ import { useMarketData, useScratchedStatus, useUserPositions } from "@/hooks/use
 import { useBuyShares, useSellShares, useClaim, useApproveUSDC, useUSDCAllowance, useClaimCancelRefund } from "@/hooks/useMarketActions";
 import { formatUSDC, toShares, toUSDC } from "@/lib/contracts";
 import { getHorseInfo, getBarColor, getRaceName } from "@/lib/horseNames";
+import { useMarketAPI } from "@/hooks/useMarketsAPI";
+import Link from "next/link";
 
 // ── Types ──
 
@@ -48,8 +50,12 @@ export default function RaceCard({ marketAddress, mockData }: RaceCardProps) {
   const [selectedHorse, setSelectedHorse] = useState<number | null>(null);
   const [stakeInput, setStakeInput] = useState("");
   const [mode, setMode] = useState<"buy" | "sell">("buy");
+  const [showDetails, setShowDetails] = useState(false);
 
   const { address: userAddress, isConnected } = useAccount();
+
+  // ── API metadata (course, going, distance, etc.) ──
+  const { data: apiMarket } = useMarketAPI(marketAddress);
 
   // ── On-chain data ──
   const { data: market } = useMarketData(marketAddress);
@@ -182,7 +188,11 @@ export default function RaceCard({ marketAddress, mockData }: RaceCardProps) {
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-3 mb-1">
             <h3 className="font-semibold text-base truncate">
-              {isLive ? getRaceName(market.raceId, marketAddress!) : mockData?.name}
+              {isLive ? (
+                <Link href={`/race/${marketAddress}`} className="hover:text-gold transition-colors">
+                  {getRaceName(market.raceId, marketAddress!)}
+                </Link>
+              ) : mockData?.name}
             </h3>
             <span className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono tracking-wider uppercase whitespace-nowrap ${status.bg} ${status.color}`}>
               <span className={`w-1.5 h-1.5 rounded-full ${status.dot}`} />
@@ -222,6 +232,61 @@ export default function RaceCard({ marketAddress, mockData }: RaceCardProps) {
           </div>
         </div>
       </div>
+
+      {/* Full race details toggle */}
+      {isLive && apiMarket?.meta && (
+        <div className="px-4 md:px-6 border-b border-border">
+          <button
+            onClick={() => setShowDetails(!showDetails)}
+            className="w-full py-2.5 flex items-center justify-between text-text-dim hover:text-text-primary transition-colors"
+          >
+            <span className="font-mono text-[10px] tracking-[1.5px] uppercase">Full Race Details</span>
+            <span className="font-mono text-[11px]">{showDetails ? "−" : "+"}</span>
+          </button>
+          {showDetails && (
+            <div className="pb-3 grid grid-cols-2 gap-x-6 gap-y-2 text-xs">
+              <div>
+                <span className="text-text-dim font-mono text-[10px] uppercase tracking-[1px]">Course</span>
+                <div className="text-text-primary mt-0.5">{apiMarket.meta.course}</div>
+              </div>
+              <div>
+                <span className="text-text-dim font-mono text-[10px] uppercase tracking-[1px]">Region</span>
+                <div className="text-text-primary mt-0.5">{apiMarket.meta.region}</div>
+              </div>
+              <div>
+                <span className="text-text-dim font-mono text-[10px] uppercase tracking-[1px]">Distance</span>
+                <div className="text-text-primary mt-0.5">{apiMarket.meta.distance}f</div>
+              </div>
+              <div>
+                <span className="text-text-dim font-mono text-[10px] uppercase tracking-[1px]">Going</span>
+                <div className="text-text-primary mt-0.5">{apiMarket.meta.going}</div>
+              </div>
+              <div>
+                <span className="text-text-dim font-mono text-[10px] uppercase tracking-[1px]">Surface</span>
+                <div className="text-text-primary mt-0.5">{apiMarket.meta.surface}</div>
+              </div>
+              <div>
+                <span className="text-text-dim font-mono text-[10px] uppercase tracking-[1px]">Type</span>
+                <div className="text-text-primary mt-0.5">{apiMarket.meta.type}</div>
+              </div>
+              {apiMarket.meta.pattern && (
+                <div>
+                  <span className="text-text-dim font-mono text-[10px] uppercase tracking-[1px]">Class</span>
+                  <div className="text-text-primary mt-0.5">{apiMarket.meta.pattern}</div>
+                </div>
+              )}
+              <div>
+                <span className="text-text-dim font-mono text-[10px] uppercase tracking-[1px]">Prize</span>
+                <div className="text-text-primary mt-0.5">{apiMarket.meta.prize}</div>
+              </div>
+              <div>
+                <span className="text-text-dim font-mono text-[10px] uppercase tracking-[1px]">Off Time</span>
+                <div className="text-text-primary mt-0.5">{apiMarket.meta.offTime} ({apiMarket.meta.date})</div>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Horse list */}
       <div className="px-4 md:px-6 py-2">

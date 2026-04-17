@@ -147,51 +147,8 @@ export class MarketIndexer {
     }
   }
 
-  /** Listen for on-chain events to update cache in real-time */
-  async startEventListener() {
-    try {
-      // Listen for new markets
-      this.factory.on("MarketCreated", async (raceId, marketAddr) => {
-        console.log(`[indexer] New market created: ${marketAddr}`);
-        await this.refreshMarket(marketAddr);
-      });
-
-      // For each known market, listen for trades
-      for (const [address] of this.markets) {
-        this.listenToMarket(address);
-      }
-
-      console.log("[indexer] Event listeners active");
-    } catch (e) {
-      console.error("[indexer] Event listener setup failed:", e.message);
-      console.log("[indexer] Falling back to periodic refresh only");
-    }
-  }
-
-  listenToMarket(address) {
-    try {
-      const market = new ethers.Contract(address, MARKET_ABI, this.provider);
-
-      market.on("SharesBought", () => {
-        console.log(`[indexer] Trade on ${address.slice(0, 10)}...`);
-        this.refreshMarket(address);
-      });
-
-      market.on("SharesSold", () => {
-        console.log(`[indexer] Sale on ${address.slice(0, 10)}...`);
-        this.refreshMarket(address);
-      });
-
-      market.on("MarketSettled", () => {
-        console.log(`[indexer] Settled: ${address.slice(0, 10)}...`);
-        this.refreshMarket(address);
-      });
-    } catch {
-      // Events may not be supported on all RPCs
-    }
-  }
-
-  /** Start periodic refresh (fallback for missed events) */
+  /** Start periodic refresh — Monad testnet doesn't support eth_newFilter
+   *  so we skip event listeners and just poll every 30s instead. */
   startPeriodicRefresh(intervalMs = 30000) {
     setInterval(() => this.refresh(), intervalMs);
     console.log(`[indexer] Periodic refresh every ${intervalMs / 1000}s`);

@@ -89,10 +89,7 @@ async function start() {
   await indexer.refresh();
   console.log(`[server] Indexed ${indexer.getAllMarkets().length} markets`);
 
-  // Start event listeners (real-time updates on trades)
-  await indexer.startEventListener();
-
-  // Periodic refresh every 30s as fallback
+  // Periodic refresh every 30s (Monad testnet doesn't support event filters)
   indexer.startPeriodicRefresh(30000);
 
   // Start HTTP server

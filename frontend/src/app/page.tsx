@@ -139,7 +139,7 @@ export default function Home() {
               <div
                 key={m.address}
                 onClick={() => setExpandedMarket(m.address as `0x${string}`)}
-                className={`flex-none flex items-start gap-5 px-6 py-3.5 min-w-[340px] cursor-pointer hover:bg-gold/[0.04] transition-colors ${i > 0 ? "border-l border-border" : "border-x border-border"}`}
+                className={`flex-none flex items-center gap-4 px-5 py-3.5 min-w-[180px] cursor-pointer hover:bg-gold/[0.04] transition-colors ${i > 0 ? "border-l border-border" : "border-x border-border"}`}
               >
                 <div className="flex flex-col items-center gap-1 shrink-0">
                   <div className={`font-mono text-[9px] tracking-[2px] uppercase px-2 py-0.5 rounded-full flex items-center gap-1.5 whitespace-nowrap ${
@@ -155,16 +155,7 @@ export default function Home() {
                   <RegionBadge region={m.meta?.region} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="font-serif text-sm font-semibold text-text-primary truncate">{m.meta?.name}</div>
-                  <div className="font-mono text-[10px] text-text-dim mt-0.5">{m.meta?.course} — {m.meta?.offTime}</div>
-                </div>
-                <div className="text-right whitespace-nowrap">
-                  <div className="font-mono text-[11px] text-gold font-medium">{m.favourite.name}</div>
-                  <div className="font-mono text-[10px] text-text-dim mt-0.5">{m.favourite.pct}% — ${m.favourite.odds}</div>
-                </div>
-                <div className="text-right whitespace-nowrap">
-                  <div className="font-mono text-[9px] text-text-dim tracking-[1px] uppercase">Pool</div>
-                  <div className="font-mono text-[13px] text-text-primary font-medium mt-0.5">${formatPool(m.totalDeposited)}</div>
+                  <div className="font-serif text-sm font-semibold text-text-primary truncate">{m.meta?.course}</div>
                 </div>
               </div>
             ))

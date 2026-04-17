@@ -8,7 +8,7 @@ import { useMarketAddresses } from "@/hooks/useMarkets";
 import { CONTRACTS } from "@/lib/contracts";
 
 // ── Design mode: set to true to preview the branded homepage ──
-const DESIGN_MODE = false;
+const DESIGN_MODE = true;
 
 // Racing saddle cloth colors
 const GATE_COLORS: Record<number, { bg: string; text: string }> = {

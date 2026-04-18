@@ -251,12 +251,12 @@ export default function Home() {
                         }`}>
                           {formatTimeLabel(offTs)}
                         </span>
-                        <div className="flex items-center gap-2">
-                          <RegionBadge region={m.meta?.region} />
-                          <span className="font-mono text-[10px] text-text-dim">R{raceNumMap.get(m.address) || "?"}</span>
-                        </div>
+                        <RegionBadge region={m.meta?.region} />
                       </div>
-                      <div className="font-serif text-lg font-bold text-text-primary mb-0.5 truncate">{m.meta?.course}</div>
+                      <div className="flex items-center gap-2 mb-0.5">
+                        <span className="font-mono text-sm font-bold text-gold">R{raceNumMap.get(m.address) || "?"}</span>
+                        <span className="font-serif text-lg font-bold text-text-primary truncate">{m.meta?.course}</span>
+                      </div>
                       <div className="font-mono text-[10px] text-text-dim mb-3 truncate">{m.meta?.name} — {m.numOutcomes} runners</div>
                       {(() => {
                         const favRunner = m.meta?.runners?.[m.favourite.index];

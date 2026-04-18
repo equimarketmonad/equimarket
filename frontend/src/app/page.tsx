@@ -190,14 +190,30 @@ export default function Home() {
 
       {/* ═══ UPCOMING RACES ═══ */}
       {(() => {
-        // Races within 60 minutes of start, not yet started, sorted soonest first.
-        const upcoming = activeMarkets
-          .filter((m) => {
-            const offTs = getOffTimestamp(m);
-            return offTs > now && (offTs - now) <= 3600;
-          })
+        // Races that haven't started yet, sorted soonest first.
+        const allFuture = activeMarkets
+          .filter((m) => getOffTimestamp(m) > now)
           .sort((a, b) => getOffTimestamp(a) - getOffTimestamp(b));
+
+        // If there are races within 60 minutes, show those.
+        // Otherwise, show the 10 soonest future races.
+        const imminentRaces = allFuture.filter((m) => (getOffTimestamp(m) - now) <= 3600);
+        const upcoming = imminentRaces.length > 0 ? imminentRaces : allFuture.slice(0, 10);
         if (upcoming.length === 0 && !isLoading) return null;
+
+        // Format time-until-race in a human-friendly way
+        const formatTimeLabel = (offTs: number) => {
+          const diff = offTs - now;
+          if (diff <= 60) return "Race off soon";
+          const mins = Math.round(diff / 60);
+          if (mins < 60) return `Race off in ${mins}m`;
+          const hrs = Math.floor(mins / 60);
+          const remainMins = mins % 60;
+          if (hrs < 24) return remainMins > 0 ? `Starts in ${hrs}h ${remainMins}m` : `Starts in ${hrs}h`;
+          const days = Math.floor(hrs / 24);
+          return `Starts in ${days}d`;
+        };
+
         return (
           <>
             <div className="flex items-center justify-between px-6 md:px-12 pt-5 pb-3">
@@ -205,6 +221,7 @@ export default function Home() {
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold mr-2 align-middle" />
                 Upcoming Races
               </span>
+              <span className="font-mono text-[10px] text-text-dim">{upcoming.length} race{upcoming.length !== 1 ? "s" : ""}</span>
             </div>
             <div className="flex gap-3 px-6 md:px-12 pb-6 overflow-x-auto hide-scrollbar">
               {isLoading && markets.length === 0 ? (
@@ -218,7 +235,8 @@ export default function Home() {
                 ))
               ) : (
                 upcoming.map((m) => {
-                  const minsUntil = Math.max(0, Math.round((getOffTimestamp(m) - now) / 60));
+                  const offTs = getOffTimestamp(m);
+                  const isImminent = (offTs - now) <= 3600; // within 1 hour
                   return (
                     <div
                       key={m.address}
@@ -226,8 +244,12 @@ export default function Home() {
                       className="flex-none w-[260px] bg-surface border border-border rounded-xl p-4 cursor-pointer hover:border-border-bright hover:-translate-y-0.5 transition-all"
                     >
                       <div className="flex items-center justify-between mb-2">
-                        <span className="font-mono text-[10px] tracking-[1.5px] uppercase px-2 py-0.5 rounded-full text-accent-green bg-accent-green/10 border border-accent-green/30">
-                          {minsUntil <= 1 ? "Race off soon" : `Race off in ${minsUntil}m`}
+                        <span className={`font-mono text-[10px] tracking-[1.5px] uppercase px-2 py-0.5 rounded-full border ${
+                          isImminent
+                            ? "text-accent-green bg-accent-green/10 border-accent-green/30"
+                            : "text-gold bg-gold/10 border-gold/25"
+                        }`}>
+                          {formatTimeLabel(offTs)}
                         </span>
                         <div className="flex items-center gap-2">
                           <RegionBadge region={m.meta?.region} />

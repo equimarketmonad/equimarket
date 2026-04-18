@@ -34,7 +34,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "0141",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -56,7 +58,9 @@
         "headgear": "b",
         "officialRating": "-",
         "form": "1-1673",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -78,7 +82,9 @@
         "headgear": "tb",
         "officialRating": "-",
         "form": "224295",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -100,7 +106,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "11",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -122,7 +130,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "5-3481",
-        "lastRun": "7"
+        "lastRun": "7",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -144,7 +154,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "7-6342",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -166,7 +178,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "173",
-        "lastRun": "7"
+        "lastRun": "7",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -188,7 +202,9 @@
         "headgear": "b",
         "officialRating": "-",
         "form": "883",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -210,7 +226,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "105",
-        "lastRun": "7"
+        "lastRun": "7",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -232,7 +250,9 @@
         "headgear": "b",
         "officialRating": "-",
         "form": "324322",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -254,7 +274,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "41",
-        "lastRun": "42"
+        "lastRun": "42",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -276,7 +298,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "22",
-        "lastRun": "7"
+        "lastRun": "7",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -298,7 +322,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "8358",
-        "lastRun": "7"
+        "lastRun": "7",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -337,7 +363,9 @@
         "headgear": "",
         "officialRating": "118",
         "form": "11-542",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -359,7 +387,9 @@
         "headgear": "",
         "officialRating": "118",
         "form": "311-75",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -381,7 +411,9 @@
         "headgear": "",
         "officialRating": "116",
         "form": "189-48",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -403,7 +435,9 @@
         "headgear": "b",
         "officialRating": "116",
         "form": "53-117",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -425,7 +459,9 @@
         "headgear": "tv",
         "officialRating": "115",
         "form": "51411-",
-        "lastRun": "165"
+        "lastRun": "165",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -447,7 +483,9 @@
         "headgear": "",
         "officialRating": "115",
         "form": "42-135",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -469,7 +507,9 @@
         "headgear": "",
         "officialRating": "113",
         "form": "42050-",
-        "lastRun": "182"
+        "lastRun": "182",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -491,7 +531,9 @@
         "headgear": "t",
         "officialRating": "112",
         "form": "62-432",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -513,7 +555,9 @@
         "headgear": "",
         "officialRating": "110",
         "form": "10-457",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -535,7 +579,9 @@
         "headgear": "tb",
         "officialRating": "107",
         "form": "4305-4",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -557,7 +603,9 @@
         "headgear": "t",
         "officialRating": "118",
         "form": "14164-",
-        "lastRun": "168"
+        "lastRun": "168",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -579,7 +627,9 @@
         "headgear": "",
         "officialRating": "112",
         "form": "155-21",
-        "lastRun": "35"
+        "lastRun": "35",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -601,7 +651,9 @@
         "headgear": "",
         "officialRating": "112",
         "form": "302-97",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -623,7 +675,9 @@
         "headgear": "",
         "officialRating": "108",
         "form": "14-826",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -662,7 +716,9 @@
         "headgear": "",
         "officialRating": "158",
         "form": "33155P",
-        "lastRun": "8"
+        "lastRun": "8",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -684,7 +740,9 @@
         "headgear": "tp",
         "officialRating": "151",
         "form": "2-1140",
-        "lastRun": "38"
+        "lastRun": "38",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -706,7 +764,9 @@
         "headgear": "t",
         "officialRating": "134",
         "form": "-24213",
-        "lastRun": "77"
+        "lastRun": "77",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -728,7 +788,9 @@
         "headgear": "t",
         "officialRating": "132",
         "form": "665443",
-        "lastRun": "9"
+        "lastRun": "9",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -750,7 +812,9 @@
         "headgear": "t",
         "officialRating": "132",
         "form": "F-1315",
-        "lastRun": "153"
+        "lastRun": "153",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -772,7 +836,9 @@
         "headgear": "t",
         "officialRating": "132",
         "form": "-1P3U1",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -794,7 +860,9 @@
         "headgear": "",
         "officialRating": "132",
         "form": "129512",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -816,7 +884,9 @@
         "headgear": "v",
         "officialRating": "132",
         "form": "-U62P3",
-        "lastRun": "42"
+        "lastRun": "42",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -838,7 +908,9 @@
         "headgear": "ht",
         "officialRating": "132",
         "form": "756223",
-        "lastRun": "49"
+        "lastRun": "49",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -877,7 +949,9 @@
         "headgear": "",
         "officialRating": "140",
         "form": "235147",
-        "lastRun": "1"
+        "lastRun": "1",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -899,7 +973,9 @@
         "headgear": "",
         "officialRating": "133",
         "form": "-31522",
-        "lastRun": "44"
+        "lastRun": "44",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -921,7 +997,9 @@
         "headgear": "t",
         "officialRating": "130",
         "form": "F12430",
-        "lastRun": "37"
+        "lastRun": "37",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -943,7 +1021,9 @@
         "headgear": "",
         "officialRating": "128",
         "form": "16/11P",
-        "lastRun": "35"
+        "lastRun": "35",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -965,7 +1045,9 @@
         "headgear": "p",
         "officialRating": "126",
         "form": "4-2331",
-        "lastRun": "49"
+        "lastRun": "49",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -987,7 +1069,9 @@
         "headgear": "p",
         "officialRating": "125",
         "form": "-28221",
-        "lastRun": "35"
+        "lastRun": "35",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -1009,7 +1093,9 @@
         "headgear": "tp",
         "officialRating": "124",
         "form": "-U245P",
-        "lastRun": "12"
+        "lastRun": "12",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -1031,7 +1117,9 @@
         "headgear": "tv",
         "officialRating": "124",
         "form": "381253",
-        "lastRun": "110"
+        "lastRun": "110",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -1053,7 +1141,9 @@
         "headgear": "v",
         "officialRating": "123",
         "form": "P-83P2",
-        "lastRun": "12"
+        "lastRun": "12",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -1075,7 +1165,9 @@
         "headgear": "t",
         "officialRating": "123",
         "form": "-11P21",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -1097,7 +1189,9 @@
         "headgear": "t",
         "officialRating": "123",
         "form": "4-1143",
-        "lastRun": "42"
+        "lastRun": "42",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -1119,7 +1213,9 @@
         "headgear": "tp",
         "officialRating": "122",
         "form": "62P623",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -1141,7 +1237,9 @@
         "headgear": "p",
         "officialRating": "120",
         "form": "-52431",
-        "lastRun": "51"
+        "lastRun": "51",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -1163,7 +1261,9 @@
         "headgear": "",
         "officialRating": "119",
         "form": "/2-531",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -1185,7 +1285,9 @@
         "headgear": "p",
         "officialRating": "114",
         "form": "7F2211",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -1224,7 +1326,9 @@
         "headgear": "",
         "officialRating": "151",
         "form": "1-6118",
-        "lastRun": "39"
+        "lastRun": "39",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -1246,7 +1350,9 @@
         "headgear": "",
         "officialRating": "135",
         "form": "1121F1",
-        "lastRun": "49"
+        "lastRun": "49",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -1268,7 +1374,9 @@
         "headgear": "h",
         "officialRating": "133",
         "form": "-10577",
-        "lastRun": "36"
+        "lastRun": "36",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -1290,7 +1398,9 @@
         "headgear": "h",
         "officialRating": "133",
         "form": "4P5-30",
-        "lastRun": "36"
+        "lastRun": "36",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -1312,7 +1422,9 @@
         "headgear": "t",
         "officialRating": "131",
         "form": "-00019",
-        "lastRun": "36"
+        "lastRun": "36",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -1334,7 +1446,9 @@
         "headgear": "",
         "officialRating": "131",
         "form": "F1F-30",
-        "lastRun": "36"
+        "lastRun": "36",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -1356,7 +1470,9 @@
         "headgear": "h",
         "officialRating": "131",
         "form": "613151",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -1378,7 +1494,9 @@
         "headgear": "h",
         "officialRating": "131",
         "form": "05-21P",
-        "lastRun": "70"
+        "lastRun": "70",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -1400,7 +1518,9 @@
         "headgear": "",
         "officialRating": "131",
         "form": "782UP1",
-        "lastRun": "16"
+        "lastRun": "16",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -1422,7 +1542,9 @@
         "headgear": "",
         "officialRating": "131",
         "form": "-046U6",
-        "lastRun": "65"
+        "lastRun": "65",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -1461,7 +1583,9 @@
         "headgear": "",
         "officialRating": "137",
         "form": "P12421",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -1483,7 +1607,9 @@
         "headgear": "b",
         "officialRating": "121",
         "form": "32-223",
-        "lastRun": "64"
+        "lastRun": "64",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -1505,7 +1631,9 @@
         "headgear": "t",
         "officialRating": "120",
         "form": "-33210",
-        "lastRun": "42"
+        "lastRun": "42",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -1527,7 +1655,9 @@
         "headgear": "b",
         "officialRating": "119",
         "form": "44PF5F",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -1549,7 +1679,9 @@
         "headgear": "p",
         "officialRating": "118",
         "form": "5134U4",
-        "lastRun": "51"
+        "lastRun": "51",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -1571,7 +1703,9 @@
         "headgear": "",
         "officialRating": "115",
         "form": "-F4451",
-        "lastRun": "42"
+        "lastRun": "42",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -1593,7 +1727,9 @@
         "headgear": "",
         "officialRating": "112",
         "form": "-55611",
-        "lastRun": "52"
+        "lastRun": "52",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -1615,7 +1751,9 @@
         "headgear": "",
         "officialRating": "112",
         "form": "21527",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -1637,7 +1775,9 @@
         "headgear": "",
         "officialRating": "111",
         "form": "211U12",
-        "lastRun": "64"
+        "lastRun": "64",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -1659,7 +1799,9 @@
         "headgear": "tp",
         "officialRating": "111",
         "form": "546774",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -1698,7 +1840,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "21-511",
-        "lastRun": "67"
+        "lastRun": "67",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -1720,7 +1864,9 @@
         "headgear": "",
         "officialRating": "127",
         "form": "5312P",
-        "lastRun": "42"
+        "lastRun": "42",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -1742,7 +1888,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "261",
-        "lastRun": "49"
+        "lastRun": "49",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -1764,7 +1912,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "21-16",
-        "lastRun": "127"
+        "lastRun": "127",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -1786,7 +1936,9 @@
         "headgear": "",
         "officialRating": "123",
         "form": "31-241",
-        "lastRun": "54"
+        "lastRun": "54",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -1808,7 +1960,9 @@
         "headgear": "",
         "officialRating": "130",
         "form": "1/3132",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -1830,7 +1984,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "2-62",
-        "lastRun": "43"
+        "lastRun": "43",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -1852,7 +2008,9 @@
         "headgear": "",
         "officialRating": "124",
         "form": "-53323",
-        "lastRun": "49"
+        "lastRun": "49",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -1874,7 +2032,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "41-2",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -1913,7 +2073,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "2-12",
-        "lastRun": "95"
+        "lastRun": "95",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -1935,7 +2097,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "711",
-        "lastRun": "54"
+        "lastRun": "54",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -1957,7 +2121,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "31",
-        "lastRun": "137"
+        "lastRun": "137",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -1979,7 +2145,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "1-1",
-        "lastRun": "169"
+        "lastRun": "169",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -2001,7 +2169,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -2023,7 +2193,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "412",
-        "lastRun": "79"
+        "lastRun": "79",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -2045,7 +2217,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "1/2-",
-        "lastRun": "473"
+        "lastRun": "473",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -2067,7 +2241,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "2-4",
-        "lastRun": "113"
+        "lastRun": "113",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -2089,7 +2265,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "32",
-        "lastRun": "44"
+        "lastRun": "44",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -2111,7 +2289,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "22",
-        "lastRun": "27"
+        "lastRun": "27",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -2133,7 +2313,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -2155,7 +2337,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "3",
-        "lastRun": "59"
+        "lastRun": "59",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -2194,7 +2378,9 @@
         "headgear": "",
         "officialRating": "118",
         "form": "241",
-        "lastRun": "29"
+        "lastRun": "29",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -2216,7 +2402,9 @@
         "headgear": "",
         "officialRating": "114",
         "form": "-21234",
-        "lastRun": "25"
+        "lastRun": "25",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -2238,7 +2426,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "3PP",
-        "lastRun": "(27P)"
+        "lastRun": "(27P)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -2260,7 +2450,9 @@
         "headgear": "t",
         "officialRating": "-",
         "form": "F-374",
-        "lastRun": "39"
+        "lastRun": "39",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -2282,7 +2474,9 @@
         "headgear": "h",
         "officialRating": "-",
         "form": "1/1/5",
-        "lastRun": "17"
+        "lastRun": "17",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -2304,7 +2498,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "-P5250",
-        "lastRun": "31"
+        "lastRun": "31",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -2326,7 +2522,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "343",
-        "lastRun": "32"
+        "lastRun": "32",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -2348,7 +2546,9 @@
         "headgear": "",
         "officialRating": "111",
         "form": "321",
-        "lastRun": "60"
+        "lastRun": "60",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -2370,7 +2570,9 @@
         "headgear": "h",
         "officialRating": "-",
         "form": "P2-6",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -2392,7 +2594,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "U",
-        "lastRun": "(34P)"
+        "lastRun": "(34P)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -2414,7 +2618,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "689",
-        "lastRun": "22"
+        "lastRun": "22",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -2436,7 +2642,9 @@
         "headgear": "t",
         "officialRating": "-",
         "form": "5",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -2458,7 +2666,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "14",
-        "lastRun": "51"
+        "lastRun": "51",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -2497,7 +2707,9 @@
         "headgear": "tp",
         "officialRating": "97",
         "form": "3UUF22",
-        "lastRun": "5"
+        "lastRun": "5",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -2519,7 +2731,9 @@
         "headgear": "p",
         "officialRating": "97",
         "form": "P-U853",
-        "lastRun": "31"
+        "lastRun": "31",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -2541,7 +2755,9 @@
         "headgear": "",
         "officialRating": "96",
         "form": "-44143",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -2563,7 +2779,9 @@
         "headgear": "h",
         "officialRating": "98",
         "form": "76463F",
-        "lastRun": "30"
+        "lastRun": "30",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -2585,7 +2803,9 @@
         "headgear": "",
         "officialRating": "92",
         "form": "111221",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -2607,7 +2827,9 @@
         "headgear": "p",
         "officialRating": "92",
         "form": "423554",
-        "lastRun": "51"
+        "lastRun": "51",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -2629,7 +2851,9 @@
         "headgear": "tp",
         "officialRating": "90",
         "form": "067322",
-        "lastRun": "25"
+        "lastRun": "25",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -2651,7 +2875,9 @@
         "headgear": "",
         "officialRating": "87",
         "form": "5/PP32",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -2673,7 +2899,9 @@
         "headgear": "",
         "officialRating": "84",
         "form": "-72333",
-        "lastRun": "31"
+        "lastRun": "31",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -2695,7 +2923,9 @@
         "headgear": "",
         "officialRating": "80",
         "form": "7069-8",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -2717,7 +2947,9 @@
         "headgear": "",
         "officialRating": "78",
         "form": "1-2595",
-        "lastRun": "44"
+        "lastRun": "44",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -2739,7 +2971,9 @@
         "headgear": "tp",
         "officialRating": "75",
         "form": "7-PP52",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -2761,7 +2995,9 @@
         "headgear": "p",
         "officialRating": "75",
         "form": "-50666",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -2783,7 +3019,9 @@
         "headgear": "ht",
         "officialRating": "74",
         "form": "F/1-77",
-        "lastRun": "38"
+        "lastRun": "38",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -2822,7 +3060,9 @@
         "headgear": "",
         "officialRating": "134",
         "form": "-33717",
-        "lastRun": "63"
+        "lastRun": "63",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -2844,7 +3084,9 @@
         "headgear": "t",
         "officialRating": "132",
         "form": "12171P",
-        "lastRun": "36"
+        "lastRun": "36",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -2866,7 +3108,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "2-446",
-        "lastRun": "61"
+        "lastRun": "61",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -2888,7 +3132,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "6/10/3",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -2910,7 +3156,9 @@
         "headgear": "",
         "officialRating": "123",
         "form": "1-0148",
-        "lastRun": "84"
+        "lastRun": "84",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -2949,7 +3197,9 @@
         "headgear": "p",
         "officialRating": "111",
         "form": "-52035",
-        "lastRun": "25"
+        "lastRun": "25",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -2971,7 +3221,9 @@
         "headgear": "t",
         "officialRating": "109",
         "form": "4-2135",
-        "lastRun": "41"
+        "lastRun": "41",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -2993,7 +3245,9 @@
         "headgear": "t",
         "officialRating": "109",
         "form": "-4366F",
-        "lastRun": "49"
+        "lastRun": "49",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -3015,7 +3269,9 @@
         "headgear": "",
         "officialRating": "109",
         "form": "224-7P",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -3037,7 +3293,9 @@
         "headgear": "",
         "officialRating": "107",
         "form": "2952",
-        "lastRun": "58"
+        "lastRun": "58",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -3059,7 +3317,9 @@
         "headgear": "",
         "officialRating": "105",
         "form": "381642",
-        "lastRun": "29"
+        "lastRun": "29",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -3081,7 +3341,9 @@
         "headgear": "",
         "officialRating": "102",
         "form": "2-F8P6",
-        "lastRun": "57"
+        "lastRun": "57",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -3103,7 +3365,9 @@
         "headgear": "",
         "officialRating": "95",
         "form": "P/P489",
-        "lastRun": "113"
+        "lastRun": "113",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -3125,7 +3389,9 @@
         "headgear": "p",
         "officialRating": "102",
         "form": "21632",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -3164,7 +3430,9 @@
         "headgear": "h",
         "officialRating": "110",
         "form": "13-91",
-        "lastRun": "39"
+        "lastRun": "39",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -3186,7 +3454,9 @@
         "headgear": "",
         "officialRating": "107",
         "form": "19421",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -3208,7 +3478,9 @@
         "headgear": "",
         "officialRating": "105",
         "form": "2F562",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -3230,7 +3502,9 @@
         "headgear": "",
         "officialRating": "104",
         "form": "-12421",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -3252,7 +3526,9 @@
         "headgear": "",
         "officialRating": "102",
         "form": "13-24P",
-        "lastRun": "60"
+        "lastRun": "60",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -3274,7 +3550,9 @@
         "headgear": "p",
         "officialRating": "110",
         "form": "2714U",
-        "lastRun": "17"
+        "lastRun": "17",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -3296,7 +3574,9 @@
         "headgear": "",
         "officialRating": "96",
         "form": "679554",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -3318,7 +3598,9 @@
         "headgear": "",
         "officialRating": "95",
         "form": "85-F75",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -3340,7 +3622,9 @@
         "headgear": "h",
         "officialRating": "92",
         "form": "7676/4",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -3379,7 +3663,9 @@
         "headgear": "",
         "officialRating": "121",
         "form": "331335",
-        "lastRun": "184"
+        "lastRun": "184",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -3401,7 +3687,9 @@
         "headgear": "",
         "officialRating": "117",
         "form": "3P2PP4",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -3423,7 +3711,9 @@
         "headgear": "tb",
         "officialRating": "117",
         "form": "-24156",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -3445,7 +3735,9 @@
         "headgear": "tp",
         "officialRating": "116",
         "form": "-1P434",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -3467,7 +3759,9 @@
         "headgear": "",
         "officialRating": "115",
         "form": "211545",
-        "lastRun": "26"
+        "lastRun": "26",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -3489,7 +3783,9 @@
         "headgear": "tp",
         "officialRating": "113",
         "form": "221328",
-        "lastRun": "22"
+        "lastRun": "22",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -3511,7 +3807,9 @@
         "headgear": "",
         "officialRating": "106",
         "form": "-7F482",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -3533,7 +3831,9 @@
         "headgear": "",
         "officialRating": "103",
         "form": "338078",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -3572,7 +3872,9 @@
         "headgear": "",
         "officialRating": "115",
         "form": "98P/4P",
-        "lastRun": "91"
+        "lastRun": "91",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -3594,7 +3896,9 @@
         "headgear": "p",
         "officialRating": "114",
         "form": "2F4422",
-        "lastRun": "32"
+        "lastRun": "32",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -3616,7 +3920,9 @@
         "headgear": "p",
         "officialRating": "114",
         "form": "3F4322",
-        "lastRun": "31"
+        "lastRun": "31",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -3638,7 +3944,9 @@
         "headgear": "",
         "officialRating": "113",
         "form": "013191",
-        "lastRun": "26"
+        "lastRun": "26",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -3660,7 +3968,9 @@
         "headgear": "b",
         "officialRating": "109",
         "form": "3-3595",
-        "lastRun": "57"
+        "lastRun": "57",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -3682,7 +3992,9 @@
         "headgear": "",
         "officialRating": "108",
         "form": "P-5561",
-        "lastRun": "141"
+        "lastRun": "141",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -3704,7 +4016,9 @@
         "headgear": "b",
         "officialRating": "107",
         "form": "5P-5P3",
-        "lastRun": "31"
+        "lastRun": "31",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -3726,7 +4040,9 @@
         "headgear": "tp",
         "officialRating": "103",
         "form": "245/77",
-        "lastRun": "30"
+        "lastRun": "30",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -3748,7 +4064,9 @@
         "headgear": "tp",
         "officialRating": "92",
         "form": "142146",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -3787,7 +4105,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "5",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -3809,7 +4129,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "305",
-        "lastRun": "55"
+        "lastRun": "55",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -3831,7 +4153,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -3853,7 +4177,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -3875,7 +4201,9 @@
         "headgear": "t",
         "officialRating": "-",
         "form": "3",
-        "lastRun": "36"
+        "lastRun": "36",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -3897,7 +4225,9 @@
         "headgear": "h",
         "officialRating": "-",
         "form": "3",
-        "lastRun": "55"
+        "lastRun": "55",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -3919,7 +4249,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -3941,7 +4273,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -3963,7 +4297,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "8",
-        "lastRun": "59"
+        "lastRun": "59",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -3985,7 +4321,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "3",
-        "lastRun": "35"
+        "lastRun": "35",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -4007,7 +4345,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -4029,7 +4369,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "234",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -4068,7 +4410,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -4090,7 +4434,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -4112,7 +4458,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -4134,7 +4482,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "4",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -4156,7 +4506,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "2",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -4178,7 +4530,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "07",
-        "lastRun": "8"
+        "lastRun": "8",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -4200,7 +4554,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -4222,7 +4578,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -4244,7 +4602,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "04",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -4266,7 +4626,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -4288,7 +4650,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -4310,7 +4674,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -4332,7 +4698,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "2",
-        "lastRun": "8"
+        "lastRun": "8",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -4354,7 +4722,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -4376,7 +4746,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "8",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -4398,7 +4770,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 16,
@@ -4420,7 +4794,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 17,
@@ -4442,7 +4818,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -4481,7 +4859,9 @@
         "headgear": "",
         "officialRating": "65",
         "form": "7164-7",
-        "lastRun": "71"
+        "lastRun": "71",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -4503,7 +4883,9 @@
         "headgear": "",
         "officialRating": "65",
         "form": "2339-6",
-        "lastRun": "79"
+        "lastRun": "79",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -4525,7 +4907,9 @@
         "headgear": "",
         "officialRating": "63",
         "form": "13242-",
-        "lastRun": "169"
+        "lastRun": "169",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -4547,7 +4931,9 @@
         "headgear": "",
         "officialRating": "63",
         "form": "240647",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -4569,7 +4955,9 @@
         "headgear": "",
         "officialRating": "62",
         "form": "67212-",
-        "lastRun": "170"
+        "lastRun": "170",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -4591,7 +4979,9 @@
         "headgear": "",
         "officialRating": "62",
         "form": "642464",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -4613,7 +5003,9 @@
         "headgear": "",
         "officialRating": "62",
         "form": "/375-0",
-        "lastRun": "49"
+        "lastRun": "49",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -4635,7 +5027,9 @@
         "headgear": "",
         "officialRating": "61",
         "form": "14184-",
-        "lastRun": "165"
+        "lastRun": "165",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -4657,7 +5051,9 @@
         "headgear": "",
         "officialRating": "61",
         "form": "897532",
-        "lastRun": "8"
+        "lastRun": "8",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -4679,7 +5075,9 @@
         "headgear": "",
         "officialRating": "61",
         "form": "389201",
-        "lastRun": "12"
+        "lastRun": "12",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -4701,7 +5099,9 @@
         "headgear": "",
         "officialRating": "60",
         "form": "213560",
-        "lastRun": "11"
+        "lastRun": "11",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -4723,7 +5123,9 @@
         "headgear": "",
         "officialRating": "60",
         "form": "548-76",
-        "lastRun": "44"
+        "lastRun": "44",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -4745,7 +5147,9 @@
         "headgear": "",
         "officialRating": "59",
         "form": "6959-6",
-        "lastRun": "19"
+        "lastRun": "19",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -4767,7 +5171,9 @@
         "headgear": "",
         "officialRating": "58",
         "form": "561285",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -4789,7 +5195,9 @@
         "headgear": "",
         "officialRating": "57",
         "form": "237186",
-        "lastRun": "12"
+        "lastRun": "12",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -4811,7 +5219,9 @@
         "headgear": "",
         "officialRating": "57",
         "form": "34-738",
-        "lastRun": "73"
+        "lastRun": "73",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 16,
@@ -4833,7 +5243,9 @@
         "headgear": "",
         "officialRating": "57",
         "form": "713231",
-        "lastRun": "12"
+        "lastRun": "12",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 17,
@@ -4855,7 +5267,9 @@
         "headgear": "",
         "officialRating": "55",
         "form": "299-29",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 18,
@@ -4877,7 +5291,9 @@
         "headgear": "",
         "officialRating": "68",
         "form": "2-8308",
-        "lastRun": "38"
+        "lastRun": "38",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -4916,7 +5332,9 @@
         "headgear": "",
         "officialRating": "75",
         "form": "2210-6",
-        "lastRun": "45"
+        "lastRun": "45",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -4938,7 +5356,9 @@
         "headgear": "",
         "officialRating": "74",
         "form": "4-7110",
-        "lastRun": "15"
+        "lastRun": "15",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -4960,7 +5380,9 @@
         "headgear": "",
         "officialRating": "74",
         "form": "4372-0",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -4982,7 +5404,9 @@
         "headgear": "",
         "officialRating": "74",
         "form": "8228-0",
-        "lastRun": "67 (26J)"
+        "lastRun": "67 (26J)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -5004,7 +5428,9 @@
         "headgear": "",
         "officialRating": "74",
         "form": "12574-",
-        "lastRun": "190"
+        "lastRun": "190",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -5026,7 +5452,9 @@
         "headgear": "",
         "officialRating": "72",
         "form": "721540",
-        "lastRun": "11"
+        "lastRun": "11",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -5048,7 +5476,9 @@
         "headgear": "",
         "officialRating": "71",
         "form": "02555-",
-        "lastRun": "129"
+        "lastRun": "129",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -5070,7 +5500,9 @@
         "headgear": "",
         "officialRating": "66",
         "form": "40-805",
-        "lastRun": "29"
+        "lastRun": "29",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -5092,7 +5524,9 @@
         "headgear": "",
         "officialRating": "63",
         "form": "13242-",
-        "lastRun": "169"
+        "lastRun": "169",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -5114,7 +5548,9 @@
         "headgear": "",
         "officialRating": "62",
         "form": "38538-",
-        "lastRun": "274"
+        "lastRun": "274",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -5136,7 +5572,9 @@
         "headgear": "",
         "officialRating": "59",
         "form": "6959-6",
-        "lastRun": "19"
+        "lastRun": "19",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -5158,7 +5596,9 @@
         "headgear": "",
         "officialRating": "55",
         "form": "5234-8",
-        "lastRun": "87"
+        "lastRun": "87",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -5197,7 +5637,9 @@
         "headgear": "",
         "officialRating": "81",
         "form": "513",
-        "lastRun": "35"
+        "lastRun": "35",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -5219,7 +5661,9 @@
         "headgear": "",
         "officialRating": "80",
         "form": "54-1",
-        "lastRun": "25"
+        "lastRun": "25",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -5241,7 +5685,9 @@
         "headgear": "",
         "officialRating": "78",
         "form": "22-1",
-        "lastRun": "99"
+        "lastRun": "99",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -5263,7 +5709,9 @@
         "headgear": "",
         "officialRating": "74",
         "form": "-81133",
-        "lastRun": "49"
+        "lastRun": "49",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -5285,7 +5733,9 @@
         "headgear": "",
         "officialRating": "74",
         "form": "542-23",
-        "lastRun": "52"
+        "lastRun": "52",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -5307,7 +5757,9 @@
         "headgear": "",
         "officialRating": "74",
         "form": "032-",
-        "lastRun": "122"
+        "lastRun": "122",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -5329,7 +5781,9 @@
         "headgear": "",
         "officialRating": "71",
         "form": "905-14",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -5351,7 +5805,9 @@
         "headgear": "",
         "officialRating": "70",
         "form": "321-12",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -5373,7 +5829,9 @@
         "headgear": "",
         "officialRating": "67",
         "form": "97-45",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -5412,7 +5870,9 @@
         "headgear": "",
         "officialRating": "60",
         "form": "3-3330",
-        "lastRun": "45 (13J)"
+        "lastRun": "45 (13J)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -5434,7 +5894,9 @@
         "headgear": "",
         "officialRating": "59",
         "form": "24-704",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -5456,7 +5918,9 @@
         "headgear": "",
         "officialRating": "59",
         "form": "915221",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -5478,7 +5942,9 @@
         "headgear": "",
         "officialRating": "58",
         "form": "096-4",
-        "lastRun": "96"
+        "lastRun": "96",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -5500,7 +5966,9 @@
         "headgear": "",
         "officialRating": "57",
         "form": "221363",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -5522,7 +5990,9 @@
         "headgear": "",
         "officialRating": "57",
         "form": "47/08-",
-        "lastRun": "409"
+        "lastRun": "409",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -5544,7 +6014,9 @@
         "headgear": "",
         "officialRating": "56",
         "form": "03687-",
-        "lastRun": "177"
+        "lastRun": "177",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -5566,7 +6038,9 @@
         "headgear": "",
         "officialRating": "54",
         "form": "4773-5",
-        "lastRun": "97"
+        "lastRun": "97",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -5588,7 +6062,9 @@
         "headgear": "",
         "officialRating": "52",
         "form": "-12621",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -5610,7 +6086,9 @@
         "headgear": "",
         "officialRating": "52",
         "form": "4-6852",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -5632,7 +6110,9 @@
         "headgear": "",
         "officialRating": "50",
         "form": "89-060",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -5654,7 +6134,9 @@
         "headgear": "",
         "officialRating": "48",
         "form": "38804-",
-        "lastRun": "313 (146J)"
+        "lastRun": "313 (146J)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -5676,7 +6158,9 @@
         "headgear": "",
         "officialRating": "48",
         "form": "55-643",
-        "lastRun": "54"
+        "lastRun": "54",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -5698,7 +6182,9 @@
         "headgear": "",
         "officialRating": "48",
         "form": "512432",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -5720,7 +6206,9 @@
         "headgear": "",
         "officialRating": "47",
         "form": "77-333",
-        "lastRun": "68"
+        "lastRun": "68",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -5742,7 +6230,9 @@
         "headgear": "",
         "officialRating": "47",
         "form": "235604",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 16,
@@ -5764,7 +6254,9 @@
         "headgear": "",
         "officialRating": "46",
         "form": "00-046",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 17,
@@ -5786,7 +6278,9 @@
         "headgear": "",
         "officialRating": "43",
         "form": "/79-99",
-        "lastRun": "36"
+        "lastRun": "36",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 18,
@@ -5808,7 +6302,9 @@
         "headgear": "",
         "officialRating": "38",
         "form": "06/79-",
-        "lastRun": "124"
+        "lastRun": "124",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -5847,7 +6343,9 @@
         "headgear": "",
         "officialRating": "89",
         "form": "1235-",
-        "lastRun": "190"
+        "lastRun": "190",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -5869,7 +6367,9 @@
         "headgear": "",
         "officialRating": "98",
         "form": "211-",
-        "lastRun": "210"
+        "lastRun": "210",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -5891,7 +6391,9 @@
         "headgear": "h",
         "officialRating": "-",
         "form": "1-",
-        "lastRun": "148"
+        "lastRun": "148",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -5913,7 +6415,9 @@
         "headgear": "",
         "officialRating": "89",
         "form": "43-12",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -5935,7 +6439,9 @@
         "headgear": "",
         "officialRating": "89",
         "form": "2412-",
-        "lastRun": "175"
+        "lastRun": "175",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -5957,7 +6463,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "1-",
-        "lastRun": "143"
+        "lastRun": "143",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -5979,7 +6487,9 @@
         "headgear": "h",
         "officialRating": "100",
         "form": "5124-",
-        "lastRun": "219"
+        "lastRun": "219",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -6001,7 +6511,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "1-",
-        "lastRun": "120"
+        "lastRun": "120",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -6023,7 +6535,9 @@
         "headgear": "",
         "officialRating": "96",
         "form": "1025-1",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -6045,7 +6559,9 @@
         "headgear": "",
         "officialRating": "87",
         "form": "3413-",
-        "lastRun": "169"
+        "lastRun": "169",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -6067,7 +6583,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "1-",
-        "lastRun": "298"
+        "lastRun": "298",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -6089,7 +6607,9 @@
         "headgear": "",
         "officialRating": "98",
         "form": "17429-",
-        "lastRun": "204"
+        "lastRun": "204",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -6111,7 +6631,9 @@
         "headgear": "",
         "officialRating": "100",
         "form": "115-",
-        "lastRun": "204"
+        "lastRun": "204",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -6133,7 +6655,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "2-",
-        "lastRun": "247"
+        "lastRun": "247",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -6155,7 +6679,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "21-",
-        "lastRun": "168"
+        "lastRun": "168",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -6194,7 +6720,9 @@
         "headgear": "h",
         "officialRating": "109",
         "form": "11-6",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -6216,7 +6744,9 @@
         "headgear": "",
         "officialRating": "108",
         "form": "116-",
-        "lastRun": "189"
+        "lastRun": "189",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -6238,7 +6768,9 @@
         "headgear": "",
         "officialRating": "92",
         "form": "22-1",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -6260,7 +6792,9 @@
         "headgear": "",
         "officialRating": "108",
         "form": "31127-",
-        "lastRun": "168"
+        "lastRun": "168",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -6282,7 +6816,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "1-",
-        "lastRun": "176"
+        "lastRun": "176",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -6304,7 +6840,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "1-",
-        "lastRun": "176"
+        "lastRun": "176",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -6326,7 +6864,9 @@
         "headgear": "",
         "officialRating": "106",
         "form": "21-311",
-        "lastRun": "49"
+        "lastRun": "49",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -6348,7 +6888,9 @@
         "headgear": "",
         "officialRating": "118",
         "form": "11114-",
-        "lastRun": "189"
+        "lastRun": "189",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -6387,7 +6929,9 @@
         "headgear": "",
         "officialRating": "116",
         "form": "32117-",
-        "lastRun": "161"
+        "lastRun": "161",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -6409,7 +6953,9 @@
         "headgear": "",
         "officialRating": "112",
         "form": "71-191",
-        "lastRun": "15"
+        "lastRun": "15",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -6431,7 +6977,9 @@
         "headgear": "",
         "officialRating": "115",
         "form": "47159-",
-        "lastRun": "175"
+        "lastRun": "175",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -6453,7 +7001,9 @@
         "headgear": "",
         "officialRating": "108",
         "form": "/5169-",
-        "lastRun": "301"
+        "lastRun": "301",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -6475,7 +7025,9 @@
         "headgear": "",
         "officialRating": "113",
         "form": "/615-6",
-        "lastRun": "63"
+        "lastRun": "63",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -6497,7 +7049,9 @@
         "headgear": "",
         "officialRating": "115",
         "form": "10014-",
-        "lastRun": "155"
+        "lastRun": "155",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -6519,7 +7073,9 @@
         "headgear": "t",
         "officialRating": "103",
         "form": "11112-",
-        "lastRun": "196"
+        "lastRun": "196",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -6558,7 +7114,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "73-",
-        "lastRun": "166"
+        "lastRun": "166",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -6580,7 +7138,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -6602,7 +7162,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -6624,7 +7186,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "2-",
-        "lastRun": "163"
+        "lastRun": "163",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -6646,7 +7210,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -6668,7 +7234,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -6690,7 +7258,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "2-3",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -6712,7 +7282,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -6751,7 +7323,9 @@
         "headgear": "",
         "officialRating": "85",
         "form": "41/21-",
-        "lastRun": "310"
+        "lastRun": "310",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -6773,7 +7347,9 @@
         "headgear": "p",
         "officialRating": "85",
         "form": "2300-4",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -6795,7 +7371,9 @@
         "headgear": "",
         "officialRating": "84",
         "form": "3/41-",
-        "lastRun": "191"
+        "lastRun": "191",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -6817,7 +7395,9 @@
         "headgear": "",
         "officialRating": "84",
         "form": "23143-",
-        "lastRun": "166"
+        "lastRun": "166",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -6839,7 +7419,9 @@
         "headgear": "ht",
         "officialRating": "82",
         "form": "9270-0",
-        "lastRun": "29"
+        "lastRun": "29",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -6861,7 +7443,9 @@
         "headgear": "h",
         "officialRating": "82",
         "form": "3227-0",
-        "lastRun": "14"
+        "lastRun": "14",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -6883,7 +7467,9 @@
         "headgear": "tp",
         "officialRating": "82",
         "form": "544-17",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -6905,7 +7491,9 @@
         "headgear": "",
         "officialRating": "81",
         "form": "137/5-",
-        "lastRun": "343"
+        "lastRun": "343",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -6927,7 +7515,9 @@
         "headgear": "",
         "officialRating": "81",
         "form": "6225-3",
-        "lastRun": "45"
+        "lastRun": "45",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -6949,7 +7539,9 @@
         "headgear": "t",
         "officialRating": "81",
         "form": "904/4-",
-        "lastRun": "268"
+        "lastRun": "268",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -6971,7 +7563,9 @@
         "headgear": "",
         "officialRating": "80",
         "form": "31-538",
-        "lastRun": "29"
+        "lastRun": "29",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -6993,7 +7587,9 @@
         "headgear": "b",
         "officialRating": "79",
         "form": "23338-",
-        "lastRun": "229"
+        "lastRun": "229",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -7015,7 +7611,9 @@
         "headgear": "h",
         "officialRating": "77",
         "form": "18/2-",
-        "lastRun": "381"
+        "lastRun": "381",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -7037,7 +7635,9 @@
         "headgear": "p",
         "officialRating": "77",
         "form": "5263-3",
-        "lastRun": "19"
+        "lastRun": "19",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -7059,7 +7659,9 @@
         "headgear": "",
         "officialRating": "76",
         "form": "05125-",
-        "lastRun": "175 (20J)"
+        "lastRun": "175 (20J)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -7081,7 +7683,9 @@
         "headgear": "",
         "officialRating": "76",
         "form": "12104-",
-        "lastRun": "175"
+        "lastRun": "175",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -7120,7 +7724,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "1-",
-        "lastRun": "129"
+        "lastRun": "129",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -7142,7 +7748,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "31-",
-        "lastRun": "231"
+        "lastRun": "231",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -7164,7 +7772,9 @@
         "headgear": "",
         "officialRating": "78",
         "form": "2624-",
-        "lastRun": "190"
+        "lastRun": "190",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -7186,7 +7796,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -7208,7 +7820,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "9-",
-        "lastRun": "226"
+        "lastRun": "226",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -7230,7 +7844,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "77",
-        "lastRun": "60"
+        "lastRun": "60",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -7252,7 +7868,9 @@
         "headgear": "",
         "officialRating": "90",
         "form": "2378-3",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -7274,7 +7892,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -7296,7 +7916,9 @@
         "headgear": "b",
         "officialRating": "-",
         "form": "7-5",
-        "lastRun": "26"
+        "lastRun": "26",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -7318,7 +7940,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -7340,7 +7964,9 @@
         "headgear": "h",
         "officialRating": "-",
         "form": "02-",
-        "lastRun": "213"
+        "lastRun": "213",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -7362,7 +7988,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "89",
-        "lastRun": "17"
+        "lastRun": "17",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -7384,7 +8012,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -7423,7 +8053,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -7445,7 +8077,9 @@
         "headgear": "t",
         "officialRating": "-",
         "form": "4",
-        "lastRun": "30"
+        "lastRun": "30",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -7467,7 +8101,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "5-",
-        "lastRun": "183"
+        "lastRun": "183",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -7489,7 +8125,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "3-2",
-        "lastRun": "88"
+        "lastRun": "88",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -7511,7 +8149,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -7533,7 +8173,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "24-",
-        "lastRun": "141"
+        "lastRun": "141",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -7555,7 +8197,9 @@
         "headgear": "",
         "officialRating": "72",
         "form": "63222-",
-        "lastRun": "108"
+        "lastRun": "108",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -7577,7 +8221,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "33",
-        "lastRun": "19"
+        "lastRun": "19",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -7599,7 +8245,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "0-",
-        "lastRun": "227"
+        "lastRun": "227",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -7621,7 +8269,9 @@
         "headgear": "h",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -7660,7 +8310,9 @@
         "headgear": "",
         "officialRating": "60",
         "form": "3380-",
-        "lastRun": "215"
+        "lastRun": "215",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -7682,7 +8334,9 @@
         "headgear": "",
         "officialRating": "60",
         "form": "44-54",
-        "lastRun": "19"
+        "lastRun": "19",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -7704,7 +8358,9 @@
         "headgear": "",
         "officialRating": "60",
         "form": "452-6",
-        "lastRun": "98"
+        "lastRun": "98",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -7726,7 +8382,9 @@
         "headgear": "",
         "officialRating": "59",
         "form": "422713",
-        "lastRun": "42"
+        "lastRun": "42",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -7748,7 +8406,9 @@
         "headgear": "p",
         "officialRating": "58",
         "form": "242535",
-        "lastRun": "11"
+        "lastRun": "11",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -7770,7 +8430,9 @@
         "headgear": "",
         "officialRating": "57",
         "form": "647",
-        "lastRun": "39"
+        "lastRun": "39",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -7792,7 +8454,9 @@
         "headgear": "",
         "officialRating": "57",
         "form": "06377-",
-        "lastRun": "203"
+        "lastRun": "203",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -7814,7 +8478,9 @@
         "headgear": "",
         "officialRating": "55",
         "form": "685-",
-        "lastRun": "207"
+        "lastRun": "207",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -7836,7 +8502,9 @@
         "headgear": "",
         "officialRating": "53",
         "form": "056-4",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -7858,7 +8526,9 @@
         "headgear": "",
         "officialRating": "52",
         "form": "376-",
-        "lastRun": "131"
+        "lastRun": "131",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -7880,7 +8550,9 @@
         "headgear": "t",
         "officialRating": "51",
         "form": "080-",
-        "lastRun": "141"
+        "lastRun": "141",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -7902,7 +8574,9 @@
         "headgear": "",
         "officialRating": "51",
         "form": "07535-",
-        "lastRun": "165"
+        "lastRun": "165",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -7924,7 +8598,9 @@
         "headgear": "p",
         "officialRating": "48",
         "form": "78-799",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -7946,7 +8622,9 @@
         "headgear": "",
         "officialRating": "48",
         "form": "957-",
-        "lastRun": "292"
+        "lastRun": "292",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -7968,7 +8646,9 @@
         "headgear": "p",
         "officialRating": "47",
         "form": "16-408",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -7990,7 +8670,9 @@
         "headgear": "",
         "officialRating": "47",
         "form": "-85275",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 16,
@@ -8012,7 +8694,9 @@
         "headgear": "h",
         "officialRating": "46",
         "form": "8694-0",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -8051,7 +8735,9 @@
         "headgear": "",
         "officialRating": "65",
         "form": "94808-",
-        "lastRun": "183"
+        "lastRun": "183",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -8073,7 +8759,9 @@
         "headgear": "b",
         "officialRating": "65",
         "form": "513331",
-        "lastRun": "10"
+        "lastRun": "10",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -8095,7 +8783,9 @@
         "headgear": "b",
         "officialRating": "63",
         "form": "-34542",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -8117,7 +8807,9 @@
         "headgear": "",
         "officialRating": "62",
         "form": "08-753",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -8139,7 +8831,9 @@
         "headgear": "",
         "officialRating": "61",
         "form": "87970-",
-        "lastRun": "123"
+        "lastRun": "123",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -8161,7 +8855,9 @@
         "headgear": "v",
         "officialRating": "57",
         "form": "1-5355",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -8183,7 +8879,9 @@
         "headgear": "p",
         "officialRating": "56",
         "form": "0730-0",
-        "lastRun": "16"
+        "lastRun": "16",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -8205,7 +8903,9 @@
         "headgear": "",
         "officialRating": "52",
         "form": "/2419-",
-        "lastRun": "193"
+        "lastRun": "193",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -8244,7 +8944,9 @@
         "headgear": "",
         "officialRating": "76",
         "form": "6345-2",
-        "lastRun": "11"
+        "lastRun": "11",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -8266,7 +8968,9 @@
         "headgear": "",
         "officialRating": "75",
         "form": "422424",
-        "lastRun": "11"
+        "lastRun": "11",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -8288,7 +8992,9 @@
         "headgear": "",
         "officialRating": "75",
         "form": "9/3-35",
-        "lastRun": "37"
+        "lastRun": "37",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -8310,7 +9016,9 @@
         "headgear": "",
         "officialRating": "75",
         "form": "552-",
-        "lastRun": "196"
+        "lastRun": "196",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -8332,7 +9040,9 @@
         "headgear": "p",
         "officialRating": "73",
         "form": "531-58",
-        "lastRun": "11"
+        "lastRun": "11",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -8354,7 +9064,9 @@
         "headgear": "p",
         "officialRating": "73",
         "form": "024-2",
-        "lastRun": "52"
+        "lastRun": "52",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -8376,7 +9088,9 @@
         "headgear": "",
         "officialRating": "71",
         "form": "424-",
-        "lastRun": "168"
+        "lastRun": "168",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -8398,7 +9112,9 @@
         "headgear": "",
         "officialRating": "70",
         "form": "1657-5",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -8420,7 +9136,9 @@
         "headgear": "",
         "officialRating": "66",
         "form": "00-091",
-        "lastRun": "29"
+        "lastRun": "29",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -8459,7 +9177,9 @@
         "headgear": "tp",
         "officialRating": "70",
         "form": "741121",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -8481,7 +9201,9 @@
         "headgear": "",
         "officialRating": "69",
         "form": "65575-",
-        "lastRun": "211"
+        "lastRun": "211",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -8503,7 +9225,9 @@
         "headgear": "b",
         "officialRating": "68",
         "form": "1854-1",
-        "lastRun": "98"
+        "lastRun": "98",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -8525,7 +9249,9 @@
         "headgear": "ht",
         "officialRating": "68",
         "form": "1/0-85",
-        "lastRun": "17"
+        "lastRun": "17",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -8547,7 +9273,9 @@
         "headgear": "p",
         "officialRating": "67",
         "form": "25-412",
-        "lastRun": "31"
+        "lastRun": "31",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -8569,7 +9297,9 @@
         "headgear": "b",
         "officialRating": "67",
         "form": "50847-",
-        "lastRun": "127"
+        "lastRun": "127",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -8591,7 +9321,9 @@
         "headgear": "h",
         "officialRating": "67",
         "form": "657-65",
-        "lastRun": "16"
+        "lastRun": "16",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -8613,7 +9345,9 @@
         "headgear": "",
         "officialRating": "67",
         "form": "-53180",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -8635,7 +9369,9 @@
         "headgear": "p",
         "officialRating": "66",
         "form": "66-350",
-        "lastRun": "8"
+        "lastRun": "8",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -8657,7 +9393,9 @@
         "headgear": "p",
         "officialRating": "66",
         "form": "-67159",
-        "lastRun": "19"
+        "lastRun": "19",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -8679,7 +9417,9 @@
         "headgear": "p",
         "officialRating": "65",
         "form": "3237-6",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -8701,7 +9441,9 @@
         "headgear": "",
         "officialRating": "62",
         "form": "92793-",
-        "lastRun": "196"
+        "lastRun": "196",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -8723,7 +9465,9 @@
         "headgear": "",
         "officialRating": "61",
         "form": "2F26-9",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -8745,7 +9489,9 @@
         "headgear": "h",
         "officialRating": "61",
         "form": "6259-0",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -8767,7 +9513,9 @@
         "headgear": "",
         "officialRating": "54",
         "form": "6860-1",
-        "lastRun": "37"
+        "lastRun": "37",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -8806,7 +9554,9 @@
         "headgear": "p",
         "officialRating": "55",
         "form": "36-119",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -8828,7 +9578,9 @@
         "headgear": "v",
         "officialRating": "54",
         "form": "-07945",
-        "lastRun": "19"
+        "lastRun": "19",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -8850,7 +9602,9 @@
         "headgear": "",
         "officialRating": "53",
         "form": "-31158",
-        "lastRun": "46"
+        "lastRun": "46",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -8872,7 +9626,9 @@
         "headgear": "h",
         "officialRating": "52",
         "form": "0569",
-        "lastRun": "26"
+        "lastRun": "26",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -8894,7 +9650,9 @@
         "headgear": "",
         "officialRating": "51",
         "form": "263-58",
-        "lastRun": "21"
+        "lastRun": "21",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -8916,7 +9674,9 @@
         "headgear": "tp",
         "officialRating": "50",
         "form": "60890-",
-        "lastRun": "173"
+        "lastRun": "173",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -8938,7 +9698,9 @@
         "headgear": "",
         "officialRating": "50",
         "form": "-13533",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -8960,7 +9722,9 @@
         "headgear": "b",
         "officialRating": "46",
         "form": "90268-",
-        "lastRun": "133"
+        "lastRun": "133",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -8982,7 +9746,9 @@
         "headgear": "p",
         "officialRating": "46",
         "form": "00-009",
-        "lastRun": "12"
+        "lastRun": "12",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -9004,7 +9770,9 @@
         "headgear": "",
         "officialRating": "46",
         "form": "99457-",
-        "lastRun": "196"
+        "lastRun": "196",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -9043,7 +9811,9 @@
         "headgear": "t",
         "officialRating": "55",
         "form": "04456-",
-        "lastRun": "186"
+        "lastRun": "186",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -9065,7 +9835,9 @@
         "headgear": "",
         "officialRating": "54",
         "form": "/7733-",
-        "lastRun": "173"
+        "lastRun": "173",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -9087,7 +9859,9 @@
         "headgear": "h",
         "officialRating": "52",
         "form": "93888-",
-        "lastRun": "143"
+        "lastRun": "143",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -9109,7 +9883,9 @@
         "headgear": "",
         "officialRating": "52",
         "form": "322613",
-        "lastRun": "24"
+        "lastRun": "24",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -9131,7 +9907,9 @@
         "headgear": "",
         "officialRating": "50",
         "form": "1667-0",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -9153,7 +9931,9 @@
         "headgear": "",
         "officialRating": "50",
         "form": "0-4947",
-        "lastRun": "19"
+        "lastRun": "19",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -9175,7 +9955,9 @@
         "headgear": "p",
         "officialRating": "50",
         "form": "3505-9",
-        "lastRun": "72 (45J)"
+        "lastRun": "72 (45J)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -9197,7 +9979,9 @@
         "headgear": "p",
         "officialRating": "46",
         "form": "55740-",
-        "lastRun": "201"
+        "lastRun": "201",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -9219,7 +10003,9 @@
         "headgear": "p",
         "officialRating": "46",
         "form": "6065-4",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -9241,7 +10027,9 @@
         "headgear": "",
         "officialRating": "46",
         "form": "670-44",
-        "lastRun": "33"
+        "lastRun": "33",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -9280,7 +10068,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -9302,7 +10092,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -9324,7 +10116,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -9346,7 +10140,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -9368,7 +10164,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -9390,7 +10188,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -9429,7 +10229,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "46",
-        "lastRun": "11"
+        "lastRun": "11",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -9451,7 +10253,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "65-",
-        "lastRun": "253"
+        "lastRun": "253",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -9473,7 +10277,9 @@
         "headgear": "",
         "officialRating": "84",
         "form": "44295-",
-        "lastRun": "190"
+        "lastRun": "190",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -9495,7 +10301,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -9517,7 +10325,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -9539,7 +10349,9 @@
         "headgear": "",
         "officialRating": "68",
         "form": "594-",
-        "lastRun": "182"
+        "lastRun": "182",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -9561,7 +10373,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -9583,7 +10397,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "5",
-        "lastRun": "10"
+        "lastRun": "10",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -9605,7 +10421,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "77-",
-        "lastRun": "212"
+        "lastRun": "212",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -9627,7 +10445,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "54",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -9649,7 +10469,9 @@
         "headgear": "",
         "officialRating": "87",
         "form": "82-2",
-        "lastRun": "30"
+        "lastRun": "30",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -9671,7 +10493,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "4-5",
-        "lastRun": "8"
+        "lastRun": "8",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -9693,7 +10517,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "0-",
-        "lastRun": "169"
+        "lastRun": "169",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -9715,7 +10541,9 @@
         "headgear": "",
         "officialRating": "71",
         "form": "7852-",
-        "lastRun": "208"
+        "lastRun": "208",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -9737,7 +10565,9 @@
         "headgear": "h",
         "officialRating": "-",
         "form": "76-",
-        "lastRun": "301"
+        "lastRun": "301",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -9759,7 +10589,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "7",
-        "lastRun": "10"
+        "lastRun": "10",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -9798,7 +10630,9 @@
         "headgear": "",
         "officialRating": "75",
         "form": "5073-0",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -9820,7 +10654,9 @@
         "headgear": "",
         "officialRating": "74",
         "form": "4-341",
-        "lastRun": "71"
+        "lastRun": "71",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -9842,7 +10678,9 @@
         "headgear": "",
         "officialRating": "73",
         "form": "0600-7",
-        "lastRun": "8"
+        "lastRun": "8",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -9864,7 +10702,9 @@
         "headgear": "tv",
         "officialRating": "72",
         "form": "857-17",
-        "lastRun": "71"
+        "lastRun": "71",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -9886,7 +10726,9 @@
         "headgear": "tv",
         "officialRating": "71",
         "form": "4-3330",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -9908,7 +10750,9 @@
         "headgear": "tp",
         "officialRating": "70",
         "form": "2038-2",
-        "lastRun": "8"
+        "lastRun": "8",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -9930,7 +10774,9 @@
         "headgear": "p",
         "officialRating": "70",
         "form": "567-40",
-        "lastRun": "6"
+        "lastRun": "6",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -9952,7 +10798,9 @@
         "headgear": "",
         "officialRating": "68",
         "form": "740-74",
-        "lastRun": "22"
+        "lastRun": "22",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -9974,7 +10822,9 @@
         "headgear": "t",
         "officialRating": "67",
         "form": "43039-",
-        "lastRun": "172"
+        "lastRun": "172",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -9996,7 +10846,9 @@
         "headgear": "v",
         "officialRating": "66",
         "form": "8080-5",
-        "lastRun": "8"
+        "lastRun": "8",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -10018,7 +10870,9 @@
         "headgear": "",
         "officialRating": "65",
         "form": "4407-7",
-        "lastRun": "104"
+        "lastRun": "104",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -10040,7 +10894,9 @@
         "headgear": "tp",
         "officialRating": "64",
         "form": "089-95",
-        "lastRun": "11"
+        "lastRun": "11",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -10062,7 +10918,9 @@
         "headgear": "",
         "officialRating": "64",
         "form": "08-000",
-        "lastRun": "8"
+        "lastRun": "8",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -10084,7 +10942,9 @@
         "headgear": "",
         "officialRating": "64",
         "form": "53008-",
-        "lastRun": "183"
+        "lastRun": "183",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -10106,7 +10966,9 @@
         "headgear": "",
         "officialRating": "63",
         "form": "7709-2",
-        "lastRun": "11"
+        "lastRun": "11",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -10128,7 +10990,9 @@
         "headgear": "",
         "officialRating": "62",
         "form": "-55989",
-        "lastRun": "22"
+        "lastRun": "22",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 16,
@@ -10150,7 +11014,9 @@
         "headgear": "",
         "officialRating": "61",
         "form": "854194",
-        "lastRun": "7"
+        "lastRun": "7",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 17,
@@ -10172,7 +11038,9 @@
         "headgear": "p",
         "officialRating": "56",
         "form": "13890-",
-        "lastRun": "194"
+        "lastRun": "194",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -10211,7 +11079,9 @@
         "headgear": "",
         "officialRating": "85",
         "form": "25300-",
-        "lastRun": "181"
+        "lastRun": "181",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -10233,7 +11103,9 @@
         "headgear": "",
         "officialRating": "85",
         "form": "078U6-",
-        "lastRun": "186"
+        "lastRun": "186",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -10255,7 +11127,9 @@
         "headgear": "",
         "officialRating": "83",
         "form": "12012-",
-        "lastRun": "164"
+        "lastRun": "164",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -10277,7 +11151,9 @@
         "headgear": "h",
         "officialRating": "83",
         "form": "25187-",
-        "lastRun": "273"
+        "lastRun": "273",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -10299,7 +11175,9 @@
         "headgear": "h",
         "officialRating": "82",
         "form": "31129-",
-        "lastRun": "170"
+        "lastRun": "170",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -10321,7 +11199,9 @@
         "headgear": "",
         "officialRating": "82",
         "form": "16612-",
-        "lastRun": "186"
+        "lastRun": "186",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -10343,7 +11223,9 @@
         "headgear": "p",
         "officialRating": "81",
         "form": "4214-1",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -10365,7 +11247,9 @@
         "headgear": "t",
         "officialRating": "79",
         "form": "2620-9",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -10387,7 +11271,9 @@
         "headgear": "h",
         "officialRating": "79",
         "form": "1/622/",
-        "lastRun": "560"
+        "lastRun": "560",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -10409,7 +11295,9 @@
         "headgear": "",
         "officialRating": "78",
         "form": "4931-6",
-        "lastRun": "22"
+        "lastRun": "22",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -10431,7 +11319,9 @@
         "headgear": "p",
         "officialRating": "76",
         "form": "28326-",
-        "lastRun": "170"
+        "lastRun": "170",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -10453,7 +11343,9 @@
         "headgear": "p",
         "officialRating": "75",
         "form": "754-33",
-        "lastRun": "11"
+        "lastRun": "11",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -10475,7 +11367,9 @@
         "headgear": "",
         "officialRating": "72",
         "form": "28317-",
-        "lastRun": "199"
+        "lastRun": "199",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -10514,7 +11408,9 @@
         "headgear": "",
         "officialRating": "85",
         "form": "40019-",
-        "lastRun": "188"
+        "lastRun": "188",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -10536,7 +11432,9 @@
         "headgear": "t",
         "officialRating": "84",
         "form": "26933-",
-        "lastRun": "225"
+        "lastRun": "225",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -10558,7 +11456,9 @@
         "headgear": "p",
         "officialRating": "82",
         "form": "4117-3",
-        "lastRun": "22"
+        "lastRun": "22",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -10580,7 +11480,9 @@
         "headgear": "",
         "officialRating": "81",
         "form": "67067-",
-        "lastRun": "225"
+        "lastRun": "225",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -10602,7 +11504,9 @@
         "headgear": "",
         "officialRating": "81",
         "form": "1085-4",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -10624,7 +11528,9 @@
         "headgear": "",
         "officialRating": "81",
         "form": "6-5049",
-        "lastRun": "29"
+        "lastRun": "29",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -10646,7 +11552,9 @@
         "headgear": "",
         "officialRating": "80",
         "form": "22614-",
-        "lastRun": "192"
+        "lastRun": "192",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -10668,7 +11576,9 @@
         "headgear": "b",
         "officialRating": "79",
         "form": "731125",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -10690,7 +11600,9 @@
         "headgear": "",
         "officialRating": "77",
         "form": "96-990",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -10712,7 +11624,9 @@
         "headgear": "p",
         "officialRating": "76",
         "form": "31342-",
-        "lastRun": "247"
+        "lastRun": "247",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -10734,7 +11648,9 @@
         "headgear": "h",
         "officialRating": "75",
         "form": "7645-7",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -10756,7 +11672,9 @@
         "headgear": "",
         "officialRating": "74",
         "form": "4720-0",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -10778,7 +11696,9 @@
         "headgear": "",
         "officialRating": "69",
         "form": "5564-8",
-        "lastRun": "6"
+        "lastRun": "6",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -10817,7 +11737,9 @@
         "headgear": "",
         "officialRating": "80",
         "form": "88420-",
-        "lastRun": "190"
+        "lastRun": "190",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -10839,7 +11761,9 @@
         "headgear": "",
         "officialRating": "79",
         "form": "18-866",
-        "lastRun": "63"
+        "lastRun": "63",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -10861,7 +11785,9 @@
         "headgear": "t",
         "officialRating": "79",
         "form": "73/1-",
-        "lastRun": "338 (20J)"
+        "lastRun": "338 (20J)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -10883,7 +11809,9 @@
         "headgear": "",
         "officialRating": "77",
         "form": "55514-",
-        "lastRun": "171"
+        "lastRun": "171",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -10905,7 +11833,9 @@
         "headgear": "p",
         "officialRating": "77",
         "form": "11442-",
-        "lastRun": "172"
+        "lastRun": "172",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -10927,7 +11857,9 @@
         "headgear": "",
         "officialRating": "76",
         "form": "298-32",
-        "lastRun": "35"
+        "lastRun": "35",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -10949,7 +11881,9 @@
         "headgear": "t",
         "officialRating": "72",
         "form": "238-10",
-        "lastRun": "6"
+        "lastRun": "6",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -10971,7 +11905,9 @@
         "headgear": "b",
         "officialRating": "72",
         "form": "03-195",
-        "lastRun": "29"
+        "lastRun": "29",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -10993,7 +11929,9 @@
         "headgear": "",
         "officialRating": "70",
         "form": "79415-",
-        "lastRun": "194"
+        "lastRun": "194",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -11015,7 +11953,9 @@
         "headgear": "",
         "officialRating": "64",
         "form": "41476-",
-        "lastRun": "191"
+        "lastRun": "191",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -11037,7 +11977,9 @@
         "headgear": "b",
         "officialRating": "61",
         "form": "349331",
-        "lastRun": "16"
+        "lastRun": "16",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -11059,7 +12001,9 @@
         "headgear": "",
         "officialRating": "61",
         "form": "86811-",
-        "lastRun": "209"
+        "lastRun": "209",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -11098,7 +12042,9 @@
         "headgear": "",
         "officialRating": "92",
         "form": "1250-9",
-        "lastRun": "33"
+        "lastRun": "33",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -11120,7 +12066,9 @@
         "headgear": "",
         "officialRating": "86",
         "form": "21715-",
-        "lastRun": "204"
+        "lastRun": "204",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -11142,7 +12090,9 @@
         "headgear": "",
         "officialRating": "86",
         "form": "16135-",
-        "lastRun": "161"
+        "lastRun": "161",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -11164,7 +12114,9 @@
         "headgear": "",
         "officialRating": "85",
         "form": "9158-5",
-        "lastRun": "32"
+        "lastRun": "32",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -11186,7 +12138,9 @@
         "headgear": "",
         "officialRating": "85",
         "form": "211",
-        "lastRun": "25"
+        "lastRun": "25",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -11208,7 +12162,9 @@
         "headgear": "",
         "officialRating": "85",
         "form": "21020-",
-        "lastRun": "189"
+        "lastRun": "189",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -11230,7 +12186,9 @@
         "headgear": "",
         "officialRating": "84",
         "form": "24100-",
-        "lastRun": "211"
+        "lastRun": "211",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -11252,7 +12210,9 @@
         "headgear": "",
         "officialRating": "84",
         "form": "2312-",
-        "lastRun": "241"
+        "lastRun": "241",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -11274,7 +12234,9 @@
         "headgear": "",
         "officialRating": "83",
         "form": "0221-1",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -11296,7 +12258,9 @@
         "headgear": "",
         "officialRating": "83",
         "form": "321-83",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -11318,7 +12282,9 @@
         "headgear": "",
         "officialRating": "82",
         "form": "2217-",
-        "lastRun": "273"
+        "lastRun": "273",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -11340,7 +12306,9 @@
         "headgear": "t",
         "officialRating": "80",
         "form": "11256-",
-        "lastRun": "190"
+        "lastRun": "190",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -11362,7 +12330,9 @@
         "headgear": "",
         "officialRating": "79",
         "form": "16346-",
-        "lastRun": "192"
+        "lastRun": "192",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -11384,7 +12354,9 @@
         "headgear": "",
         "officialRating": "78",
         "form": "23421-",
-        "lastRun": "214"
+        "lastRun": "214",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -11423,7 +12395,9 @@
         "headgear": "",
         "officialRating": "56",
         "form": "325311",
-        "lastRun": "7"
+        "lastRun": "7",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -11445,7 +12419,9 @@
         "headgear": "p",
         "officialRating": "55",
         "form": "23-661",
-        "lastRun": "10"
+        "lastRun": "10",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -11467,7 +12443,9 @@
         "headgear": "",
         "officialRating": "55",
         "form": "50167-",
-        "lastRun": "165"
+        "lastRun": "165",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -11489,7 +12467,9 @@
         "headgear": "",
         "officialRating": "55",
         "form": "0-3459",
-        "lastRun": "53"
+        "lastRun": "53",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -11511,7 +12491,9 @@
         "headgear": "",
         "officialRating": "55",
         "form": "79730-",
-        "lastRun": "164"
+        "lastRun": "164",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -11533,7 +12515,9 @@
         "headgear": "",
         "officialRating": "54",
         "form": "07-5",
-        "lastRun": "58"
+        "lastRun": "58",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -11555,7 +12539,9 @@
         "headgear": "p",
         "officialRating": "54",
         "form": "27686-",
-        "lastRun": "165"
+        "lastRun": "165",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -11577,7 +12563,9 @@
         "headgear": "",
         "officialRating": "53",
         "form": "-44391",
-        "lastRun": "53"
+        "lastRun": "53",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -11599,7 +12587,9 @@
         "headgear": "",
         "officialRating": "53",
         "form": "03-906",
-        "lastRun": "10"
+        "lastRun": "10",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -11621,7 +12611,9 @@
         "headgear": "tp",
         "officialRating": "50",
         "form": "15550-",
-        "lastRun": "183"
+        "lastRun": "183",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -11643,7 +12635,9 @@
         "headgear": "p",
         "officialRating": "49",
         "form": "85508-",
-        "lastRun": "130"
+        "lastRun": "130",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -11665,7 +12659,9 @@
         "headgear": "b",
         "officialRating": "49",
         "form": "48-529",
-        "lastRun": "25"
+        "lastRun": "25",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -11687,7 +12683,9 @@
         "headgear": "",
         "officialRating": "48",
         "form": "41-082",
-        "lastRun": "43"
+        "lastRun": "43",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -11709,7 +12707,9 @@
         "headgear": "h",
         "officialRating": "48",
         "form": "441877",
-        "lastRun": "37"
+        "lastRun": "37",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -11731,7 +12731,9 @@
         "headgear": "p",
         "officialRating": "48",
         "form": "096224",
-        "lastRun": "10"
+        "lastRun": "10",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -11753,7 +12755,9 @@
         "headgear": "b",
         "officialRating": "47",
         "form": "06530-",
-        "lastRun": "194"
+        "lastRun": "194",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 16,
@@ -11775,7 +12779,9 @@
         "headgear": "v",
         "officialRating": "46",
         "form": "457480",
-        "lastRun": "19"
+        "lastRun": "19",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -11814,7 +12820,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "00",
-        "lastRun": "79 (22F)"
+        "lastRun": "79 (22F)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -11836,7 +12844,9 @@
         "headgear": "t",
         "officialRating": "120",
         "form": "-F0232",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -11858,7 +12868,9 @@
         "headgear": "",
         "officialRating": "105",
         "form": "2O2556",
-        "lastRun": "56 (19F)"
+        "lastRun": "56 (19F)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -11880,7 +12892,9 @@
         "headgear": "t",
         "officialRating": "99",
         "form": "60546",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -11902,7 +12916,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -11924,7 +12940,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -11946,7 +12964,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": "(220F)"
+        "lastRun": "(220F)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -11968,7 +12988,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -11990,7 +13012,9 @@
         "headgear": "h",
         "officialRating": "123",
         "form": "3222F",
-        "lastRun": "39"
+        "lastRun": "39",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -12012,7 +13036,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "08",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -12034,7 +13060,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "6F5",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -12056,7 +13084,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "06",
-        "lastRun": "30"
+        "lastRun": "30",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -12078,7 +13108,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "B7",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -12100,7 +13132,9 @@
         "headgear": "t",
         "officialRating": "-",
         "form": "9",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -12122,7 +13156,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "3",
-        "lastRun": "59"
+        "lastRun": "59",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -12144,7 +13180,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "0P0",
-        "lastRun": "6"
+        "lastRun": "6",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 16,
@@ -12166,7 +13204,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": "(245F)"
+        "lastRun": "(245F)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 17,
@@ -12188,7 +13228,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "5",
-        "lastRun": "59"
+        "lastRun": "59",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 18,
@@ -12210,7 +13252,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "P",
-        "lastRun": "146"
+        "lastRun": "146",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -12249,7 +13293,9 @@
         "headgear": "",
         "officialRating": "108",
         "form": "9656-4",
-        "lastRun": "88 (22F)"
+        "lastRun": "88 (22F)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -12271,7 +13317,9 @@
         "headgear": "",
         "officialRating": "107",
         "form": "F43P",
-        "lastRun": "63"
+        "lastRun": "63",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -12293,7 +13341,9 @@
         "headgear": "",
         "officialRating": "105",
         "form": "0-34U",
-        "lastRun": "125"
+        "lastRun": "125",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -12315,7 +13365,9 @@
         "headgear": "",
         "officialRating": "104",
         "form": "6-4225",
-        "lastRun": "211"
+        "lastRun": "211",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -12337,7 +13389,9 @@
         "headgear": "h",
         "officialRating": "109",
         "form": "80624",
-        "lastRun": "105"
+        "lastRun": "105",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -12359,7 +13413,9 @@
         "headgear": "t",
         "officialRating": "109",
         "form": "-22686",
-        "lastRun": "74"
+        "lastRun": "74",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -12381,7 +13437,9 @@
         "headgear": "",
         "officialRating": "101",
         "form": "6440",
-        "lastRun": "111"
+        "lastRun": "111",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -12403,7 +13461,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "55-005",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -12425,7 +13485,9 @@
         "headgear": "",
         "officialRating": "110",
         "form": "4F-5F7",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -12447,7 +13509,9 @@
         "headgear": "b",
         "officialRating": "107",
         "form": "2-8444",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -12469,7 +13533,9 @@
         "headgear": "",
         "officialRating": "107",
         "form": "6524",
-        "lastRun": "236"
+        "lastRun": "236",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -12491,7 +13557,9 @@
         "headgear": "ht",
         "officialRating": "106",
         "form": "88-82F",
-        "lastRun": "88"
+        "lastRun": "88",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -12513,7 +13581,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "6-02",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -12535,7 +13605,9 @@
         "headgear": "",
         "officialRating": "107",
         "form": "64-255",
-        "lastRun": "110"
+        "lastRun": "110",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -12557,7 +13629,9 @@
         "headgear": "p",
         "officialRating": "-",
         "form": "7U57",
-        "lastRun": "165"
+        "lastRun": "165",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -12579,7 +13653,9 @@
         "headgear": "",
         "officialRating": "106",
         "form": "465P85",
-        "lastRun": "82"
+        "lastRun": "82",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 16,
@@ -12601,7 +13677,9 @@
         "headgear": "tp",
         "officialRating": "102",
         "form": "P5P660",
-        "lastRun": "74"
+        "lastRun": "74",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 17,
@@ -12623,7 +13701,9 @@
         "headgear": "tp",
         "officialRating": "102",
         "form": "687940",
-        "lastRun": "197 (162F)"
+        "lastRun": "197 (162F)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 18,
@@ -12645,7 +13725,9 @@
         "headgear": "",
         "officialRating": "102",
         "form": "0-652P",
-        "lastRun": "43"
+        "lastRun": "43",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -12684,7 +13766,9 @@
         "headgear": "tp",
         "officialRating": "119",
         "form": "F145-5",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -12706,7 +13790,9 @@
         "headgear": "",
         "officialRating": "117",
         "form": "902555",
-        "lastRun": "83"
+        "lastRun": "83",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -12728,7 +13814,9 @@
         "headgear": "",
         "officialRating": "115",
         "form": "37-722",
-        "lastRun": "90 (15F)"
+        "lastRun": "90 (15F)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -12750,7 +13838,9 @@
         "headgear": "",
         "officialRating": "112",
         "form": "-65160",
-        "lastRun": "185"
+        "lastRun": "185",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -12772,7 +13862,9 @@
         "headgear": "h",
         "officialRating": "110",
         "form": "1022-1",
-        "lastRun": "262 (6F)"
+        "lastRun": "262 (6F)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -12794,7 +13886,9 @@
         "headgear": "",
         "officialRating": "106",
         "form": "B-1409",
-        "lastRun": "173 (36F)"
+        "lastRun": "173 (36F)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -12816,7 +13910,9 @@
         "headgear": "h",
         "officialRating": "102",
         "form": "1-3800",
-        "lastRun": "107"
+        "lastRun": "107",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -12838,7 +13934,9 @@
         "headgear": "",
         "officialRating": "102",
         "form": "37-060",
-        "lastRun": "41"
+        "lastRun": "41",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -12860,7 +13958,9 @@
         "headgear": "t",
         "officialRating": "96",
         "form": "13P067",
-        "lastRun": "45"
+        "lastRun": "45",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -12882,7 +13982,9 @@
         "headgear": "h",
         "officialRating": "104",
         "form": "3786",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -12921,7 +14023,9 @@
         "headgear": "",
         "officialRating": "118",
         "form": "151",
-        "lastRun": "27"
+        "lastRun": "27",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -12943,7 +14047,9 @@
         "headgear": "",
         "officialRating": "106",
         "form": "006432",
-        "lastRun": "42"
+        "lastRun": "42",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -12965,7 +14071,9 @@
         "headgear": "",
         "officialRating": "106",
         "form": "5083F5",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -12987,7 +14095,9 @@
         "headgear": "h",
         "officialRating": "104",
         "form": "02442F",
-        "lastRun": "6"
+        "lastRun": "6",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -13009,7 +14119,9 @@
         "headgear": "h",
         "officialRating": "103",
         "form": "318P0",
-        "lastRun": "32"
+        "lastRun": "32",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -13031,7 +14143,9 @@
         "headgear": "tb",
         "officialRating": "99",
         "form": "0B7-07",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -13053,7 +14167,9 @@
         "headgear": "t",
         "officialRating": "97",
         "form": "5334FP",
-        "lastRun": "32"
+        "lastRun": "32",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -13075,7 +14191,9 @@
         "headgear": "",
         "officialRating": "95",
         "form": "094529",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -13097,7 +14215,9 @@
         "headgear": "tp",
         "officialRating": "94",
         "form": "34930P",
-        "lastRun": "6"
+        "lastRun": "6",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -13119,7 +14239,9 @@
         "headgear": "",
         "officialRating": "93",
         "form": "-07337",
-        "lastRun": "56"
+        "lastRun": "56",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -13141,7 +14263,9 @@
         "headgear": "",
         "officialRating": "93",
         "form": "P-4020",
-        "lastRun": "16"
+        "lastRun": "16",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -13163,7 +14287,9 @@
         "headgear": "",
         "officialRating": "93",
         "form": "54636P",
-        "lastRun": "42"
+        "lastRun": "42",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -13185,7 +14311,9 @@
         "headgear": "tp",
         "officialRating": "87",
         "form": "042674",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -13224,7 +14352,9 @@
         "headgear": "",
         "officialRating": "98",
         "form": "00-560",
-        "lastRun": "12"
+        "lastRun": "12",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -13246,7 +14376,9 @@
         "headgear": "tp",
         "officialRating": "97",
         "form": "F-06F0",
-        "lastRun": "108"
+        "lastRun": "108",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -13268,7 +14400,9 @@
         "headgear": "",
         "officialRating": "96",
         "form": "9006",
-        "lastRun": "41"
+        "lastRun": "41",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -13290,7 +14424,9 @@
         "headgear": "t",
         "officialRating": "94",
         "form": "0-0075",
-        "lastRun": "149"
+        "lastRun": "149",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -13312,7 +14448,9 @@
         "headgear": "",
         "officialRating": "94",
         "form": "6545F",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -13334,7 +14472,9 @@
         "headgear": "",
         "officialRating": "98",
         "form": "0697",
-        "lastRun": "16"
+        "lastRun": "16",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -13356,7 +14496,9 @@
         "headgear": "",
         "officialRating": "87",
         "form": "9000",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -13378,7 +14520,9 @@
         "headgear": "tp",
         "officialRating": "86",
         "form": "U80073",
-        "lastRun": "16"
+        "lastRun": "16",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -13400,7 +14544,9 @@
         "headgear": "tp",
         "officialRating": "85",
         "form": "690-PP",
-        "lastRun": "174"
+        "lastRun": "174",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -13422,7 +14568,9 @@
         "headgear": "h",
         "officialRating": "84",
         "form": "000435",
-        "lastRun": "16"
+        "lastRun": "16",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -13444,7 +14592,9 @@
         "headgear": "",
         "officialRating": "83",
         "form": "604P",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -13466,7 +14616,9 @@
         "headgear": "p",
         "officialRating": "82",
         "form": "-5PB01",
-        "lastRun": "113"
+        "lastRun": "113",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -13488,7 +14640,9 @@
         "headgear": "ht",
         "officialRating": "77",
         "form": "20/P69",
-        "lastRun": "100"
+        "lastRun": "100",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -13510,7 +14664,9 @@
         "headgear": "p",
         "officialRating": "74",
         "form": "765790",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -13532,7 +14688,9 @@
         "headgear": "",
         "officialRating": "74",
         "form": "000P-P",
-        "lastRun": "325"
+        "lastRun": "325",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -13554,7 +14712,9 @@
         "headgear": "t",
         "officialRating": "72",
         "form": "/4P/08",
-        "lastRun": "88"
+        "lastRun": "88",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 16,
@@ -13576,7 +14736,9 @@
         "headgear": "p",
         "officialRating": "93",
         "form": "9840",
-        "lastRun": "225"
+        "lastRun": "225",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 17,
@@ -13598,7 +14760,9 @@
         "headgear": "tp",
         "officialRating": "91",
         "form": "09030F",
-        "lastRun": "88"
+        "lastRun": "88",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 18,
@@ -13620,7 +14784,9 @@
         "headgear": "",
         "officialRating": "98",
         "form": "0-0515",
-        "lastRun": "149"
+        "lastRun": "149",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -13659,7 +14825,9 @@
         "headgear": "t",
         "officialRating": "109",
         "form": "816286",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -13681,7 +14849,9 @@
         "headgear": "p",
         "officialRating": "107",
         "form": "0-573P",
-        "lastRun": "44"
+        "lastRun": "44",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -13703,7 +14873,9 @@
         "headgear": "t",
         "officialRating": "107",
         "form": "2-7064",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -13725,7 +14897,9 @@
         "headgear": "tb",
         "officialRating": "105",
         "form": "20162P",
-        "lastRun": "111"
+        "lastRun": "111",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -13747,7 +14921,9 @@
         "headgear": "",
         "officialRating": "104",
         "form": "P1504P",
-        "lastRun": "44"
+        "lastRun": "44",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -13769,7 +14945,9 @@
         "headgear": "",
         "officialRating": "102",
         "form": "012-PP",
-        "lastRun": "6"
+        "lastRun": "6",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -13791,7 +14969,9 @@
         "headgear": "t",
         "officialRating": "102",
         "form": "8263P7",
-        "lastRun": "13"
+        "lastRun": "13",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -13813,7 +14993,9 @@
         "headgear": "",
         "officialRating": "102",
         "form": "4545U0",
-        "lastRun": "23"
+        "lastRun": "23",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -13835,7 +15017,9 @@
         "headgear": "t",
         "officialRating": "101",
         "form": "005P7",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -13857,7 +15041,9 @@
         "headgear": "p",
         "officialRating": "100",
         "form": "28885",
-        "lastRun": "28"
+        "lastRun": "28",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -13879,7 +15065,9 @@
         "headgear": "t",
         "officialRating": "100",
         "form": "629404",
-        "lastRun": "18"
+        "lastRun": "18",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -13901,7 +15089,9 @@
         "headgear": "tp",
         "officialRating": "96",
         "form": "1PP704",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -13923,7 +15113,9 @@
         "headgear": "tp",
         "officialRating": "94",
         "form": "500",
-        "lastRun": "32"
+        "lastRun": "32",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -13945,7 +15137,9 @@
         "headgear": "p",
         "officialRating": "93",
         "form": "970803",
-        "lastRun": "20"
+        "lastRun": "20",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -13967,7 +15161,9 @@
         "headgear": "p",
         "officialRating": "93",
         "form": "5240FP",
-        "lastRun": "107"
+        "lastRun": "107",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -13989,7 +15185,9 @@
         "headgear": "t",
         "officialRating": "92",
         "form": "0PP5P0",
-        "lastRun": "32"
+        "lastRun": "32",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 16,
@@ -14011,7 +15209,9 @@
         "headgear": "p",
         "officialRating": "89",
         "form": "P-3744",
-        "lastRun": "32"
+        "lastRun": "32",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 17,
@@ -14033,7 +15233,9 @@
         "headgear": "tp",
         "officialRating": "87",
         "form": "80PP73",
-        "lastRun": "30"
+        "lastRun": "30",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 18,
@@ -14055,7 +15257,9 @@
         "headgear": "t",
         "officialRating": "87",
         "form": "470090",
-        "lastRun": "74"
+        "lastRun": "74",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -14094,7 +15298,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -14116,7 +15322,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "5",
-        "lastRun": "67"
+        "lastRun": "67",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -14138,7 +15346,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "7P",
-        "lastRun": "(76P)"
+        "lastRun": "(76P)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -14160,7 +15370,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "7",
-        "lastRun": "72"
+        "lastRun": "72",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -14182,7 +15394,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "P",
-        "lastRun": "(109P)"
+        "lastRun": "(109P)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -14204,7 +15418,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "24",
-        "lastRun": "(109P)"
+        "lastRun": "(109P)",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -14226,7 +15442,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "1-P4",
-        "lastRun": "37"
+        "lastRun": "37",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -14248,7 +15466,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -14270,7 +15490,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "655",
-        "lastRun": "37"
+        "lastRun": "37",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -14292,7 +15514,9 @@
         "headgear": "p",
         "officialRating": "-",
         "form": "3-5232",
-        "lastRun": "32"
+        "lastRun": "32",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -14314,7 +15538,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "43",
-        "lastRun": "170"
+        "lastRun": "170",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -14336,7 +15562,9 @@
         "headgear": "h",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -14358,7 +15586,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -14380,7 +15610,9 @@
         "headgear": "t",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -14402,7 +15634,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "7",
-        "lastRun": "170"
+        "lastRun": "170",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -14424,7 +15658,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "1/4",
-        "lastRun": "41"
+        "lastRun": "41",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   },
@@ -14463,7 +15699,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 1,
@@ -14485,7 +15723,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 2,
@@ -14507,7 +15747,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "700-0",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 3,
@@ -14529,7 +15771,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "000-0",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 4,
@@ -14551,7 +15795,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "08",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 5,
@@ -14573,7 +15819,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "70-3",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 6,
@@ -14595,7 +15843,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 7,
@@ -14617,7 +15867,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "42-0",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 8,
@@ -14639,7 +15891,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "086-00",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 9,
@@ -14661,7 +15915,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "000-",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 10,
@@ -14683,7 +15939,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 11,
@@ -14705,7 +15963,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "7-0",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 12,
@@ -14727,7 +15987,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "56-6",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 13,
@@ -14749,7 +16011,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "0-",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 14,
@@ -14771,7 +16035,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "209-20",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       },
       {
         "index": 15,
@@ -14793,7 +16059,9 @@
         "headgear": "",
         "officialRating": "-",
         "form": "5-0",
-        "lastRun": ""
+        "lastRun": "",
+        "forecastPrice": null,
+        "decimalPrice": null
       }
     ]
   }

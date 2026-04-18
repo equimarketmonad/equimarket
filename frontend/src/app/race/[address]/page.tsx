@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useAccount, useReadContract } from "wagmi";
 import { useMarketData, useScratchedStatus, useUserPositions } from "@/hooks/useMarkets";
-import { useMarketAPI } from "@/hooks/useMarketsAPI";
+import { useMarketAPI, usePriceHistory } from "@/hooks/useMarketsAPI";
 import {
   useBuyShares,
   useSellShares,
@@ -72,6 +72,8 @@ export default function RacePage() {
   const [selectedHorse, setSelectedHorse] = useState<number | null>(null);
   const [stakeInput, setStakeInput] = useState("");
   const [mode, setMode] = useState<"buy" | "sell">("buy");
+  const [highlightedHorses, setHighlightedHorses] = useState<Set<number>>(new Set());
+  const [chartHover, setChartHover] = useState<{ x: number; snapIdx: number } | null>(null);
 
   // ── Wallet ──
   const { address: userAddress, isConnected } = useAccount();
@@ -85,8 +87,9 @@ export default function RacePage() {
     query: { enabled: isConnected && !!userAddress, refetchInterval: 5000 },
   });
 
-  // ── API metadata ──
+  // ── API metadata + price history ──
   const { data: apiMarket } = useMarketAPI(address);
+  const priceHistory = usePriceHistory(address);
 
   // ── On-chain data ──
   const { data: market } = useMarketData(marketAddress);
@@ -447,54 +450,176 @@ export default function RacePage() {
             })}
           </div>
 
-          {/* ─── Price History Chart (placeholder) ─── */}
+          {/* ─── Price History Chart ─── */}
           <div className="px-6 md:px-12 pb-8 border-r border-border">
             <div className="flex items-center justify-between mb-4 pt-6 border-t border-border">
               <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-text-dim">
                 Price History
               </span>
-              <div className="flex gap-1">
-                {["1m", "5m", "All"].map((tf, i) => (
-                  <button
-                    key={tf}
-                    className={`font-mono text-[9px] tracking-[1px] px-2.5 py-1 rounded-md transition-colors ${
-                      i === 2
-                        ? "text-gold bg-gold/[0.08] border border-gold/20"
-                        : "text-text-dim border border-transparent hover:text-text-primary"
-                    }`}
+            </div>
+            {(() => {
+              // Build chart data: use price history if available, otherwise use current snapshot
+              const chartW = 600;
+              const chartH = 220;
+              const padTop = 20;
+              const padBot = 25;
+              const padLeft = 0;
+              const padRight = 0;
+              const plotH = chartH - padTop - padBot;
+              const plotW = chartW - padLeft - padRight;
+
+              // Use history if we have at least 2 snapshots, otherwise synthesize from current prices
+              const snapshots = priceHistory.length >= 2
+                ? priceHistory
+                : [
+                    { timestamp: Date.now() - 60000, prices: horses.map((h) => h.price) },
+                    { timestamp: Date.now(), prices: horses.map((h) => h.price) },
+                  ];
+
+              const numSnaps = snapshots.length;
+              const hasAnyHighlighted = highlightedHorses.size > 0;
+
+              // Find the max price across all snapshots for scaling
+              let maxPrice = 0;
+              for (const snap of snapshots) {
+                for (const p of snap.prices) {
+                  if (p > maxPrice) maxPrice = p;
+                }
+              }
+              if (maxPrice < 0.05) maxPrice = 0.05; // minimum scale
+
+              // Convert price to Y coordinate (higher price = higher on chart)
+              const priceToY = (p: number) => padTop + plotH - (p / maxPrice) * plotH;
+              const snapToX = (idx: number) => padLeft + (idx / Math.max(numSnaps - 1, 1)) * plotW;
+
+              // Build SVG path for each horse
+              const horsePaths = horses.map((_, hi) => {
+                const points = snapshots.map((snap, si) => ({
+                  x: snapToX(si),
+                  y: priceToY(snap.prices[hi] ?? 0),
+                }));
+                if (points.length === 0) return "";
+                let d = `M${points[0].x},${points[0].y}`;
+                for (let j = 1; j < points.length; j++) {
+                  d += ` L${points[j].x},${points[j].y}`;
+                }
+                return d;
+              });
+
+              // Get hovered snapshot data
+              const hoverSnap = chartHover ? snapshots[chartHover.snapIdx] : null;
+
+              return (
+                <>
+                  <div
+                    className="w-full bg-surface border border-border rounded-xl relative overflow-hidden cursor-crosshair"
+                    style={{ height: `${chartH}px` }}
+                    onMouseMove={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      const relX = (e.clientX - rect.left) / rect.width;
+                      const snapIdx = Math.round(relX * (numSnaps - 1));
+                      const clampedIdx = Math.max(0, Math.min(numSnaps - 1, snapIdx));
+                      setChartHover({ x: relX * chartW, snapIdx: clampedIdx });
+                    }}
+                    onMouseLeave={() => setChartHover(null)}
                   >
-                    {tf}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className="w-full h-[200px] bg-surface border border-border rounded-xl relative overflow-hidden">
-              {/* SVG chart placeholder showing horse price lines */}
-              <svg viewBox="0 0 600 200" preserveAspectRatio="none" className="w-full h-full">
-                {horses.slice(0, 5).map((horse, i) => {
-                  const baseY = 40 + (i * 30);
-                  const color = getSilkColor(i);
-                  // Generate a gentle curve for each horse
-                  const drift = horse.price > 0.3 ? -20 : horse.price > 0.15 ? -5 : 5;
-                  const path = `M0,${baseY + 20} C150,${baseY + 15} 300,${baseY + 10 + drift} 450,${baseY + drift} S550,${baseY + drift - 5} 600,${baseY + drift - 8}`;
-                  return (
-                    <g key={i}>
-                      <path d={`${path} L600,200 L0,200 Z`} fill={color} opacity="0.06" />
-                      <path d={path} fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </g>
-                  );
-                })}
-              </svg>
-            </div>
-            {/* Legend */}
-            <div className="flex gap-4 mt-3 flex-wrap">
-              {horses.slice(0, 5).map((horse, i) => (
-                <div key={i} className="flex items-center gap-1.5 font-mono text-[10px] text-text-dim">
-                  <div className="w-4 h-0.5 rounded-sm" style={{ background: getSilkColor(i) }} />
-                  {horse.name}
-                </div>
-              ))}
-            </div>
+                    <svg viewBox={`0 0 ${chartW} ${chartH}`} preserveAspectRatio="none" className="w-full h-full">
+                      {/* Y-axis grid lines */}
+                      {[0, 0.25, 0.5, 0.75, 1].map((frac) => {
+                        const y = padTop + plotH * (1 - frac);
+                        return (
+                          <line key={frac} x1={padLeft} y1={y} x2={chartW - padRight} y2={y}
+                            stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
+                        );
+                      })}
+
+                      {/* Horse price lines */}
+                      {horses.map((horse, hi) => {
+                        if (!horsePaths[hi]) return null;
+                        const isHighlighted = highlightedHorses.has(hi);
+                        const opacity = hasAnyHighlighted ? (isHighlighted ? 1 : 0.15) : 0.5;
+                        const strokeW = hasAnyHighlighted && isHighlighted ? 2.5 : 1.5;
+                        const color = getSilkColor(hi);
+                        return (
+                          <g key={hi}>
+                            <path d={horsePaths[hi]} fill="none" stroke={color} strokeWidth={strokeW}
+                              strokeLinecap="round" strokeLinejoin="round" opacity={opacity} />
+                          </g>
+                        );
+                      })}
+
+                      {/* Hover vertical line */}
+                      {chartHover && (
+                        <line x1={chartHover.x} y1={padTop} x2={chartHover.x} y2={chartH - padBot}
+                          stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeDasharray="3,3" />
+                      )}
+
+                      {/* Hover dots and labels */}
+                      {chartHover && hoverSnap && horses.map((horse, hi) => {
+                        const price = hoverSnap.prices[hi] ?? 0;
+                        if (price <= 0) return null;
+                        const isHighlighted = highlightedHorses.has(hi);
+                        const showLabel = !hasAnyHighlighted || isHighlighted;
+                        if (!showLabel) return null;
+                        const y = priceToY(price);
+                        const color = getSilkColor(hi);
+                        const labelX = chartHover.x < chartW / 2 ? chartHover.x + 8 : chartHover.x - 8;
+                        const anchor = chartHover.x < chartW / 2 ? "start" : "end";
+                        return (
+                          <g key={hi}>
+                            <circle cx={chartHover.x} cy={y} r={3} fill={color} />
+                            <text x={labelX} y={y - 6} fill={color} fontSize="9" fontFamily="monospace"
+                              textAnchor={anchor} dominantBaseline="auto">
+                              {horse.name} ({(price * 100).toFixed(0)}%)
+                            </text>
+                          </g>
+                        );
+                      })}
+                    </svg>
+                  </div>
+
+                  {/* Horse checkboxes below chart */}
+                  <div className="flex gap-x-4 gap-y-2 mt-3 flex-wrap">
+                    {horses.map((horse, i) => {
+                      const isChecked = highlightedHorses.has(i);
+                      const color = getSilkColor(i);
+                      return (
+                        <label key={i} className="flex items-center gap-1.5 cursor-pointer select-none group">
+                          <div
+                            className="w-3.5 h-3.5 rounded-sm border flex items-center justify-center transition-colors"
+                            style={{
+                              borderColor: isChecked ? color : "rgba(255,255,255,0.2)",
+                              background: isChecked ? color : "transparent",
+                            }}
+                            onClick={() => {
+                              setHighlightedHorses((prev) => {
+                                const next = new Set(prev);
+                                if (next.has(i)) next.delete(i);
+                                else next.add(i);
+                                return next;
+                              });
+                            }}
+                          >
+                            {isChecked && (
+                              <svg viewBox="0 0 12 12" className="w-2.5 h-2.5" fill="none" stroke="#1a1a18" strokeWidth="2">
+                                <path d="M2 6l3 3 5-5" />
+                              </svg>
+                            )}
+                          </div>
+                          <div className="w-4 h-0.5 rounded-sm" style={{ background: color, opacity: isChecked || !hasAnyHighlighted ? 1 : 0.3 }} />
+                          <span
+                            className="font-mono text-[10px] transition-colors"
+                            style={{ color: isChecked || !hasAnyHighlighted ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.3)" }}
+                          >
+                            {horse.name}
+                          </span>
+                        </label>
+                      );
+                    })}
+                  </div>
+                </>
+              );
+            })()}
           </div>
 
           {/* ─── Market Info Grid ─── */}

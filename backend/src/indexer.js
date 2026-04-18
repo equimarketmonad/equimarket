@@ -18,6 +18,7 @@ export class MarketIndexer {
     // In-memory cache
     this.markets = new Map(); // address → market data
     this.marketsByRaceId = new Map(); // raceIdBytes → address
+    this.priceHistory = new Map(); // address → [{timestamp, prices: number[]}]
     this.lastRefresh = 0;
     this.refreshing = false;
   }
@@ -143,6 +144,17 @@ export class MarketIndexer {
 
       this.markets.set(address, data);
       this.marketsByRaceId.set(raceId, address);
+
+      // Snapshot prices for history chart — only if prices changed
+      const history = this.priceHistory.get(address) || [];
+      const lastSnap = history.length > 0 ? history[history.length - 1] : null;
+      const pricesChanged = !lastSnap || priceArray.some((p, i) => Math.abs(p - lastSnap.prices[i]) > 0.0001);
+      if (pricesChanged) {
+        history.push({ timestamp: Date.now(), prices: priceArray });
+        // Keep last 500 snapshots per market (~4 hours at 30s intervals)
+        if (history.length > 500) history.shift();
+        this.priceHistory.set(address, history);
+      }
     } catch (e) {
       console.error(`[indexer] Failed to read market ${address}:`, e.message);
     }
@@ -165,6 +177,11 @@ export class MarketIndexer {
   /** Get a single market by address */
   getMarket(address) {
     return this.markets.get(address) || null;
+  }
+
+  /** Get price history for a market */
+  getPriceHistory(address) {
+    return this.priceHistory.get(address) || [];
   }
 
   /** Get market by raceId */

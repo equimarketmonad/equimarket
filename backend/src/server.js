@@ -82,6 +82,12 @@ app.get("/api/markets/:address", (req, res) => {
   res.json(market);
 });
 
+/** Price history for a market — used by the frontend chart */
+app.get("/api/markets/:address/history", (req, res) => {
+  const history = indexer.getPriceHistory(req.params.address);
+  res.json({ address: req.params.address, snapshots: history });
+});
+
 /** Health check */
 app.get("/api/health", (req, res) => {
   res.json({

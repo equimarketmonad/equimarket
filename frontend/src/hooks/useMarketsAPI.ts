@@ -113,6 +113,40 @@ export function useMarketsAPI() {
   return { data, isLoading, error, refetch: fetchMarkets };
 }
 
+export interface PriceSnapshot {
+  timestamp: number;
+  prices: number[];
+}
+
+/**
+ * Fetch price history for a market (for the chart).
+ * Refreshes every 30s to match the backend polling interval.
+ */
+export function usePriceHistory(address: string | undefined) {
+  const [snapshots, setSnapshots] = useState<PriceSnapshot[]>([]);
+
+  useEffect(() => {
+    if (!address) return;
+
+    const fetchHistory = async () => {
+      try {
+        const res = await fetch(`${API_BASE}/api/markets/${address}/history`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        setSnapshots(json.snapshots || []);
+      } catch (e) {
+        console.warn("[usePriceHistory] Fetch failed:", e);
+      }
+    };
+
+    fetchHistory();
+    const interval = setInterval(fetchHistory, 30000);
+    return () => clearInterval(interval);
+  }, [address]);
+
+  return snapshots;
+}
+
 /**
  * Fetch a single market by address.
  */

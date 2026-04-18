@@ -364,80 +364,114 @@ export default function Home() {
       <div className="h-px bg-border mx-6 md:mx-12" />
 
       {/* ═══ TOP TRACKS ═══ */}
-      <div className="flex items-center justify-between px-6 md:px-12 pt-5 pb-3">
-        <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-text-dim">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold-dim mr-2 align-middle" />
-          Top Tracks
-        </span>
-      </div>
+      {(() => {
+        // Group active markets by course, sum totalDeposited per track
+        const trackMap = new Map<string, { course: string; region: string; totalVolume: number; raceCount: number; nextOff: number; markets: typeof activeMarkets }>();
+        for (const m of activeMarkets) {
+          const course = m.meta?.course || "Unknown";
+          const existing = trackMap.get(course);
+          const offTs = getOffTimestamp(m);
+          if (existing) {
+            existing.totalVolume += m.totalDeposited;
+            existing.raceCount += 1;
+            existing.markets.push(m);
+            if (offTs < existing.nextOff) existing.nextOff = offTs;
+          } else {
+            trackMap.set(course, {
+              course,
+              region: m.meta?.region || "",
+              totalVolume: m.totalDeposited,
+              raceCount: 1,
+              nextOff: offTs,
+              markets: [m],
+            });
+          }
+        }
+        const tracks = Array.from(trackMap.values()).sort((a, b) => b.totalVolume - a.totalVolume);
+        if (tracks.length === 0 && !isLoading) return null;
 
-      <div className="flex flex-wrap gap-4 px-6 md:px-12 pb-10">
-        {isLoading && activeMarkets.length === 0 ? (
-          Array.from({ length: 4 }).map((_, i) => (
-            <div key={i} className="flex-none w-[320px] bg-surface border border-border rounded-xl overflow-hidden animate-pulse">
-              <div className="px-5 py-4"><div className="h-6 bg-surface-2 rounded w-40 mb-2" /><div className="h-3 bg-surface-2 rounded w-28" /></div>
-              <div className="px-5 pb-4 space-y-3">{Array.from({ length: 3 }).map((_, j) => <div key={j} className="h-8 bg-surface-2 rounded" />)}</div>
+        return (
+          <>
+            <div className="flex items-center justify-between px-6 md:px-12 pt-5 pb-3">
+              <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-text-dim">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold-dim mr-2 align-middle" />
+                Top Tracks
+              </span>
             </div>
-          ))
-        ) : (
-          activeMarkets.map((m) => {
-            const runners = (m.meta?.runners || [])
-              .slice()
-              .sort((a, b) => b.price - a.price)
-              .slice(0, 4);
-
-            return (
-              <div
-                key={m.address}
-                onClick={() => setExpandedMarket(m.address as `0x${string}`)}
-                className="flex-none w-[320px] bg-surface border border-border rounded-xl overflow-hidden cursor-pointer hover:border-border-bright hover:-translate-y-0.5 transition-all"
-              >
-                <div className="flex items-start justify-between px-5 py-4">
-                  <div className="min-w-0 flex-1">
-                    <div className="font-serif text-[17px] font-bold text-text-primary mb-0.5 truncate">{m.meta?.name}</div>
-                    <div className="font-mono text-[10px] text-text-dim">{m.meta?.course} — {m.meta?.date}</div>
+            <div className="flex gap-3 px-6 md:px-12 pb-10 overflow-x-auto hide-scrollbar">
+              {isLoading && activeMarkets.length === 0 ? (
+                Array.from({ length: 4 }).map((_, i) => (
+                  <div key={i} className="flex-none w-[240px] bg-surface border border-border rounded-xl p-5 animate-pulse">
+                    <div className="h-5 bg-surface-2 rounded w-32 mb-3" />
+                    <div className="h-3 bg-surface-2 rounded w-20 mb-4" />
+                    <div className="h-8 bg-surface-2 rounded" />
                   </div>
-                  <div className="text-right ml-3">
-                    <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px]">Pool</div>
-                    <div className="font-mono text-base text-gold font-semibold">${formatPool(m.totalDeposited)}</div>
-                  </div>
-                </div>
+                ))
+              ) : (
+                tracks.map((track) => {
+                  const nextOffLabel = (() => {
+                    const diff = track.nextOff - now;
+                    if (diff <= 0) return "Racing now";
+                    const mins = Math.round(diff / 60);
+                    if (mins < 60) return `Next race in ${mins}m`;
+                    const hrs = Math.floor(mins / 60);
+                    const rm = mins % 60;
+                    if (hrs < 24) return rm > 0 ? `Next race in ${hrs}h ${rm}m` : `Next race in ${hrs}h`;
+                    return `Next race tomorrow`;
+                  })();
+                  const isLive = track.nextOff <= now;
 
-                <div className="px-5 pb-4">
-                  {runners.map((runner, hi) => {
-                    const odds = runner.price > 0 ? (1 / runner.price).toFixed(1) + "/1" : "---";
-                    return (
-                      <div key={hi} className={`flex items-center justify-between py-1.5 ${hi < runners.length - 1 ? "border-b border-border" : ""}`}>
-                        <div className="flex items-center gap-2.5">
-                          <GateNum gate={runner.draw || runner.number} />
-                          <div>
-                            <div className="text-xs font-medium text-text-primary">{runner.name}</div>
-                            <div className="font-mono text-[10px] text-text-dim">{runner.jockey}</div>
-                          </div>
-                        </div>
-                        <span className="font-mono text-xs font-semibold text-gold bg-gold/10 border border-gold/25 px-3.5 py-1 rounded-lg">
-                          {odds}
+                  return (
+                    <div
+                      key={track.course}
+                      className="flex-none w-[240px] bg-surface border border-border rounded-xl p-5 hover:border-border-bright hover:-translate-y-0.5 transition-all"
+                    >
+                      <div className="flex items-center gap-2 mb-1">
+                        <RegionBadge region={track.region} />
+                      </div>
+                      <div className="font-serif text-lg font-bold text-text-primary mb-1 truncate">{track.course}</div>
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className={`font-mono text-[10px] tracking-[1px] uppercase px-2 py-0.5 rounded-full border ${
+                          isLive
+                            ? "text-accent-green bg-accent-green/10 border-accent-green/30"
+                            : "text-gold bg-gold/10 border-gold/25"
+                        }`}>
+                          {nextOffLabel}
                         </span>
                       </div>
-                    );
-                  })}
-                </div>
-
-                <div className="flex items-center justify-between px-5 py-2.5 bg-surface-2 border-t border-border">
-                  <span className={`font-mono text-[9px] tracking-[1.5px] uppercase px-2 py-0.5 rounded-full ${
-                    !m.settled && !m.cancelled
-                      ? "text-accent-green bg-accent-green/10 border border-accent-green/30"
-                      : "text-gold bg-gold/10 border border-gold/25"
-                  }`}>
-                    {!m.settled && !m.cancelled ? "Market Open" : "Settled"}
-                  </span>
-                  <span className="font-mono text-[10px] text-text-dim">{m.numOutcomes} runners</span>
-                </div>
-              </div>
-            );
-          })
-        )}
-      </div>
+                      <div className="bg-surface-2 rounded-lg px-3 py-2.5 mb-3">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px]">Races</div>
+                            <div className="font-mono text-sm font-semibold text-text-primary">{track.raceCount}</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="font-mono text-[9px] text-text-dim uppercase tracking-[1px]">Total Volume</div>
+                            <div className="font-mono text-sm font-semibold text-gold">${formatPool(track.totalVolume)}</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {track.markets
+                          .sort((a, b) => getOffTimestamp(a) - getOffTimestamp(b))
+                          .map((m) => (
+                            <span
+                              key={m.address}
+                              onClick={() => setExpandedMarket(m.address as `0x${string}`)}
+                              className="font-mono text-[10px] text-text-dim bg-surface-2 border border-border px-2 py-1 rounded cursor-pointer hover:text-gold hover:border-gold/30 transition-colors"
+                            >
+                              R{raceNumMap.get(m.address) || "?"} {localTime(m.meta?.offDt, m.meta?.offTime)}
+                            </span>
+                          ))}
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          </>
+        );
+      })()}
     </main>
   );
 }

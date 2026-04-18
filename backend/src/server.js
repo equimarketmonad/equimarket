@@ -35,18 +35,31 @@ const indexer = new MarketIndexer({
 app.get("/api/markets", (req, res) => {
   const markets = indexer.getAllMarkets();
 
-  // Split by status
+  // Split by status using offDt (actual race start time), not closesAt
+  // closesAt = off time + 7 days (when betting closes), NOT when the race starts
   const now = Date.now() / 1000;
-  const live = [];
-  const upcoming = [];
+  const live = [];      // race has started (past off time), not yet settled
+  const upcoming = [];  // race hasn't started yet (before off time)
   const settled = [];
   const cancelled = [];
 
   for (const m of markets) {
-    if (m.cancelled) cancelled.push(m);
-    else if (m.settled) settled.push(m);
-    else if (now <= m.closesAt) live.push(m);
-    else upcoming.push(m);
+    if (m.cancelled) { cancelled.push(m); continue; }
+    if (m.settled) { settled.push(m); continue; }
+
+    // Use offDt (actual race start time) to determine if race has started
+    const offDt = m.meta?.offDt;
+    let offTimestamp = null;
+    if (offDt) {
+      const d = new Date(offDt);
+      if (!isNaN(d.getTime())) offTimestamp = d.getTime() / 1000;
+    }
+
+    if (offTimestamp && now < offTimestamp) {
+      upcoming.push(m); // race hasn't started yet
+    } else {
+      live.push(m);     // race has started (or no offDt, assume live)
+    }
   }
 
   res.json({

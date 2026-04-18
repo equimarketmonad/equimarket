@@ -76,10 +76,24 @@ export default function Home() {
   const [expandedMarket, setExpandedMarket] = useState<`0x${string}` | null>(null);
 
   const markets = data?.all || [];
-  // "Racing now" = off time has passed (closesAt < now) but not yet settled — horses are on the track
   const now = Date.now() / 1000;
-  const racingNow = markets.filter((m) => !m.settled && !m.cancelled && m.closesAt < now);
-  const tickerMarkets = racingNow.length > 0 ? racingNow : markets.filter((m) => !m.settled && !m.cancelled).slice(0, 6);
+
+  // Helper: get the actual race start time (off time), NOT closesAt (which is off + 7 days)
+  const getOffTimestamp = (m: APIMarket) => {
+    if (m.meta?.offDt) {
+      const d = new Date(m.meta.offDt);
+      if (!isNaN(d.getTime())) return d.getTime() / 1000;
+    }
+    // Fallback for old markets where closesAt WAS the off time
+    return m.closesAt;
+  };
+
+  // Active markets = not settled, not cancelled
+  const activeMarkets = markets.filter((m) => !m.settled && !m.cancelled);
+
+  // "Racing now" = off time has passed but not yet settled — horses are on the track
+  const racingNow = activeMarkets.filter((m) => getOffTimestamp(m) <= now);
+  const tickerMarkets = racingNow.length > 0 ? racingNow : activeMarkets.slice(0, 6);
 
   // Compute race number per course (R1, R2, R3… based on off-time order)
   const raceNumMap = new Map<string, number>();
@@ -177,18 +191,8 @@ export default function Home() {
       {/* ═══ UPCOMING RACES ═══ */}
       {(() => {
         // Races within 60 minutes of start, not yet started, sorted soonest first.
-        // Use offDt if available (future markets have closesAt = off time + 7 days),
-        // otherwise fall back to closesAt (current markets where closesAt = off time).
-        const getOffTimestamp = (m: typeof markets[0]) => {
-          if (m.meta?.offDt) {
-            const d = new Date(m.meta.offDt);
-            if (!isNaN(d.getTime())) return d.getTime() / 1000;
-          }
-          return m.closesAt;
-        };
-        const upcoming = markets
+        const upcoming = activeMarkets
           .filter((m) => {
-            if (m.settled || m.cancelled) return false;
             const offTs = getOffTimestamp(m);
             return offTs > now && (offTs - now) <= 3600;
           })
@@ -263,9 +267,8 @@ export default function Home() {
       })()}
 
       {/* ═══ POPULAR MARKETS ═══ */}
-      {markets.length > 0 && (() => {
-        const popular = markets
-          .filter((m) => !m.settled && !m.cancelled)
+      {activeMarkets.length > 0 && (() => {
+        const popular = activeMarkets
           .sort((a, b) => b.totalDeposited - a.totalDeposited)
           .slice(0, 8);
         if (popular.length === 0) return null;
@@ -347,7 +350,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-wrap gap-4 px-6 md:px-12 pb-10">
-        {isLoading && markets.length === 0 ? (
+        {isLoading && activeMarkets.length === 0 ? (
           Array.from({ length: 4 }).map((_, i) => (
             <div key={i} className="flex-none w-[320px] bg-surface border border-border rounded-xl overflow-hidden animate-pulse">
               <div className="px-5 py-4"><div className="h-6 bg-surface-2 rounded w-40 mb-2" /><div className="h-3 bg-surface-2 rounded w-28" /></div>
@@ -355,7 +358,7 @@ export default function Home() {
             </div>
           ))
         ) : (
-          markets.map((m) => {
+          activeMarkets.map((m) => {
             const runners = (m.meta?.runners || [])
               .slice()
               .sort((a, b) => b.price - a.price)
